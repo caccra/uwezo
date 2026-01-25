@@ -382,7 +382,14 @@ section {
     }
 
     .bento-item {
-        padding: 1.5rem;
+        padding: 1.25rem;
+        /* Reduced for smaller screens */
+    }
+
+    /* Fix for CIT and other small cards */
+    .bento-item span[style*="font-size: 2rem"] {
+        font-size: 1.5rem !important;
+        margin-bottom: 1rem !important;
     }
 }
 
@@ -633,8 +640,22 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .nav-content {
+        justify-content: space-between;
+    }
+
     .mobile-toggle {
         display: flex;
+        order: -1;
+        /* Move to the left */
+        margin-right: auto;
+    }
+
+    .logo-wrap {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2001;
     }
 
     .nav-links {
@@ -709,9 +730,11 @@ footer {
     }
 
     .nav-links .btn-primary {
+        display: block;
         width: 100%;
-        max-width: 300px;
-        margin-top: 1.5rem;
+        max-width: 280px;
+        margin: 1.5rem auto 0;
+        /* Centered */
         font-size: 1.125rem;
     }
 
