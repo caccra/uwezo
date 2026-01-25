@@ -32,29 +32,27 @@
 
     <main>
         <!-- Service Hero -->
-        <section style="padding-top: 140px; padding-bottom: 60px; background: var(--card);">
-            <div class="container">
-                <div style="max-width: 900px;">
-                    <div
-                        style="display: inline-block; background: rgba(37, 99, 235, 0.1); color: var(--primary); padding: 8px 16px; border-radius: 20px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem;">
-                        TECH-ENABLED SECURITY</div>
-                    <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; font-family: var(--font-heading);">CCTV & <span
-                            class="text-blue">Surveillance</span></h1>
-                    <p style="font-size: 1.25rem; color: var(--text-gray); line-height: 1.8; margin-bottom: 2rem;">
-                        Advanced surveillance systems integrated with rapid response. Total visibility for your peace
-                        of mind.</p>
-                    <a href="contact.html" class="btn-primary btn-large">Get a Technical Quote</a>
-                </div>
+        <section class="sub-header">
+            <div class="container reveal">
+                <div class="feature-badge">Tech-Enabled Security</div>
+                <h1 class="sub-title">CCTV & <span class="text-gradient">Surveillance</span></h1>
+                <p
+                    style="font-size: clamp(1.1rem, 3vw, 1.25rem); color: var(--muted); line-height: 1.8; max-width: 800px; margin: 1.5rem auto 2rem;">
+                    Advanced surveillance systems integrated with real-time monitoring and rapid response. Total
+                    visibility for total protection.
+                </p>
+                <a href="contact.html" class="btn-primary btn-large">Get Technical Audit</a>
             </div>
         </section>
 
         <!-- Service Overview -->
-        <section style="padding: 80px 0;">
+        <section class="section-standard">
             <div class="container">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;">
-                    <div>
-                        <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; font-family: var(--font-heading);">
-                            The Digital Watch</h2>
+                <div class="grid-split">
+                    <div class="grid-split-content reveal">
+                        <h2
+                            style="font-size: clamp(2rem, 5vw, 2.5rem); margin-bottom: 1.5rem; font-family: var(--font-heading);">
+                            The <span class="text-blue">Digital Watch</span></h2>
                         <p
                             style="color: var(--text-gray); margin-bottom: 1.5rem; font-size: 1.125rem; line-height: 1.8;">
                             Modern security relies on high-definition surveillance and intelligent monitoring. Our CCTV
@@ -64,44 +62,46 @@
                         <p style="color: var(--text-gray); font-size: 1.125rem; line-height: 1.8;">
                             From simple home camera setups to complex multi-site corporate surveillance networks with AI
                             analytics, Uwezo Security installs and maintains top-tier hardware that integrates
-                            seamlessly with our guarding operations.
+                            seamlessly with our tactical guarding operations.
                         </p>
                     </div>
-                    <div
+                    <div class="grid-split-visual reveal delay-1"
                         style="border-radius: var(--radius); overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
                         <img src="surveillance_tech.png" alt="CCTV Systems"
-                            style="width: 100%; height: 400px; object-fit: cover;">
+                            style="width: 100%; height: clamp(300px, 40vh, 500px); object-fit: cover;">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Key Features -->
-        <section style="background: var(--card); padding: 80px 0;">
+        <section class="section-standard" style="background: var(--card);">
             <div class="container">
-                <div style="text-align: center; margin-bottom: 4rem;">
-                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem; font-family: var(--font-heading);">Our Tech Stack
-                    </h2>
-                    <p style="color: var(--text-gray); font-size: 1.125rem;">Modern surveillance technologies</p>
+                <div style="text-align: center; margin-bottom: 4rem;" class="reveal">
+                    <h2
+                        style="font-size: clamp(2rem, 5vw, 2.5rem); margin-bottom: 1rem; font-family: var(--font-heading);">
+                        Technical <span class="text-blue">Edge</span></h2>
+                    <p style="color: var(--text-gray); font-size: 1.125rem;">Proprietary and industry-standard
+                        surveillance assets</p>
                 </div>
-                <div class="grid-3">
-                    <div class="service-card">
+                <div class="grid-3 reveal delay-1">
+                    <div class="service-card glass-card">
                         <div style="font-size: 2.5rem; margin-bottom: 1rem;">📷</div>
                         <h3 style="margin-bottom: 1rem;">HD/4K Cameras</h3>
                         <p style="color: var(--text-gray);">Crystal clear images even in low light, specialized for
                             number plate recognition and facial ID.</p>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card glass-card">
                         <div style="font-size: 2.5rem; margin-bottom: 1rem;">🖥️</div>
                         <h3 style="margin-bottom: 1rem;">Remote Monitoring</h3>
                         <p style="color: var(--text-gray);">Access your camera feeds from anywhere in the world via your
-                            smartphone or desktop.</p>
+                            smartphone or desktop units.</p>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card glass-card">
                         <div style="font-size: 2.5rem; margin-bottom: 1rem;">🧠</div>
                         <h3 style="margin-bottom: 1rem;">Smart Analytics</h3>
                         <p style="color: var(--text-gray);">AI-driven motion detection, heat maps, and automated alerts
-                            for suspicious activity.</p>
+                            for suspicious activity patterns.</p>
                     </div>
                 </div>
             </div>
@@ -126,12 +126,56 @@
     <footer>
         <div class="container footer-grid">
             <div class="footer-col">
-                <div class="logo-wrap" style="margin-bottom: 1.5rem;">
-                    <img src="logo_new.png" alt="Uwezo Logo" style="height: 32px;">
-                    <span class="logo-text">Uwezo Security</span>
+                <div class="logo-wrap" style="margin-bottom: 2rem;">
+                    <img src="logo_new.png" alt="Uwezo Logo" style="height: 48px;">
+                    <span class="logo-text" style="font-size: 1.5rem;">Uwezo Security</span>
                 </div>
-                <p style="color: var(--text-gray); font-size: 0.9375rem; line-height: 1.6; margin-bottom: 1.5rem;">
-                    Integrating tech for total security.</p>
+                <p style="color: var(--muted); line-height: 1.8; margin-bottom: 2.5rem; max-width: 350px;">
+                    Uganda's choice for tactical security and professional guarding. Driven by integrity and mission
+                    success since 2019.
+                </p>
+                <div
+                    style="padding: 1.5rem; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); border: 1px solid var(--border); display: inline-block; width: 100%; max-width: 300px;">
+                    <p
+                        style="font-size: 0.75rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; font-weight: 700;">
+                        24/7 Emergency Lines</p>
+                    <p style="font-size: 1.25rem; font-weight: 800; color: white; margin-bottom: 0.25rem;">+256 200 902
+                        428</p>
+                    <p style="font-size: 1.25rem; font-weight: 800; color: white;">+256 774 361 171</p>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="service-guards.html">Armed & Unarmed Guards</a></li>
+                    <li><a href="service-corporate.html">Corporate Security</a></li>
+                    <li><a href="service-residential.html">Residential Protection</a></li>
+                    <li><a href="service-event.html">Event Management</a></li>
+                    <li><a href="service-vip.html">VIP Protection</a></li>
+                    <li><a href="service-cctv.html">CCTV Surveillance</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li style="margin-bottom: 1rem;">
+                        <p style="color: var(--muted); font-size: 0.875rem;">Head Office</p>
+                        <p style="color: var(--text-gray); font-size: 0.9375rem;">Kulambiro Ring Road<br>Kampala, Uganda
+                        </p>
+                    </li>
+                    <li>
+                        <p style="color: var(--muted); font-size: 0.875rem;">Email</p>
+                        <p><a href="mailto:uwezo663@gmail.com" style="color: var(--primary);">uwezo663@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container"
+            style="padding-top: 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 0.875rem; flex-wrap: wrap-reverse; gap: 1.5rem; justify-content: center; text-align: center;">
+            <p>&copy; 2026 Uwezo Security Services Limited.</p>
+            <div style="display: flex; gap: 2rem;">
+                <a href="#">Security Audit</a>
+                <a href="#">Privacy Policy</a>
             </div>
         </div>
     </footer>
