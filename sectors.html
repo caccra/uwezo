@@ -39,12 +39,12 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="sub-header" style="background: linear-gradient(135deg, #02020a 0%, #050510 100%);">
+        <section class="sub-header">
             <div class="container reveal">
                 <div class="feature-badge">Vertical Expertise</div>
                 <h1 class="sub-title">Industry <span class="text-gradient">Sectors</span></h1>
                 <p
-                    style="font-size: 1.25rem; color: var(--muted); line-height: 1.8; max-width: 700px; margin-top: 1.5rem;">
+                    style="font-size: clamp(1.1rem, 3vw, 1.25rem); color: var(--muted); line-height: 1.8; max-width: 700px; margin-top: 1.5rem;">
                     Every industry faces unique security challenges. We deliver specialized protocols designed for the
                     specific risk profiles of your sector.
                 </p>
@@ -52,7 +52,7 @@
         </section>
 
         <!-- Sectors Bento Grid -->
-        <section style="padding: 100px 0;">
+        <section class="section-standard">
             <div class="container">
                 <div class="bento-grid">
                     <!-- Banking: Large -->
@@ -61,8 +61,7 @@
                         <h3 style="font-size: 2.5rem; margin-bottom: 1rem;">Banking & Finance</h3>
                         <p style="color: var(--text-gray); margin-bottom: 2rem;">Fortified protection for financial
                             institutions, vault guarding, and secure cash logistics.</p>
-                        <ul
-                            style="list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <ul class="grid-cols-3" style="list-style: none; padding: 0; gap: 1rem; margin-top: 2rem;">
                             <li style="font-size: 0.875rem; color: var(--muted);">✓ Armed CIT Escorts</li>
                             <li style="font-size: 0.875rem; color: var(--muted);">✓ Biometric Vault Access</li>
                             <li style="font-size: 0.875rem; color: var(--muted);">✓ ATM Response Units</li>
@@ -144,18 +143,19 @@
         </section>
 
         <!-- Dynamic CTA -->
-        <section style="padding: 100px 0;">
+        <section class="section-standard">
             <div class="container reveal">
                 <div class="glass"
-                    style="padding: 5rem 3rem; border-radius: var(--radius-lg); text-align: center; background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(3,2,19,0.3) 100%);">
-                    <h2 style="font-size: 3rem; margin-bottom: 1.5rem; font-family: var(--font-heading);">Bespoke <span
-                            class="text-gradient">Sector Solutions</span></h2>
+                    style="padding: clamp(2rem, 8vw, 5rem) clamp(1.25rem, 5vw, 3rem); border-radius: var(--radius-lg); text-align: center; background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(3,2,19,0.3) 100%);">
+                    <h2
+                        style="font-size: clamp(2.25rem, 5vw, 3rem); margin-bottom: 1.5rem; font-family: var(--font-heading);">
+                        Bespoke <span class="text-gradient">Sector Solutions</span></h2>
                     <p
-                        style="color: var(--muted); font-size: 1.25rem; margin-bottom: 3rem; max-width: 650px; margin-left: auto; margin-right: auto;">
+                        style="color: var(--muted); font-size: clamp(1rem, 3vw, 1.25rem); margin-bottom: 3rem; max-width: 650px; margin-left: auto; margin-right: auto;">
                         If your industry isn't listed, our tactical team can design a custom security protocol from the
                         ground up for your specific operational needs.
                     </p>
-                    <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                         <a href="contact.html" class="btn-primary btn-large">Schedule a Consultation</a>
                         <a href="services.html" class="btn-outline btn-large">View All Services</a>
                     </div>
@@ -173,10 +173,10 @@
                 </div>
                 <p style="color: var(--muted); line-height: 1.8; margin-bottom: 2.5rem; max-width: 350px;">
                     Uganda's choice for tactical security and professional guarding. Driven by integrity and mission
-                    success.
+                    success since 2019.
                 </p>
                 <div
-                    style="padding: 1.5rem; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                    style="padding: 1.5rem; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); border: 1px solid var(--border); display: inline-block; width: 100%; max-width: 300px;">
                     <p
                         style="font-size: 0.75rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; font-weight: 700;">
                         24/7 Response Unit</p>
@@ -196,7 +196,7 @@
             </div>
             <div class="footer-col">
                 <h4>Contact</h4>
-                <ul style="list-style: none; padding: 0;">
+                <ul>
                     <li style="margin-bottom: 1rem;">
                         <p style="color: var(--muted); font-size: 0.875rem;">Head Office</p>
                         <p style="color: var(--text-gray); font-size: 0.9375rem;">Kulambiro Ring Road<br>Kampala, Uganda
@@ -210,7 +210,7 @@
             </div>
         </div>
         <div class="container"
-            style="padding-top: 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 0.875rem; flex-wrap: wrap; gap: 1rem;">
+            style="padding-top: 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 0.875rem; flex-wrap: wrap-reverse; gap: 1.5rem; justify-content: center; text-align: center;">
             <p>&copy; 2026 Uwezo Security Services Limited. Uganda License No. 00663.</p>
             <div style="display: flex; gap: 2rem;">
                 <a href="#">Security Audit</a>

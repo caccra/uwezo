@@ -39,39 +39,44 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="sub-header">
+        <section class="sub-header section-standard">
             <div class="container reveal">
                 <div class="feature-badge">Tactical Communications</div>
                 <h1 class="sub-title">Secure <span class="text-gradient">Uplink</span></h1>
                 <p
-                    style="font-size: 1.25rem; color: var(--muted); line-height: 1.8; max-width: 700px; margin-top: 1.5rem;">
+                    style="font-size: clamp(1.1rem, 3vw, 1.25rem); color: var(--muted); line-height: 1.8; max-width: 700px; margin-top: 1.5rem;">
                     Immediate coordination for mission-critical security. Our command center is active 24/7/365.
                 </p>
             </div>
         </section>
 
-        <section style="padding: 100px 0;">
+        <section class="section-standard">
             <div class="container">
-                <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 5rem; align-items: start;">
+                <div class="grid-split" style="align-items: start;">
 
                     <!-- Contact Form: Premium Glass -->
-                    <div class="reveal">
-                        <h2 style="font-size: 2.5rem; margin-bottom: 2rem; font-family: var(--font-heading);">Mission
-                            <span class="text-blue">Inquiry</span></h2>
-                        <form class="glass" style="padding: 4rem; border-radius: var(--radius-lg);">
-                            <div
-                                style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+                    <div class="reveal grid-split-content">
+                        <h2
+                            style="font-size: clamp(2rem, 5vw, 2.5rem); margin-bottom: 2rem; font-family: var(--font-heading);">
+                            Mission
+                            <span class="text-blue">Inquiry</span>
+                        </h2>
+                        <form class="glass" style="padding: clamp(1.5rem, 5vw, 4rem); border-radius: var(--radius-lg);">
+                            <div class="grid-split"
+                                style="gap: 1.5rem; margin-bottom: 2rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
                                 <div>
                                     <label
                                         style="display: block; margin-bottom: 0.75rem; font-weight: 600; font-size: 0.875rem; color: var(--muted);">Full
                                         Name</label>
-                                    <input type="text" required class="form-input" placeholder="Operative Name">
+                                    <input type="text" required class="form-input" placeholder="Operative Name"
+                                        style="margin-bottom: 0;">
                                 </div>
                                 <div>
                                     <label
                                         style="display: block; margin-bottom: 0.75rem; font-weight: 600; font-size: 0.875rem; color: var(--muted);">Direct
                                         Dial</label>
-                                    <input type="tel" required class="form-input" placeholder="+256 000 000000">
+                                    <input type="tel" required class="form-input" placeholder="+256 000 000000"
+                                        style="margin-bottom: 0;">
                                 </div>
                             </div>
 
@@ -79,14 +84,15 @@
                                 <label
                                     style="display: block; margin-bottom: 0.75rem; font-weight: 600; font-size: 0.875rem; color: var(--muted);">Email
                                     Address</label>
-                                <input type="email" required class="form-input" placeholder="secure@org.com">
+                                <input type="email" required class="form-input" placeholder="secure@org.com"
+                                    style="margin-bottom: 0;">
                             </div>
 
                             <div style="margin-bottom: 2rem;">
                                 <label
                                     style="display: block; margin-bottom: 0.75rem; font-weight: 600; font-size: 0.875rem; color: var(--muted);">Objective
                                     Type</label>
-                                <select class="form-input">
+                                <select class="form-input" style="margin-bottom: 0;">
                                     <option>Corporate Guarding</option>
                                     <option>VIP Protection</option>
                                     <option>Tech Surveillance</option>
@@ -100,7 +106,8 @@
                                     style="display: block; margin-bottom: 0.75rem; font-weight: 600; font-size: 0.875rem; color: var(--muted);">Mission
                                     Brief</label>
                                 <textarea required class="form-input" rows="5"
-                                    placeholder="Outline your security requirements..."></textarea>
+                                    placeholder="Outline your security requirements..."
+                                    style="margin-bottom: 0;"></textarea>
                             </div>
 
                             <button type="submit" class="btn-primary"
@@ -109,16 +116,20 @@
                     </div>
 
                     <!-- Side Intel -->
-                    <div class="reveal delay-2">
-                        <h2 style="font-size: 2rem; margin-bottom: 2rem; font-family: var(--font-heading);">Command
-                            <span class="text-blue">Details</span></h2>
+                    <div class="reveal delay-2 grid-split-visual">
+                        <h2
+                            style="font-size: clamp(1.75rem, 4vw, 2rem); margin-bottom: 2rem; font-family: var(--font-heading);">
+                            Command
+                            <span class="text-blue">Details</span>
+                        </h2>
 
                         <!-- High Priority Hotlines -->
                         <div class="bento-item" style="border-color: var(--primary); margin-bottom: 2rem;">
                             <p
                                 style="color: var(--primary); font-weight: 800; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">
                                 24/7 Tactical Hotline</p>
-                            <p style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem;">+256 700 586 292</p>
+                            <p style="font-size: clamp(1.5rem, 5vw, 2rem); font-weight: 800; margin-bottom: 0.5rem;">
+                                +256 700 586 292</p>
                             <p style="color: var(--muted);">+256 772 732 688</p>
                         </div>
 
@@ -138,7 +149,8 @@
                         <!-- Digital Uplink -->
                         <div class="bento-item">
                             <h3 style="font-size: 1.25rem; margin-bottom: 1rem;">Digital Uplink</h3>
-                            <p style="color: var(--text-gray); font-size: 1.125rem; font-weight: 600;">
+                            <p
+                                style="color: var(--text-gray); font-size: clamp(1rem, 3vw, 1.125rem); font-weight: 600;">
                                 uwezo663@gmail.com</p>
                             <div style="margin-top: 2rem; opacity: 0.5;">
                                 <p style="font-size: 0.75rem; color: var(--muted);">Response SLA: Under 12 Hours</p>
@@ -159,10 +171,10 @@
                 </div>
                 <p style="color: var(--muted); line-height: 1.8; margin-bottom: 2.5rem; max-width: 350px;">
                     Uganda's choice for tactical security and professional guarding. Driven by integrity and mission
-                    success.
+                    success since 2019.
                 </p>
                 <div
-                    style="padding: 1.5rem; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                    style="padding: 1.5rem; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); border: 1px solid var(--border); display: inline-block; width: 100%; max-width: 300px;">
                     <p
                         style="font-size: 0.75rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; font-weight: 700;">
                         24/7 Response Unit</p>
@@ -182,7 +194,7 @@
             </div>
             <div class="footer-col">
                 <h4>Contact</h4>
-                <ul style="list-style: none; padding: 0;">
+                <ul>
                     <li style="margin-bottom: 1rem;">
                         <p style="color: var(--muted); font-size: 0.875rem;">Head Office</p>
                         <p style="color: var(--text-gray); font-size: 0.9375rem;">Kulambiro Ring Road<br>Kampala, Uganda
@@ -196,7 +208,7 @@
             </div>
         </div>
         <div class="container"
-            style="padding-top: 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 0.875rem; flex-wrap: wrap; gap: 1rem;">
+            style="padding-top: 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 0.875rem; flex-wrap: wrap-reverse; gap: 1.5rem; justify-content: center; text-align: center;">
             <p>&copy; 2026 Uwezo Security Services Limited. Uganda License No. 00663.</p>
             <div style="display: flex; gap: 2rem;">
                 <a href="#">Security Audit</a>

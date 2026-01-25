@@ -32,18 +32,18 @@
 
     <main>
         <!-- Hero Section -->
-        <section style="padding-top: 140px; padding-bottom: 80px; background: var(--card); text-align: center;">
+        <section class="sub-header">
             <div class="container">
                 <div style="max-width: 900px; margin: 0 auto;">
-                    <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; font-family: var(--font-heading);">Our <span
-                            class="text-blue">Services</span></h1>
-                    <p style="font-size: 1.25rem; color: var(--text-gray); line-height: 1.8;">Comprehensive security
+                    <h1 class="sub-title">Our <span class="text-gradient">Services</span></h1>
+                    <p style="font-size: clamp(1.1rem, 3vw, 1.25rem); color: var(--text-gray); line-height: 1.8;">
+                        Comprehensive security
                         solutions tailored to protect what matters most to you across Uganda.</p>
                 </div>
             </div>
         </section>
 
-        <section style="padding: 80px 0;">
+        <section class="section-standard">
             <div class="container">
                 <div class="grid-3">
                     <div class="service-card">
@@ -131,12 +131,15 @@
                 </div>
 
                 <div
-                    style="margin-top: 6rem; background: rgba(255,255,255,0.02); padding: 4rem; border-radius: var(--radius); border: 1px solid var(--border);">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-                        <img src="surveillance_tech.png" alt="Tech Setup"
-                            style="width: 100%; height: 300px; object-fit: cover; border-radius: var(--radius);">
-                        <div>
-                            <h2 style="font-size: 2.25rem; margin-bottom: 24px;">The Technical Edge.</h2>
+                    style="margin-top: 6rem; background: rgba(255,255,255,0.02); padding: clamp(1.5rem, 5vw, 4rem); border-radius: var(--radius); border: 1px solid var(--border);">
+                    <div class="grid-split">
+                        <div class="grid-split-visual">
+                            <img src="surveillance_tech.png" alt="Tech Setup"
+                                style="width: 100%; height: clamp(200px, 30vh, 300px); object-fit: cover; border-radius: var(--radius);">
+                        </div>
+                        <div class="grid-split-content">
+                            <h2 style="font-size: clamp(1.75rem, 4vw, 2.25rem); margin-bottom: 24px;">The Technical
+                                Edge.</h2>
                             <p style="color: var(--text-gray); font-size: 1.125rem;">We integrate GPS patrol
                                 synchronization and biometric access controls to ensure 100% mission success for every
                                 contract.</p>
@@ -150,47 +153,55 @@
     <footer>
         <div class="container footer-grid">
             <div class="footer-col">
-                <div class="logo-wrap" style="margin-bottom: 1.5rem;">
-                    <img src="logo_new.png" alt="Uwezo Logo" style="height: 32px;">
-                    <span class="logo-text">Uwezo Security</span>
+                <div class="logo-wrap" style="margin-bottom: 2rem;">
+                    <img src="logo_new.png" alt="Uwezo Logo" style="height: 48px;">
+                    <span class="logo-text" style="font-size: 1.5rem;">Uwezo Security</span>
                 </div>
-                <p style="color: var(--text-gray); font-size: 0.9375rem; line-height: 1.6; margin-bottom: 1.5rem;">
-                    Professional security solutions tailored to your needs across Uganda.</p>
-                <div style="margin-top: 1.5rem;">
-                    <p style="color: var(--muted); font-size: 0.875rem;"><strong>Get a Quote:</strong></p>
-                    <p style="color: var(--primary); font-size: 1.25rem; font-weight: 700; margin-top: 0.5rem;">+256 700
-                        586 292</p>
+                <p style="color: var(--muted); line-height: 1.8; margin-bottom: 2.5rem; max-width: 350px;">
+                    Uganda's choice for tactical security and professional guarding. Driven by integrity and mission
+                    success since 2019.
+                </p>
+                <div
+                    style="padding: 1.5rem; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); border: 1px solid var(--border); display: inline-block; width: 100%; max-width: 300px;">
+                    <p
+                        style="font-size: 0.75rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; font-weight: 700;">
+                        24/7 Response Unit</p>
+                    <p style="font-size: 1.5rem; font-weight: 800; color: white;">+256 700 586 292</p>
                 </div>
             </div>
             <div class="footer-col">
-                <h4>Quick Links</h4>
+                <h4>Services</h4>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">All Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="contact.html">Request Quote</a></li>
+                    <li><a href="service-guards.html">Armed & Unarmed Guards</a></li>
+                    <li><a href="service-corporate.html">Corporate Security</a></li>
+                    <li><a href="service-residential.html">Residential Protection</a></li>
+                    <li><a href="service-event.html">Event Management</a></li>
+                    <li><a href="service-vip.html">VIP Protection</a></li>
+                    <li><a href="service-cctv.html">CCTV Surveillance</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Get in Touch</h4>
-                <ul style="list-style: none; padding: 0;">
+                <h4>Contact</h4>
+                <ul>
                     <li style="margin-bottom: 1rem;">
-                        <p style="color: var(--text-gray); font-size: 0.9375rem;">Kulambiro Ring Road, Sembuto
-                            Road<br>Kampala, Uganda</p>
-                    </li>
-                    <li style="margin-bottom: 1rem;">
-                        <p style="color: var(--text-gray); font-size: 0.9375rem;">+256 772 732 688</p>
+                        <p style="color: var(--muted); font-size: 0.875rem;">Head Office</p>
+                        <p style="color: var(--text-gray); font-size: 0.9375rem;">Kulambiro Ring Road<br>Kampala, Uganda
+                        </p>
                     </li>
                     <li>
+                        <p style="color: var(--muted); font-size: 0.875rem;">Email</p>
                         <p><a href="mailto:uwezo663@gmail.com" style="color: var(--primary);">uwezo663@gmail.com</a></p>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="container" style="padding-top: 2rem; border-top: 1px solid var(--border); text-align: center;">
-            <p style="color: var(--muted); font-size: 0.875rem;">&copy; 2026 Uwezo Security Services Limited. Licensed
-                Security Provider in Uganda.</p>
+        <div class="container"
+            style="padding-top: 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 0.875rem; flex-wrap: wrap-reverse; gap: 1.5rem; justify-content: center; text-align: center;">
+            <p>&copy; 2026 Uwezo Security Services Limited. Uganda License No. 00663.</p>
+            <div style="display: flex; gap: 2rem;">
+                <a href="#">Security Audit</a>
+                <a href="#">Privacy Policy</a>
+            </div>
         </div>
     </footer>
 

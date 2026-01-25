@@ -4,8 +4,11 @@ const navLinks = document.getElementById('navLinks');
 
 if (mobileToggle && navLinks) {
     mobileToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        mobileToggle.innerText = navLinks.classList.contains('active') ? '✕' : '☰';
+        const isActive = navLinks.classList.toggle('active');
+        mobileToggle.innerText = isActive ? '✕' : '☰';
+
+        // Prevent body scroll when menu is open
+        document.body.style.overflow = isActive ? 'hidden' : '';
     });
 
     // Close menu when clicking links
@@ -13,6 +16,7 @@ if (mobileToggle && navLinks) {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
             mobileToggle.innerText = '☰';
+            document.body.style.overflow = '';
         });
     });
 }

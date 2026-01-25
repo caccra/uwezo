@@ -32,24 +32,26 @@
 
     <main>
         <!-- Hero Section -->
-        <section style="padding-top: 140px; padding-bottom: 80px; background: var(--card); text-align: center;">
+        <section class="sub-header">
             <div class="container">
                 <div style="max-width: 900px; margin: 0 auto;">
-                    <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; font-family: var(--font-heading);">About <span
-                            class="text-blue">Uwezo Security</span></h1>
-                    <p style="font-size: 1.25rem; color: var(--text-gray); line-height: 1.8;">Uganda's premier security
+                    <h1 class="sub-title">About <span class="text-gradient">Uwezo Security</span></h1>
+                    <p style="font-size: clamp(1.1rem, 3vw, 1.25rem); color: var(--text-gray); line-height: 1.8;">
+                        Uganda's premier security
                         services provider, delivering professional protection solutions with integrity, vigilance, and
-                        unwavering commitment to safety since 2019.</p>
+                        unwavering commitment to safety.</p>
                 </div>
             </div>
         </section>
 
         <!-- Company Story -->
-        <section style="background: var(--card); padding: 80px 0;">
+        <section class="section-standard" style="background: var(--card);">
             <div class="container">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;">
-                    <div>
-                        <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; font-family: var(--font-heading);">Our
+                <div class="grid-split">
+                    <div class="grid-split-content">
+                        <h2
+                            style="font-size: clamp(2rem, 5vw, 2.5rem); margin-bottom: 1.5rem; font-family: var(--font-heading);">
+                            Our
                             Story</h2>
                         <p
                             style="color: var(--text-gray); margin-bottom: 1.5rem; font-size: 1.125rem; line-height: 1.8;">
@@ -64,40 +66,35 @@
                             country. Our team of over 1,200 trained security professionals delivers round-the-clock
                             protection with professionalism and dedication.
                         </p>
-                        <p style="color: var(--text-gray); font-size: 1.125rem; line-height: 1.8;">
-                            We combine traditional security expertise with modern technology, offering comprehensive
-                            solutions that include armed and unarmed guards, CCTV surveillance, event security, and VIP
-                            protection services.
-                        </p>
                     </div>
-                    <div
+                    <div class="grid-split-visual"
                         style="border-radius: var(--radius); overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
                         <img src="guarding_official.jpg" alt="Uwezo Security Team"
-                            style="width: 100%; height: 500px; object-fit: cover;">
+                            style="width: 100%; height: clamp(300px, 50vh, 500px); object-fit: cover;">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Mission & Vision -->
-        <section style="padding: 80px 0;">
+        <section class="section-standard">
             <div class="container">
-                <div class="grid-3" style="gap: 3rem;">
-                    <div class="service-card" style="text-align: center; padding: 3rem;">
+                <div class="grid-3">
+                    <div class="service-card glass-card" style="text-align: center;">
                         <div style="font-size: 3rem; margin-bottom: 1.5rem;">🎯</div>
                         <h3 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.5rem;">Our Mission</h3>
                         <p style="color: var(--text-gray); line-height: 1.8;">To provide exceptional security services
                             that protect lives, property, and assets while maintaining the highest standards of
                             professionalism and integrity.</p>
                     </div>
-                    <div class="service-card" style="text-align: center; padding: 3rem;">
+                    <div class="service-card glass-card" style="text-align: center;">
                         <div style="font-size: 3rem; margin-bottom: 1.5rem;">👁️</div>
                         <h3 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.5rem;">Our Vision</h3>
                         <p style="color: var(--text-gray); line-height: 1.8;">To be Uganda's leading security services
                             provider, recognized for innovation, reliability, and unwavering commitment to client safety
                             and satisfaction.</p>
                     </div>
-                    <div class="service-card" style="text-align: center; padding: 3rem;">
+                    <div class="service-card glass-card" style="text-align: center;">
                         <div style="font-size: 3rem; margin-bottom: 1.5rem;">⭐</div>
                         <h3 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.5rem;">Our Values</h3>
                         <p style="color: var(--text-gray); line-height: 1.8;">Integrity, vigilance, professionalism, and
@@ -109,10 +106,12 @@
         </section>
 
         <!-- Core Values -->
-        <section style="background: var(--card); padding: 80px 0;">
+        <section class="section-standard" style="background: var(--card);">
             <div class="container">
                 <div style="text-align: center; margin-bottom: 4rem;">
-                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem; font-family: var(--font-heading);">What Sets Us
+                    <h2
+                        style="font-size: clamp(2rem, 5vw, 2.5rem); margin-bottom: 1rem; font-family: var(--font-heading);">
+                        What Sets Us
                         Apart</h2>
                     <p style="color: var(--text-gray); font-size: 1.125rem; max-width: 700px; margin: 0 auto;">Our
                         commitment to excellence is built on these fundamental principles</p>
@@ -179,10 +178,10 @@
                 </div>
                 <p style="color: var(--muted); line-height: 1.8; margin-bottom: 2.5rem; max-width: 350px;">
                     Uganda's choice for tactical security and professional guarding. Driven by integrity and mission
-                    success.
+                    success since 2019.
                 </p>
                 <div
-                    style="padding: 1.5rem; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); border: 1px solid var(--border);">
+                    style="padding: 1.5rem; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); border: 1px solid var(--border); display: inline-block; width: 100%; max-width: 300px;">
                     <p
                         style="font-size: 0.75rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; font-weight: 700;">
                         24/7 Response Unit</p>
@@ -202,7 +201,7 @@
             </div>
             <div class="footer-col">
                 <h4>Contact</h4>
-                <ul style="list-style: none; padding: 0;">
+                <ul>
                     <li style="margin-bottom: 1rem;">
                         <p style="color: var(--muted); font-size: 0.875rem;">Head Office</p>
                         <p style="color: var(--text-gray); font-size: 0.9375rem;">Kulambiro Ring Road<br>Kampala, Uganda
@@ -216,7 +215,7 @@
             </div>
         </div>
         <div class="container"
-            style="padding-top: 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 0.875rem; flex-wrap: wrap; gap: 1rem;">
+            style="padding-top: 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 0.875rem; flex-wrap: wrap-reverse; gap: 1.5rem; justify-content: center; text-align: center;">
             <p>&copy; 2026 Uwezo Security Services Limited. Uganda License No. 00663.</p>
             <div style="display: flex; gap: 2rem;">
                 <a href="#">Security Audit</a>
