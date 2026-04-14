@@ -11,7 +11,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700&display=swap"
         rel="stylesheet">
 </head>
 
@@ -19,19 +19,19 @@
 
     <header class="glass">
         <div class="container nav-content">
-            <a href="index.html" class="logo-wrap">
+            <a href="/" class="logo-wrap">
                 <img src="logo_new.png" alt="Uwezo Security Official Logo">
                 <span class="logo-text">Uwezo Security</span>
             </a>
             <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">☰</button>
             <nav>
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="sectors.html" class="active">Sectors</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="contact.html" class="btn-primary">Secure Now</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/sectors" class="active">Sectors</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/contact" class="btn-primary">Secure Now</a></li>
                 </ul>
             </nav>
         </div>
@@ -39,7 +39,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="sub-header">
+        <section class="sub-header" style="background-image: url('images/istockphoto-1567440154-612x612.jpg'); background-size: cover; background-position: center top;">
             <div class="container reveal">
                 <div class="feature-badge">Vertical Expertise</div>
                 <h1 class="sub-title">Industry <span class="text-gradient">Sectors</span></h1>
@@ -67,20 +67,20 @@
                             <li style="font-size: 0.875rem; color: var(--muted);">✓ ATM Response Units</li>
                             <li style="font-size: 0.875rem; color: var(--muted);">✓ 24/7 Branch Guarding</li>
                         </ul>
-                        <div
-                            style="font-size: 6rem; position: absolute; bottom: -1rem; right: -1rem; opacity: 0.1; transform: rotate(-15deg);">
-                            🏦</div>
+                        <img src="images/anne-nygard-jORjvhaUX40-unsplash.jpg" alt="Banking & Finance Security"
+                            style="width: 100%; margin-top: 2rem; border-radius: var(--radius-sm); object-fit: cover; height: 180px; filter: brightness(0.6);">
                     </div>
 
                     <!-- Manufacturing: Medium -->
                     <div class="bento-item medium reveal delay-1">
-                        <div style="display: flex; justify-content: space-between;">
+                        <div style="display: flex; justify-content: space-between; gap: 1rem;">
                             <div>
                                 <h3 style="font-size: 1.75rem; margin-bottom: 0.75rem;">Industrial & Logistics</h3>
                                 <p style="color: var(--text-gray); font-size: 0.9375rem; max-width: 300px;">Protecting
                                     supply chains, warehouses, and factories from theft and sabotage.</p>
                             </div>
-                            <span style="font-size: 3rem;">🏭</span>
+                            <img src="images/jonny-caspari-1je5j4aN2RI-unsplash.jpg" alt="Industrial Security"
+                                style="width: 100px; height: 80px; object-fit: cover; border-radius: var(--radius-sm); flex-shrink: 0; filter: brightness(0.7);">
                         </div>
                         <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
                             <span class="feature-badge"
@@ -96,47 +96,56 @@
                     </div>
 
                     <!-- Residential: Small -->
-                    <div class="bento-item reveal delay-2">
-                        <span style="font-size: 2rem; margin-bottom: 1rem; display: block;">🏘️</span>
-                        <h3 style="margin-bottom: 0.5rem;">Residential</h3>
-                        <p style="color: var(--muted); font-size: 0.875rem;">Elite protection for gated communities and
-                            private estates across Kampala.</p>
+                    <div class="bento-item reveal delay-2" style="padding: 0; overflow: hidden; position: relative;">
+                        <img src="images/gerson-repreza-CepDpEiALqM-unsplash.jpg" alt="Residential Security"
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; min-height: 260px; filter: brightness(0.5);">
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);">
+                            <h3 style="margin-bottom: 0.4rem;">Residential</h3>
+                            <p style="color: var(--muted); font-size: 0.875rem;">Elite protection for gated communities and private estates across Kampala.</p>
+                        </div>
                     </div>
 
                     <!-- Diplomatic: Small -->
-                    <div class="bento-item reveal delay-3">
-                        <span style="font-size: 2rem; margin-bottom: 1rem; display: block;">⚖️</span>
-                        <h3 style="margin-bottom: 0.5rem;">Diplomatic</h3>
-                        <p style="color: var(--muted); font-size: 0.875rem;">Discreet and high-level security for
-                            embassies and international NGOs.</p>
+                    <div class="bento-item reveal delay-3" style="padding: 0; overflow: hidden; position: relative;">
+                        <img src="images/design-hills-hfI0pr6g4yw-unsplash.jpg" alt="Diplomatic Security"
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; min-height: 260px; filter: brightness(0.5);">
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);">
+                            <h3 style="margin-bottom: 0.4rem;">Diplomatic</h3>
+                            <p style="color: var(--muted); font-size: 0.875rem;">Discreet and high-level security for embassies and international NGOs.</p>
+                        </div>
                     </div>
 
                     <!-- Commercial: Medium -->
                     <div class="bento-item medium reveal delay-1">
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; justify-content: space-between; gap: 1rem; align-items: center;">
                             <div>
                                 <h3 style="font-size: 1.75rem; margin-bottom: 0.75rem;">Commercial Real Estate</h3>
                                 <p style="color: var(--text-gray); font-size: 0.9375rem;">Concierge-level security for
                                     office buildings and shopping malls.</p>
                             </div>
-                            <span style="font-size: 3rem;">🏢</span>
+                            <img src="images/kevin-matos-Nl_FMFpXo2g-unsplash.jpg" alt="Commercial Real Estate Security"
+                                style="width: 100px; height: 80px; object-fit: cover; border-radius: var(--radius-sm); flex-shrink: 0; filter: brightness(0.7);">
                         </div>
                     </div>
 
                     <!-- Construction: Small -->
-                    <div class="bento-item reveal delay-2">
-                        <span style="font-size: 2rem; margin-bottom: 1rem; display: block;">🏗️</span>
-                        <h3 style="margin-bottom: 0.5rem;">Construction</h3>
-                        <p style="color: var(--muted); font-size: 0.875rem;">Safeguarding equipment and high-value
-                            materials on-site.</p>
+                    <div class="bento-item reveal delay-2" style="padding: 0; overflow: hidden; position: relative;">
+                        <img src="images/glenov-brankovic-6CT4cYdSNaI-unsplash.jpg" alt="Construction Security"
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; min-height: 260px; filter: brightness(0.5);">
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);">
+                            <h3 style="margin-bottom: 0.4rem;">Construction</h3>
+                            <p style="color: var(--muted); font-size: 0.875rem;">Safeguarding equipment and high-value materials on-site.</p>
+                        </div>
                     </div>
 
                     <!-- Education: Small -->
-                    <div class="bento-item reveal delay-3">
-                        <span style="font-size: 2rem; margin-bottom: 1rem; display: block;">🏫</span>
-                        <h3 style="margin-bottom: 0.5rem;">Educational</h3>
-                        <p style="color: var(--muted); font-size: 0.875rem;">Safe campuses for schools and universities
-                            through diligent guarding.</p>
+                    <div class="bento-item reveal delay-3" style="padding: 0; overflow: hidden; position: relative;">
+                        <img src="images/zachary-keimig-s8ZTEbJNN7E-unsplash.jpg" alt="Educational Security"
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; min-height: 260px; filter: brightness(0.5);">
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);">
+                            <h3 style="margin-bottom: 0.4rem;">Educational</h3>
+                            <p style="color: var(--muted); font-size: 0.875rem;">Safe campuses for schools and universities through diligent guarding.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -156,8 +165,8 @@
                         ground up for your specific operational needs.
                     </p>
                     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                        <a href="contact.html" class="btn-primary btn-large">Schedule a Consultation</a>
-                        <a href="services.html" class="btn-outline btn-large">View All Services</a>
+                        <a href="/contact" class="btn-primary btn-large">Schedule a Consultation</a>
+                        <a href="/services" class="btn-outline btn-large">View All Services</a>
                     </div>
                 </div>
             </div>
@@ -188,12 +197,12 @@
             <div class="footer-col">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="service-guards.html">Armed & Unarmed Guards</a></li>
-                    <li><a href="service-corporate.html">Corporate Security</a></li>
-                    <li><a href="service-residential.html">Residential Protection</a></li>
-                    <li><a href="service-event.html">Event Management</a></li>
-                    <li><a href="service-vip.html">VIP Protection</a></li>
-                    <li><a href="service-cctv.html">CCTV Surveillance</a></li>
+                    <li><a href="/service-guards">Armed & Unarmed Guards</a></li>
+                    <li><a href="/service-corporate">Corporate Security</a></li>
+                    <li><a href="/service-residential">Residential Protection</a></li>
+                    <li><a href="/service-event">Event Management</a></li>
+                    <li><a href="/service-vip">VIP Protection</a></li>
+                    <li><a href="/service-cctv">CCTV Surveillance</a></li>
                 </ul>
             </div>
             <div class="footer-col">

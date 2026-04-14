@@ -1,0 +1,68 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/services"
+  to = "/services.html"
+  status = 200
+
+[[redirects]]
+  from = "/sectors"
+  to = "/sectors.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/service-guards"
+  to = "/service-guards.html"
+  status = 200
+
+[[redirects]]
+  from = "/service-corporate"
+  to = "/service-corporate.html"
+  status = 200
+
+[[redirects]]
+  from = "/service-residential"
+  to = "/service-residential.html"
+  status = 200
+
+[[redirects]]
+  from = "/service-event"
+  to = "/service-event.html"
+  status = 200
+
+[[redirects]]
+  from = "/service-vip"
+  to = "/service-vip.html"
+  status = 200
+
+[[redirects]]
+  from = "/service-cctv"
+  to = "/service-cctv.html"
+  status = 200
+
+[[redirects]]
+  from = "/service-cit"
+  to = "/service-cit.html"
+  status = 200
+
+[[redirects]]
+  from = "/service-investigation"
+  to = "/service-investigation.html"
+  status = 200
+
+[[redirects]]
+  from = "/service-training"
+  to = "/service-training.html"
+  status = 200

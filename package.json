@@ -1,0 +1,27 @@
+{
+  "name": "uwezo-security-landing",
+  "version": "1.0.0",
+  "description": "Official marketing website for **Uwezo Security Services Limited**, a licensed tactical security provider based in Kampala, Uganda.",
+  "main": "theme.js",
+  "scripts": {
+    "build": "node build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caccra/uwezo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/caccra/uwezo/issues"
+  },
+  "homepage": "https://github.com/caccra/uwezo#readme",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "html-minifier-terser": "^7.2.0",
+    "terser": "^5.46.1"
+  }
+}

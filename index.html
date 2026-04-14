@@ -14,7 +14,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="index.css">
@@ -22,24 +22,23 @@
 
 <body>
 
-    <!-- 1. NAVIGATION -->
+<!-- 1. NAVIGATION -->
     <header class="glass">
         <div class="container nav-content">
-            <a href="index.html" class="logo-wrap" aria-label="Uwezo Security Home">
+            <a href="/" class="logo-wrap" aria-label="Uwezo Security Home">
                 <img src="logo_new.png" alt="Official Uwezo Security Logo">
-                <span class="logo-text">Uwezo Security</span>
             </a>
 
             <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">☰</button>
 
             <nav id="nav">
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="sectors.html">Sectors</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="contact.html" class="btn-primary">Get a Security Quote</a></li>
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/sectors">Sectors</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/contact" class="btn-primary">Get a Security Quote</a></li>
                 </ul>
             </nav>
         </div>
@@ -51,19 +50,13 @@
             <div class="hero-slider">
                 <div class="hero-slide active" style="background-image: url('images/slider1.jpg');"></div>
                 <div class="hero-slide" style="background-image: url('images/uwezo-security services.jpg');"></div>
-                <div class="hero-slide" style="background-image: url('images/UWEZO slider.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('images/istockphoto-1316755912-612x612.jpg');"></div>
             </div>
             <div class="hero-overlay"></div>
 
             <div class="container" style="position: relative; z-index: 10;">
                 <div class="hero-content reveal on">
-                    <div class="feature-badge" style="background: rgba(0, 91, 150, 0.2); backdrop-filter: blur(4px);">
-                        <span>🛡️</span>
-                        <span style="color: white; font-weight: 500;">Official Licensed Security Provider in
-                            Uganda</span>
-                    </div>
-
-                    <div class="hero-slide-text active">
+<div class="hero-slide-text active">
                         <h1 class="hero-title">
                             Elite Tactical <br>
                             <span class="text-gradient">Security & Protection</span>
@@ -96,7 +89,7 @@
                     </div>
 
                     <div class="hero-actions">
-                        <a href="contact.html" class="btn-primary btn-large">Inquire for Protection</a>
+                        <a href="/contact" class="btn-primary btn-large">Inquire for Protection</a>
                         <a href="#about-summary" class="btn-outline btn-large">Mission Brief</a>
                     </div>
                 </div>
@@ -107,37 +100,99 @@
 
 
 
-        <!-- 5. ABOUT SUMMARY: THE HUMAN ELEMENT -->
-        <section id="about-summary" class="section-standard">
+        <!-- STATS BAR -->
+        <section class="stats-bar">
             <div class="container">
-                <div class="grid-split">
-                    <div class="reveal grid-split-content">
-                        <div class="feature-badge">The Uwezo standard</div>
-                        <h2
-                            style="font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1.1; margin-bottom: 2rem; font-family: var(--font-heading);">
-                            Security Grounded in <br><span class="text-gradient">Vigilance & Integrity</span>
-                        </h2>
-                        <p style="color: var(--text-gray); font-size: 1.15rem; margin-bottom: 2rem; line-height: 1.8;">
-                            Formed in 2019, Uwezo Security addresses the critical need for elite protection in Uganda.
-                            Our mission is to safeguard your assets, interests, and peace of mind with professionalism
-                            and tactical excellence.
-                        </p>
-                        <p style="color: var(--muted); margin-bottom: 2.5rem;">
-                            Unlike generic security firms, we prioritize continuous training, rigorous vetting, and the
-                            integration of modern intelligence systems.
-                        </p>
-                        <a href="about.html" class="btn-outline btn-large">Our Commitment &rarr;</a>
+                <div class="stats-grid">
+                    <div class="stat-item reveal">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Clients Protected</span>
                     </div>
-                    <div class="reveal delay-1 grid-split-visual" style="position: relative;">
-                        <img src="images/uwezo-security services.jpg" alt="Uwezo Security Personnel"
-                            style="width: 100%; border-radius: var(--radius-lg); object-fit: cover; filter: saturate(0.9) brightness(0.9);">
-                        <div class="glass"
-                            style="position: absolute; bottom: 2rem; left: 1rem; right: 1rem; padding: 1.5rem; border-radius: var(--radius); border-left: 4px solid var(--primary);">
-                            <p style="font-weight: 800; font-size: 1.25rem; color: white;">Vigilance First</p>
-                            <p style="color: var(--muted); font-size: 0.875rem;">Training excellence for mission
-                                success.</p>
+                    <div class="stat-item reveal delay-1">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Guards Deployed</span>
+                    </div>
+                    <div class="stat-item reveal delay-2">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Years of Excellence</span>
+                    </div>
+                    <div class="stat-item reveal delay-3">
+                        <span class="stat-number">&lt;8 min</span>
+                        <span class="stat-label">Avg. Response Time</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. SECTORS SUMMARY: WHO WE SERVE -->
+        <section id="sectors-summary" class="section-standard">
+            <div class="container reveal">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5rem; flex-wrap: wrap; gap: 2rem;">
+                    <div style="max-width: 600px;">
+                        <div class="feature-badge">Sector Resilience</div>
+                        <h2 style="font-size: clamp(2.5rem, 5vw, 3rem); font-family: var(--font-heading);">Bespoke <span
+                                class="text-gradient">Industry Expertise</span></h2>
+                        <p style="color: var(--muted); margin-top: 1rem;">Custom-tailored security protocols for every
+                            major industry in Uganda.</p>
+                    </div>
+                    <a href="/sectors" class="btn-outline btn-large">View All Industries &rarr;</a>
+                </div>
+                <div class="sector-grid">
+                    <a href="/sectors" class="sector-card bento-item" style="padding: 0; overflow: hidden; position: relative; min-height: 240px;">
+                        <img src="images/anne-nygard-jORjvhaUX40-unsplash.jpg" alt="Banking Security"
+                            style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.45);">
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.25rem; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);">
+                            <h4 style="margin-bottom: 0.3rem;">Banking</h4>
+                            <p style="font-size: 0.8rem; color: var(--muted); margin-bottom: 0.6rem;">Vault security, branch guarding, and cash-in-transit for financial institutions.</p>
+                            <span class="sector-link">Explore &rarr;</span>
                         </div>
-                    </div>
+                    </a>
+                    <a href="/sectors" class="sector-card bento-item" style="padding: 0; overflow: hidden; position: relative; min-height: 240px;">
+                        <img src="images/eesofuffzich-bGMyTnSlYvE-unsplash.jpg" alt="Industrial Security"
+                            style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.45);">
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.25rem; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);">
+                            <h4 style="margin-bottom: 0.3rem;">Industrial</h4>
+                            <p style="font-size: 0.8rem; color: var(--muted); margin-bottom: 0.6rem;">Perimeter patrols, access control, and asset protection for factories and warehouses.</p>
+                            <span class="sector-link">Explore &rarr;</span>
+                        </div>
+                    </a>
+                    <a href="/sectors" class="sector-card bento-item" style="padding: 0; overflow: hidden; position: relative; min-height: 240px;">
+                        <img src="images/gerson-repreza-CepDpEiALqM-unsplash.jpg" alt="Residential Security"
+                            style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.45);">
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.25rem; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);">
+                            <h4 style="margin-bottom: 0.3rem;">Residential</h4>
+                            <p style="font-size: 0.8rem; color: var(--muted); margin-bottom: 0.6rem;">24/7 mobile patrols and static guards for gated communities and private estates.</p>
+                            <span class="sector-link">Explore &rarr;</span>
+                        </div>
+                    </a>
+                    <a href="/sectors" class="sector-card bento-item" style="padding: 0; overflow: hidden; position: relative; min-height: 240px;">
+                        <img src="images/kevin-matos-Nl_FMFpXo2g-unsplash.jpg" alt="Diplomatic Security"
+                            style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.45);">
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.25rem; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);">
+                            <h4 style="margin-bottom: 0.3rem;">Diplomatic</h4>
+                            <p style="font-size: 0.8rem; color: var(--muted); margin-bottom: 0.6rem;">Discreet, protocol-aware protection for embassies and diplomatic missions.</p>
+                            <span class="sector-link">Explore &rarr;</span>
+                        </div>
+                    </a>
+                    <a href="/sectors" class="sector-card bento-item" style="padding: 0; overflow: hidden; position: relative; min-height: 240px;">
+                        <img src="images/kasongo-bulobo-kw-234Tz-Nc-unsplash.jpg" alt="Intelligence Services"
+                            style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; filter: brightness(0.45);">
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.25rem; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);">
+                            <h4 style="margin-bottom: 0.3rem;">Intelligence</h4>
+                            <p style="font-size: 0.8rem; color: var(--muted); margin-bottom: 0.6rem;">Private investigations, threat assessments, and corporate counter-intelligence.</p>
+                            <span class="sector-link">Explore &rarr;</span>
+                        </div>
+                    </a>
+                    <a href="/sectors" class="sector-card bento-item" style="padding: 0; overflow: hidden; position: relative; min-height: 240px;">
+                        <img src="images/zachary-keimig-s8ZTEbJNN7E-unsplash.jpg" alt="Security Training"
+                            style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.45);">
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.25rem; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);">
+                            <h4 style="margin-bottom: 0.3rem;">Training</h4>
+                            <p style="font-size: 0.8rem; color: var(--muted); margin-bottom: 0.6rem;">Certified security training programs for personnel and organizations.</p>
+                            <span class="sector-link">Explore &rarr;</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -161,18 +216,21 @@
                         <h3 style="font-size: 2.5rem; margin-bottom: 1rem;">Tactical Guarding</h3>
                         <p style="color: var(--text-gray); margin-bottom: 2rem;">Professional armed and unarmed units
                             vetted to national security standards for critical asset protection.</p>
-                        <a href="service-guards.html" style="color: var(--primary); font-weight: 600;">View Unit Details
+                        <a href="/service-guards" style="color: var(--primary); font-weight: 600;">View Unit Details
                             &rarr;</a>
                         <img src="images/istockphoto-1264671187-612x612.jpg" alt="Guarding Service"
                             style="width: 100%; margin-top: 2rem; border-radius: var(--radius-sm); object-fit: cover; filter: brightness(0.6);">
                     </div>
 
-                    <div class="bento-item medium reveal delay-1">
-                        <h3 style="font-size: 1.75rem; margin-bottom: 0.75rem;">Advanced Surveillance</h3>
-                        <p style="color: var(--muted); margin-bottom: 1.5rem;">AI-powered CCTV monitoring synchronized
-                            with rapid response units in Kampala.</p>
-                        <a href="service-cctv.html" class="btn-outline"
-                            style="padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem;">View Tech Stack</a>
+                    <div class="bento-item medium reveal delay-1" style="padding: 0; overflow: hidden; position: relative;">
+                        <img src="images/uwezo security camera surveilence.jpg" alt="Advanced Surveillance Command Centre"
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; min-height: 280px; filter: brightness(0.5);">
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.75rem; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);">
+                            <h3 style="font-size: 1.75rem; margin-bottom: 0.75rem;">Advanced Surveillance</h3>
+                            <p style="color: var(--muted); margin-bottom: 1.5rem;">AI-powered CCTV monitoring synchronized with rapid response units in Kampala.</p>
+                            <a href="/service-cctv" class="btn-outline"
+                                style="padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem;">View Tech Stack</a>
+                        </div>
                     </div>
 
                     <div class="bento-item reveal delay-2 hide-mobile" style="padding: 0; overflow: hidden; position: relative;">
@@ -181,7 +239,7 @@
                         <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);">
                             <h3 style="margin-bottom: 0.4rem; font-size: 1.2rem;">VIP Protection</h3>
                             <p style="color: var(--muted); font-size: 0.8rem; margin-bottom: 0.75rem;">Elite close protection for executives and diplomatic staff.</p>
-                            <a href="service-vip.html"
+                            <a href="/service-vip"
                                 style="color: var(--primary); font-weight: 600; font-size: 0.9rem;">Inquire &rarr;</a>
                         </div>
                     </div>
@@ -192,72 +250,132 @@
                         <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);">
                             <h3 style="margin-bottom: 0.4rem; font-size: 1.2rem;">CIT Logistics</h3>
                             <p style="color: var(--muted); font-size: 0.8rem; margin-bottom: 0.75rem;">Insured, secure transport for cash and high-value bullion.</p>
-                            <a href="service-cit.html"
+                            <a href="/service-cit"
                                 style="color: var(--primary); font-weight: 600; font-size: 0.9rem;">Explore &rarr;</a>
                         </div>
                     </div>
                 </div>
                 <div style="text-align: center; margin-top: 5rem;">
-                    <a href="services.html" class="btn-primary btn-large">Browse All Protection Services</a>
+                    <a href="/services" class="btn-primary btn-large">Browse All Protection Services</a>
                 </div>
             </div>
         </section>
 
-        <!-- 7. SECTORS SUMMARY: WHO WE SERVE -->
-        <section id="sectors-summary" class="section-standard">
-            <div class="container reveal">
-                <div
-                    style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5rem; flex-wrap: wrap; gap: 2rem;">
-                    <div style="max-width: 600px;">
-                        <div class="feature-badge">Sector Resilience</div>
-                        <h2 style="font-size: clamp(2.5rem, 5vw, 3rem); font-family: var(--font-heading);">Bespoke <span
-                                class="text-gradient">Industry Expertise</span></h2>
-                        <p style="color: var(--muted); margin-top: 1rem;">Custom-tailored security protocols for every
-                            major industry in Uganda.</p>
+        <!-- 5. ABOUT SUMMARY: THE HUMAN ELEMENT -->
+        <section id="about-summary" class="section-standard">
+            <div class="container">
+                <div class="grid-split">
+                    <div class="reveal grid-split-content">
+                        <div class="feature-badge">The Uwezo standard</div>
+                        <h2
+                            style="font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1.1; margin-bottom: 2rem; font-family: var(--font-heading);">
+                            Security Grounded in <br><span class="text-gradient">Vigilance & Integrity</span>
+                        </h2>
+                        <p style="color: var(--text-gray); font-size: 1.15rem; margin-bottom: 2rem; line-height: 1.8;">
+                            Formed in 2019, Uwezo Security addresses the critical need for elite protection in Uganda.
+                            Our mission is to safeguard your assets, interests, and peace of mind with professionalism
+                            and tactical excellence.
+                        </p>
+                        <p style="color: var(--muted); margin-bottom: 2.5rem;">
+                            Unlike generic security firms, we prioritize continuous training, rigorous vetting, and the
+                            integration of modern intelligence systems.
+                        </p>
+                        <a href="/about" class="btn-outline btn-large">Our Commitment &rarr;</a>
                     </div>
-                    <a href="sectors.html" class="btn-outline btn-large">View All Industries &rarr;</a>
-                </div>
-
-                <div class="sector-grid">
-                    <a href="sectors.html" class="sector-card bento-item">
-                        <span class="sector-icon">🏦</span>
-                        <h4>Banking</h4>
-                        <p>Vault security, branch guarding, and cash-in-transit for financial institutions.</p>
-                        <span class="sector-link">Explore &rarr;</span>
-                    </a>
-                    <a href="sectors.html" class="sector-card bento-item">
-                        <span class="sector-icon">🏭</span>
-                        <h4>Industrial</h4>
-                        <p>Perimeter patrols, access control, and asset protection for factories and warehouses.</p>
-                        <span class="sector-link">Explore &rarr;</span>
-                    </a>
-                    <a href="sectors.html" class="sector-card bento-item">
-                        <span class="sector-icon">🏘️</span>
-                        <h4>Residential</h4>
-                        <p>24/7 mobile patrols and static guards for gated communities and private estates.</p>
-                        <span class="sector-link">Explore &rarr;</span>
-                    </a>
-                    <a href="sectors.html" class="sector-card bento-item">
-                        <span class="sector-icon">⚖️</span>
-                        <h4>Diplomatic</h4>
-                        <p>Discreet, protocol-aware protection for embassies and diplomatic missions.</p>
-                        <span class="sector-link">Explore &rarr;</span>
-                    </a>
-                    <a href="sectors.html" class="sector-card bento-item">
-                        <span class="sector-icon">🔍</span>
-                        <h4>Intelligence</h4>
-                        <p>Private investigations, threat assessments, and corporate counter-intelligence.</p>
-                        <span class="sector-link">Explore &rarr;</span>
-                    </a>
-                    <a href="sectors.html" class="sector-card bento-item">
-                        <span class="sector-icon">🎓</span>
-                        <h4>Training</h4>
-                        <p>Certified security training programs for personnel and organizations.</p>
-                        <span class="sector-link">Explore &rarr;</span>
-                    </a>
+                    <div class="reveal delay-1 grid-split-visual" style="position: relative;">
+                        <img src="images/uwezo-security services.jpg" alt="Uwezo Security Personnel"
+                            style="width: 100%; border-radius: var(--radius-lg); object-fit: cover; filter: saturate(0.9) brightness(0.9);">
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- WHY CHOOSE UWEZO -->
+        <section class="section-standard" style="background: var(--background-alt);">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;" class="reveal">
+                    <div class="feature-badge">The Uwezo Advantage</div>
+                    <h2 style="font-size: clamp(2.5rem, 5vw, 3rem); font-family: var(--font-heading);">
+                        Why Organizations <span class="text-gradient">Choose Us</span>
+                    </h2>
+                    <p style="color: var(--muted); max-width: 600px; margin: 1rem auto 0; font-size: 1.1rem;">What sets us apart from every other security firm in Uganda.</p>
+                </div>
+                <div class="why-grid">
+                    <div class="why-card reveal">
+                        <span class="why-icon">🎯</span>
+                        <h4>Tactical Training</h4>
+                        <p>All personnel undergo military-grade training and continuous skills assessment before deployment.</p>
+                    </div>
+                    <div class="why-card reveal delay-1">
+                        <span class="why-icon">⚡</span>
+                        <h4>Rapid Response</h4>
+                        <p>Average incident response time under 8 minutes across Kampala and surrounding areas.</p>
+                    </div>
+                    <div class="why-card reveal delay-2">
+                        <span class="why-icon">🔐</span>
+                        <h4>Licensed &amp; Insured</h4>
+                        <p>Fully licensed by Uganda's Internal Security Organisation with comprehensive liability cover.</p>
+                    </div>
+                    <div class="why-card reveal delay-3">
+                        <span class="why-icon">📡</span>
+                        <h4>Tech-Enabled</h4>
+                        <p>AI-powered CCTV, real-time monitoring dashboards, and smart access control integration.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section class="section-standard" style="background: var(--background-alt);">
+            <div class="container reveal">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <div class="feature-badge">Simple &amp; Fast</div>
+                    <h2 style="font-size: clamp(2.5rem, 5vw, 3rem); font-family: var(--font-heading);">
+                        How to <span class="text-gradient">Get Protected</span>
+                    </h2>
+                    <p style="color: var(--muted); max-width: 550px; margin: 1rem auto 0; font-size: 1.05rem;">Four steps from first contact to full security deployment.</p>
+                </div>
+                <div class="process-steps">
+                    <div class="process-step reveal">
+                        <div class="step-number">01</div>
+                        <h4>Initial Consultation</h4>
+                        <p>Contact us and we'll schedule a free security needs assessment at your premises.</p>
+                    </div>
+                    <div class="process-step reveal delay-1">
+                        <div class="step-number">02</div>
+                        <h4>Risk Assessment</h4>
+                        <p>Our security experts audit your vulnerabilities and produce a detailed threat report.</p>
+                    </div>
+                    <div class="process-step reveal delay-2">
+                        <div class="step-number">03</div>
+                        <h4>Custom Plan</h4>
+                        <p>We design a bespoke security solution matched precisely to your risk profile and budget.</p>
+                    </div>
+                    <div class="process-step reveal delay-3">
+                        <div class="step-number">04</div>
+                        <h4>Deploy &amp; Monitor</h4>
+                        <p>Guards are deployed and integrated into your operations with ongoing 24/7 oversight.</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 3.5rem;">
+                    <a href="/contact" class="btn-primary btn-large">Start Your Free Assessment</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CLIENT TRUST STRIP -->
+        <div class="clients-strip-section">
+            <div class="container">
+                <p class="clients-label">Trusted by Leading Organisations Across Uganda</p>
+                <div class="clients-strip">
+                    <img src="images/client naro.png" alt="NARO" class="client-logo">
+                    <img src="images/client Oil Libya.jpg" alt="Oil Libya" class="client-logo">
+                    <img src="images/client Planex Group.png" alt="Planex Group" class="client-logo">
+                    <img src="images/client Pride College Mpigi.jpg" alt="Pride College Mpigi" class="client-logo">
+                    <img src="images/client west Ankole Diocese.jpg" alt="West Ankole Diocese" class="client-logo">
+                </div>
+            </div>
+        </div>
 
         <!-- 8. TESTIMONIALS: REAL SOCIAL PROOF -->
         <section class="section-standard" style="background: var(--background-alt);">
@@ -269,20 +387,30 @@
 
                 <div class="testimonial-grid">
                     <div class="glass" style="padding: 3rem; border-radius: var(--radius);">
-                        <div style="color: var(--primary); font-size: 2rem; margin-bottom: 1.5rem;">"</div>
+                        <div class="stars">★★★★★</div>
                         <p style="color: var(--text-gray); font-style: italic; margin-bottom: 2rem; line-height: 1.8;">
                             "Uwezo Security transformed our corporate safety protocols. Their tactical response team is
                             unmatched in Kampala for speed and professionalism."</p>
-                        <p style="font-weight: 700; color: white;">Operations Director</p>
-                        <p style="color: var(--muted); font-size: 0.875rem;">Leading Logistics Firm, Uganda</p>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 42px; height: 42px; border-radius: 50%; background: var(--primary); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem; flex-shrink: 0;">OD</div>
+                            <div>
+                                <p style="font-weight: 700; color: white;">Operations Director</p>
+                                <p style="color: var(--muted); font-size: 0.8rem;">Leading Logistics Firm, Uganda</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="glass" style="padding: 3rem; border-radius: var(--radius);">
-                        <div style="color: var(--primary); font-size: 2rem; margin-bottom: 1.5rem;">"</div>
+                        <div class="stars">★★★★★</div>
                         <p style="color: var(--text-gray); font-style: italic; margin-bottom: 2rem; line-height: 1.8;">
                             "The peace of mind our residential estate now enjoys is thanks to the diligent patrolling
                             and access control systems implemented by Uwezo."</p>
-                        <p style="font-weight: 700; color: white;">Chairman, Residents Association</p>
-                        <p style="color: var(--muted); font-size: 0.875rem;">Elite Gated Community, Kampala</p>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 42px; height: 42px; border-radius: 50%; background: var(--primary); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem; flex-shrink: 0;">CR</div>
+                            <div>
+                                <p style="font-weight: 700; color: white;">Chairman, Residents Association</p>
+                                <p style="color: var(--muted); font-size: 0.8rem;">Elite Gated Community, Kampala</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -309,8 +437,8 @@
                             absolute safety.
                         </p>
                         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                            <a href="contact.html" class="btn-primary btn-large">Get Expert Consultation</a>
-                            <a href="services.html" class="btn-outline btn-large">View Full Service Catalog</a>
+                            <a href="/contact" class="btn-primary btn-large">Get Expert Consultation</a>
+                            <a href="/services" class="btn-outline btn-large">View Full Service Catalog</a>
                         </div>
                     </div>
                 </div>
@@ -343,12 +471,12 @@
             <div class="footer-col">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="service-guards.html">Armed & Unarmed Guards</a></li>
-                    <li><a href="service-corporate.html">Corporate Security</a></li>
-                    <li><a href="service-residential.html">Residential Protection</a></li>
-                    <li><a href="service-event.html">Event Management</a></li>
-                    <li><a href="service-vip.html">VIP Protection</a></li>
-                    <li><a href="service-cctv.html">CCTV Surveillance</a></li>
+                    <li><a href="/service-guards">Armed & Unarmed Guards</a></li>
+                    <li><a href="/service-corporate">Corporate Security</a></li>
+                    <li><a href="/service-residential">Residential Protection</a></li>
+                    <li><a href="/service-event">Event Management</a></li>
+                    <li><a href="/service-vip">VIP Protection</a></li>
+                    <li><a href="/service-cctv">CCTV Surveillance</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -366,9 +494,18 @@
                 </ul>
             </div>
         </div>
+        <div class="container" style="padding-bottom: 2.5rem; border-bottom: 1px solid var(--border);">
+            <div class="cert-strip">
+                <div class="cert-badge">🛡️ Licensed by ISO Uganda</div>
+                <div class="cert-badge">✅ URA Compliant</div>
+                <div class="cert-badge">🔒 Fully Insured Operations</div>
+                <div class="cert-badge">⚖️ Ministry of Internal Affairs Registered</div>
+                <div class="cert-badge">🏅 Member — Uganda Security Association</div>
+            </div>
+        </div>
         <div class="container"
-            style="padding-top: 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 0.875rem; flex-wrap: wrap-reverse; gap: 1.5rem; justify-content: center; text-align: center;">
-            <p>&copy; 2026 Uwezo Security Services Limited.</p>
+            style="padding-top: 2rem; display: flex; justify-content: center; align-items: center; color: var(--muted); font-size: 0.875rem; flex-wrap: wrap; gap: 1.5rem; text-align: center;">
+            <p>&copy; 2026 Uwezo Security Services Limited. All rights reserved.</p>
             <div style="display: flex; gap: 2rem;">
                 <a href="#">Security Audit</a>
                 <a href="#">Privacy Policy</a>
