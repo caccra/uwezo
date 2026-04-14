@@ -7,17 +7,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
 
 :root {
-    /* Palette from Reference */
-    --background: #02020a;
-    --background-alt: #050510;
+    /* Palette */
+    --background: #011f4b;
+    --background-alt: #03396c;
     --foreground: #ffffff;
-    --primary: #2563eb;
-    --primary-glow: rgba(37, 99, 235, 0.4);
-    --card: #0c0c14;
-    --card-hover: #12121e;
-    --border: rgba(255, 255, 255, 0.08);
-    --muted: #8e8e9f;
-    --text-gray: #d1d1d6;
+    --primary: #005b96;
+    --primary-glow: rgba(0, 91, 150, 0.4);
+    --card: #03396c;
+    --card-hover: #005b96;
+    --border: rgba(100, 151, 177, 0.2);
+    --muted: #6497b1;
+    --text-gray: #b3cde0;
 
     /* Typography */
     --font-heading: 'Outfit', sans-serif;
@@ -112,7 +112,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 50;
-    background: rgba(3, 2, 19, 0.95);
+    background: rgba(1, 31, 75, 0.95);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
     display: flex;
@@ -127,7 +127,7 @@ header {
 }
 
 .glass {
-    background: rgba(10, 10, 10, 0.7);
+    background: rgba(1, 31, 75, 0.7);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -274,7 +274,7 @@ section {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(65deg, rgba(3, 2, 19, 0.8) 0%, rgba(3, 2, 19, 0.2) 100%);
+    background: linear-gradient(65deg, rgba(1, 31, 75, 0.85) 0%, rgba(1, 31, 75, 0.25) 100%);
     z-index: 2;
 }
 
@@ -296,7 +296,7 @@ section {
 
     /* Ensure images are visible on mobile by making the overlay much lighter */
     .hero-overlay {
-        background: linear-gradient(to bottom, rgba(3, 2, 19, 0.5) 0%, rgba(3, 2, 19, 0.1) 50%, rgba(3, 2, 19, 0.7) 100%);
+        background: linear-gradient(to bottom, rgba(1, 31, 75, 0.5) 0%, rgba(1, 31, 75, 0.1) 50%, rgba(1, 31, 75, 0.7) 100%);
     }
 }
 
@@ -430,7 +430,7 @@ section {
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
-    background: rgba(37, 99, 235, 0.1);
+    background: rgba(0, 91, 150, 0.15);
     color: var(--primary);
     border-radius: 100px;
     font-size: 0.875rem;
@@ -501,6 +501,13 @@ section {
 }
 
 
+/* Sector Grid */
+.sector-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
 @media (max-width: 1024px) {
     .sector-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -522,16 +529,22 @@ section {
 
 
 .service-card {
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--card);
     border: 1px solid var(--border);
+    border-top: 3px solid var(--primary);
     padding: 2.5rem;
     border-radius: var(--radius);
-    transition: all 0.3s;
+    transition: var(--transition-bounce);
+    display: flex;
+    flex-direction: column;
 }
 
 .service-card:hover {
+    transform: translateY(-6px);
     border-color: var(--primary);
-    background: rgba(255, 255, 255, 0.05);
+    border-top-color: var(--primary);
+    background: rgba(0, 91, 150, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .service-icon {
@@ -553,10 +566,27 @@ section {
 
 /* Subpage Header */
 .sub-header {
-    background: #02020a;
+    background: #011f4b;
+    background-size: cover;
+    background-position: center;
     padding: clamp(8rem, 15vw, 12rem) 0 clamp(4rem, 10vw, 6rem);
     text-align: center;
     border-bottom: 1px solid var(--border);
+    position: relative;
+}
+
+.sub-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(1,31,75,0.88) 0%, rgba(0,91,150,0.55) 100%);
+    z-index: 0;
+}
+
+.sub-header .container,
+.sub-header > .container {
+    position: relative;
+    z-index: 1;
 }
 
 .sub-title {
@@ -600,6 +630,49 @@ select.form-input option {
 textarea.form-input {
     resize: vertical;
     min-height: 120px;
+}
+
+/* WhatsApp Floating Link */
+.whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 9999;
+    width: 58px;
+    height: 58px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+    transition: var(--transition-bounce);
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.12) translateY(-3px);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.65);
+}
+
+.whatsapp-float svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+    flex-shrink: 0;
+}
+
+.whatsapp-float span {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .whatsapp-float {
+        bottom: 1.25rem;
+        right: 1.25rem;
+        width: 52px;
+        height: 52px;
+    }
 }
 
 /* Footer */
@@ -670,7 +743,7 @@ footer {
         right: 0;
         width: 100%;
         height: 100vh;
-        background: #02020a;
+        background: #011f4b;
         flex-direction: column;
         justify-content: center;
         align-items: center;
