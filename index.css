@@ -149,35 +149,53 @@ header {
 .logo-wrap {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.875rem;
     z-index: 1001;
 }
 
+header .logo-wrap {
+    padding: 0.35rem 0.75rem 0.35rem 0.35rem;
+    border-radius: 10px;
+    border: 1px solid rgba(100, 151, 177, 0.18);
+    background: rgba(255, 255, 255, 0.04);
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+header .logo-wrap:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(100, 151, 177, 0.35);
+}
+
 .logo-wrap img {
-    height: 40px;
-    filter: invert(1) brightness(1.8) contrast(1.1);
-    transition: transform 0.3s ease;
+    height: 52px;
+    filter: invert(1) brightness(2.2) contrast(1.15) drop-shadow(0 0 8px rgba(100, 151, 177, 0.55));
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .logo-wrap:hover img {
-    transform: scale(1.05);
+    transform: scale(1.06);
+    filter: invert(1) brightness(2.5) contrast(1.2) drop-shadow(0 0 14px rgba(100, 151, 177, 0.8));
 }
 
 .logo-text {
-    font-size: 1.15rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    color: white;
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+    color: #ffffff;
     white-space: nowrap;
+    text-shadow: 0 0 18px rgba(180, 210, 235, 0.5);
+    font-family: var(--font-heading);
+    line-height: 1.1;
 }
 
 @media (max-width: 400px) {
     .logo-text {
-        font-size: 1rem;
+        font-size: 1.05rem;
     }
 
     .logo-wrap {
         gap: 0.5rem;
+        padding: 0.25rem 0.5rem 0.25rem 0.25rem;
     }
 }
 
