@@ -17,154 +17,154 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://www.uwezosecurity.com/logo_new.png">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
-    <header class="glass">
+    <div class="reg-bar">
+        <div class="container">
+            <span><b>PSO LICENCE</b> &nbsp;UPF/PSO REGISTERED &nbsp;&middot;&nbsp; UWEZO SECURITY SERVICES LTD</span>
+            <span>CONTROL ROOM 24/7 &nbsp;&middot;&nbsp; <a href="tel:+256200902428">+256&nbsp;200&nbsp;902&nbsp;428</a></span>
+        </div>
+    </div>
+
+    <header>
         <div class="container nav-content">
-            <a href="/" class="logo-wrap">
-                <img src="logo_new.png" alt="Uwezo Security Official Logo">
-                
+            <a href="/" class="logo-wrap" aria-label="Uwezo Security home">
+                <img src="logo_new.png" alt="Uwezo Security">
+                <span class="logo-text">Uwezo Security</span>
             </a>
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">☰</button>
-            <nav>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">&#9776;</button>
+            <nav id="nav">
                 <ul class="nav-links" id="navLinks">
                     <li><a href="/">Home</a></li>
                     <li><a href="/about" class="active">About</a></li>
                     <li><a href="/services">Services</a></li>
                     <li><a href="/sectors">Sectors</a></li>
                     <li><a href="/contact">Contact</a></li>
-                    <li><a href="/contact" class="btn-primary">Get Started</a></li>
+                    <li class="nav-actions">
+                        <a href="/verify-receipt">Verify a record</a>
+                        <a href="/login">Client portal</a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="sub-header" style="background-image: url('images/slider1.jpg');">
+        <section class="sub-header">
             <div class="container">
-                <div style="max-width: 900px; margin: 0 auto;">
-                    <h1 class="sub-title">About <span class="text-gradient">Uwezo Security</span></h1>
-                    <p style="font-size: clamp(1.1rem, 3vw, 1.25rem); color: var(--text-gray); line-height: 1.8;">
-                        Uganda's premier security
-                        services provider, delivering professional protection solutions with integrity, vigilance, and
-                        unwavering commitment to safety.</p>
-                </div>
+                <p class="eyebrow">Kampala, Uganda &middot; Founded 2011</p>
+                <h1 class="sub-title">About the firm</h1>
+                <p style="max-width:58ch;">Uwezo is Swahili for capability. It has been the standard we're held to
+                    since a small team started guarding premises in Ntinda, fifteen years ago.</p>
             </div>
         </section>
 
-        <!-- Company Story -->
-        <section class="section-standard" style="background: var(--card);">
-            <div class="container">
-                <div class="grid-split">
-                    <div class="grid-split-content">
-                        <h2
-                            style="font-size: clamp(2rem, 5vw, 2.5rem); margin-bottom: 1.5rem; font-family: var(--font-heading);">
-                            Our
-                            Story</h2>
-                        <p
-                            style="color: var(--text-gray); margin-bottom: 1.5rem; font-size: 1.125rem; line-height: 1.8;">
-                            Uwezo Security Services Limited was founded in 2011 in Kampala with a clear purpose — to give Ugandan families, businesses, and organisations access to professional, trustworthy security they could actually rely on. The name "Uwezo" means capability in Swahili, and for over 15 years that word has defined how we show up for every client.
-                        </p>
-                        <p
-                            style="color: var(--text-gray); margin-bottom: 1.5rem; font-size: 1.125rem; line-height: 1.8;">
-                            What started as a small team in Ntinda has grown into one of Uganda's most respected security companies. Today, our team of over 200 trained and vetted security professionals serves hundreds of clients — from gated homes and schools to banks, NGOs, and large commercial sites across the country. We are fully licensed by the Ministry of Internal Affairs and proud of the trust our clients place in us every day.
-                        </p>
-                    </div>
-                    <div class="grid-split-visual"
-                        style="border-radius: var(--radius); overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
-                        <img src="images/uwezo-security services.jpg" alt="Uwezo Security Team"
-                            style="width: 100%; height: clamp(300px, 50vh, 500px); object-fit: cover;">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Mission & Vision -->
         <section class="section-standard">
             <div class="container">
-                <div class="grid-3">
-                    <div class="service-card glass-card" style="text-align: center;">
-                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">🎯</div>
-                        <h3 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.5rem;">Our Mission</h3>
-                        <p style="color: var(--text-gray); line-height: 1.8;">To protect the lives, property, and livelihoods of every client we serve — with professionalism, honesty, and genuine care for the people behind every assignment.</p>
+                <div class="entry-head reveal">
+                    <h2>The founding</h2>
+                </div>
+                <div class="grid-split reveal">
+                    <div class="grid-split-content">
+                        <p class="lead" style="margin-bottom:1.4rem;">
+                            A small team began guarding premises in Ntinda in 2011. Fifteen years on, that word
+                            &mdash; capability &mdash; still defines how we show up for every client.
+                        </p>
+                        <p style="color:var(--ink-70);margin-bottom:1.2rem;">
+                            What started as a handful of officers has grown into a firm of over 200 trained,
+                            vetted security professionals, serving clients from gated homes and schools to banks,
+                            NGOs and large commercial sites across Uganda.
+                        </p>
+                        <p style="color:var(--ink-70);">
+                            We are licensed by the Uganda Police Force under the Private Security Organisations
+                            framework, and carry full liability cover. Every deployment is written up, every
+                            movement is logged.
+                        </p>
                     </div>
-                    <div class="service-card glass-card" style="text-align: center;">
-                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">👁️</div>
-                        <h3 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.5rem;">Our Vision</h3>
-                        <p style="color: var(--text-gray); line-height: 1.8;">To be the security company that Ugandans recommend to each other — trusted not just for what we do, but for how we do it.</p>
-                    </div>
-                    <div class="service-card glass-card" style="text-align: center;">
-                        <div style="font-size: 3rem; margin-bottom: 1.5rem;">⭐</div>
-                        <h3 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.5rem;">Our Values</h3>
-                        <p style="color: var(--text-gray); line-height: 1.8;">Integrity, reliability, and respect for every person we work with — client, guard, or partner. We hold ourselves to a high standard because people's safety depends on it.</p>
+                    <div class="grid-split-visual">
+                        <img src="images/uwezo-security services.jpg" alt="Uwezo Security officers"
+                            style="width:100%;aspect-ratio:4/3;object-fit:cover;filter:grayscale(0.25) contrast(1.03);">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Core Values -->
-        <section class="section-standard" style="background: var(--card);">
+        <section class="section-standard" style="background: var(--paper-2);">
             <div class="container">
-                <div style="text-align: center; margin-bottom: 4rem;">
-                    <h2
-                        style="font-size: clamp(2rem, 5vw, 2.5rem); margin-bottom: 1rem; font-family: var(--font-heading);">
-                        What Sets Us
-                        Apart</h2>
-                    <p style="color: var(--text-gray); font-size: 1.125rem; max-width: 700px; margin: 0 auto;">Our
-                        commitment to excellence is built on these fundamental principles</p>
+                <div class="entry-head reveal">
+                    <h2>Mission, vision, values</h2>
                 </div>
-                <div class="grid-3">
+                <div class="grid-3 reveal">
                     <div class="service-card">
-                        <h3 style="color: var(--primary); margin-bottom: 1rem;">Professional Training</h3>
-                        <p style="color: var(--text-gray); line-height: 1.8;">All our security personnel undergo
-                            rigorous training programs and continuous professional development to ensure they meet the
-                            highest industry standards.</p>
+                        <p class="eyebrow">Mission</p>
+                        <p style="color:var(--ink-70);">To protect the lives, property and livelihoods of every
+                            client we serve — with professionalism, honesty and genuine care for the people behind
+                            every assignment.</p>
                     </div>
                     <div class="service-card">
-                        <h3 style="color: var(--primary); margin-bottom: 1rem;">24/7 Availability</h3>
-                        <p style="color: var(--text-gray); line-height: 1.8;">Round-the-clock monitoring and rapid
-                            response teams ensure your security needs are met at any time, day or night.</p>
+                        <p class="eyebrow">Vision</p>
+                        <p style="color:var(--ink-70);">To be the security company Ugandans recommend to each
+                            other — trusted not just for what we do, but for how we do it.</p>
                     </div>
                     <div class="service-card">
-                        <h3 style="color: var(--primary); margin-bottom: 1rem;">Licensed & Insured</h3>
-                        <p style="color: var(--text-gray); line-height: 1.8;">Fully licensed security provider with
-                            comprehensive insurance coverage, giving you peace of mind and legal protection.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3 style="color: var(--primary); margin-bottom: 1rem;">Modern Technology</h3>
-                        <p style="color: var(--text-gray); line-height: 1.8;">We leverage the latest security technology
-                            including CCTV systems, GPS tracking, and digital reporting for enhanced protection.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3 style="color: var(--primary); margin-bottom: 1rem;">Local Expertise</h3>
-                        <p style="color: var(--text-gray); line-height: 1.8;">Deep understanding of Uganda's security
-                            landscape and local challenges, enabling us to provide tailored, effective solutions.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3 style="color: var(--primary); margin-bottom: 1rem;">Client-Focused</h3>
-                        <p style="color: var(--text-gray); line-height: 1.8;">Customized security solutions designed
-                            around your specific needs, budget, and risk profile with dedicated account management.</p>
+                        <p class="eyebrow">Values</p>
+                        <p style="color:var(--ink-70);">Integrity, reliability and respect for everyone we work
+                            with — client, officer or partner. People's safety depends on the standard we hold.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section style="background: var(--card); padding: 80px 0; text-align: center;">
+        <section class="section-standard">
             <div class="container">
-                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; font-family: var(--font-heading);">Ready to Secure
-                    Your Future?</h2>
-                <p
-                    style="color: var(--text-gray); font-size: 1.25rem; margin-bottom: 2.5rem; max-width: 700px; margin-left: auto; margin-right: auto;">
-                    Contact us today for a free security assessment and discover how Uwezo Security can protect what
-                    matters most to you.</p>
-                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="/contact" class="btn-primary btn-large">Get a Free Quote</a>
-                    <a href="/services" class="btn-outline btn-large">View Our Services</a>
+                <div class="entry-head reveal">
+                    <h2>What sets us apart</h2>
+                </div>
+                <div class="reg-list reveal">
+                    <a href="/services">
+                        <span class="rl-name">Professional training</span>
+                        <span class="rl-desc">Every officer completes structured training and continuous assessment against industry standard.</span>
+                    </a>
+                    <a href="/service-cctv">
+                        <span class="rl-name">24/7 availability</span>
+                        <span class="rl-desc">Round-the-clock monitoring and a control room that answers, day or night.</span>
+                    </a>
+                    <a href="/services">
+                        <span class="rl-name">Licensed &amp; insured</span>
+                        <span class="rl-desc">Fully licensed by the Uganda Police Force, with comprehensive liability cover.</span>
+                    </a>
+                    <a href="/service-cctv">
+                        <span class="rl-name">Modern technology</span>
+                        <span class="rl-desc">CCTV, GPS tracking and digital reporting built into every deployment.</span>
+                    </a>
+                    <a href="/sectors">
+                        <span class="rl-name">Local expertise</span>
+                        <span class="rl-desc">Fifteen years reading Uganda's security landscape — from Ntinda estates to mining sites.</span>
+                    </a>
+                    <a href="/contact">
+                        <span class="rl-name">Client-focused</span>
+                        <span class="rl-desc">A plan built around your risk profile and budget, with a named account contact.</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-standard vault">
+            <div class="container reveal" style="text-align:center;">
+                <p class="eyebrow" style="color:var(--vault-ink-60);">Next step</p>
+                <h2 style="max-width:22ch;margin-inline:auto;">Ready to put this to work on your site?</h2>
+                <p class="lead" style="max-width:52ch;margin:1.2rem auto 2.2rem;color:var(--vault-ink-60);">
+                    A written proposal, priced against your actual risk — usually within the week.
+                </p>
+                <div style="display:flex;gap:0.9rem;justify-content:center;flex-wrap:wrap;">
+                    <a href="/contact" class="btn-primary btn-large">Request a proposal</a>
+                    <a href="/services" class="btn-outline btn-large">View the schedule</a>
                 </div>
             </div>
         </section>
@@ -173,27 +173,22 @@
     <footer>
         <div class="container footer-grid">
             <div class="footer-col">
-                <div class="logo-wrap" style="margin-bottom: 2rem;">
-                    <img src="logo_new.png" alt="Uwezo Logo" style="height: 48px;">
-                    
+                <div class="logo-wrap" style="margin-bottom:1.6rem;">
+                    <img src="logo_new.png" alt="Uwezo Security">
                 </div>
-                <p style="color: var(--muted); line-height: 1.8; margin-bottom: 2.5rem; max-width: 350px;">
-                    Protecting Ugandan homes and businesses with care, professionalism, and integrity since 2011.
+                <p style="max-width:34ch;font-size:0.9rem;">
+                    Protecting Ugandan homes and businesses with care, professionalism and integrity since 2011.
                 </p>
-                <div
-                    style="padding: 1.5rem; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); border: 1px solid var(--border); display: inline-block; width: 100%; max-width: 300px;">
-                    <p
-                        style="font-size: 0.75rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; font-weight: 700;">
-                        24/7 Emergency Lines</p>
-                    <p style="font-size: 1.25rem; font-weight: 800; color: white; margin-bottom: 0.25rem;">+256 200 902
-                        428</p>
-                    <p style="font-size: 1.25rem; font-weight: 800; color: white;">+256 774 361 171</p>
+                <div class="footer-emergency">
+                    <p class="fe-label">24/7 Emergency Lines</p>
+                    <p class="fe-num"><a href="tel:+256200902428">+256 200 902 428</a></p>
+                    <p class="fe-num"><a href="tel:+256774361171">+256 774 361 171</a></p>
                 </div>
             </div>
             <div class="footer-col">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="/service-guards">Armed & Unarmed Guards</a></li>
+                    <li><a href="/service-guards">Armed &amp; Unarmed Guards</a></li>
                     <li><a href="/service-corporate">Corporate Security</a></li>
                     <li><a href="/service-residential">Residential Protection</a></li>
                     <li><a href="/service-event">Event Management</a></li>
@@ -206,35 +201,40 @@
                 </ul>
             </div>
             <div class="footer-col">
+                <h4>Records</h4>
+                <ul>
+                    <li><a href="/verify-receipt">Verify a record</a></li>
+                    <li><a href="/track">Track a consignment</a></li>
+                    <li><a href="/login">Client portal</a></li>
+                    <li><a href="/signup">Open an account</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
                 <h4>Contact</h4>
                 <ul>
-                    <li style="margin-bottom: 1rem;">
-                        <p style="color: var(--muted); font-size: 0.875rem;">Head Office</p>
-                        <p style="color: var(--text-gray); font-size: 0.9375rem;">Plot 6, Ssemawata Road, Ntinda<br>Kampala, Uganda
-                        </p>
+                    <li style="margin-bottom:1rem;">
+                        <span class="fc-label">Head Office</span>
+                        Plot 6, Ssemawata Road, Ntinda<br>Kampala, Uganda
+                    </li>
+                    <li style="margin-bottom:1rem;">
+                        <span class="fc-label">General Enquiries</span>
+                        <a href="mailto:enquiries@uwezosecurity.com">enquiries@uwezosecurity.com</a>
                     </li>
                     <li>
-                        <p style="color: var(--muted); font-size: 0.875rem;">General Enquiries</p>
-                        <p><a href="mailto:enquiries@uwezosecurity.com" style="color: var(--primary);">enquiries@uwezosecurity.com</a></p>
-                        <p style="color: var(--muted); font-size: 0.875rem; margin-top: 0.75rem;">Administration</p>
-                        <p><a href="mailto:admin@uwezosecurity.com" style="color: var(--primary);">admin@uwezosecurity.com</a></p>
-                        <p><a href="mailto:uwezosecurityservices@gmail.com" style="color: var(--primary);">uwezosecurityservices@gmail.com</a></p>
+                        <span class="fc-label">Administration</span>
+                        <a href="mailto:admin@uwezosecurity.com">admin@uwezosecurity.com</a><br>
+                        <a href="mailto:uwezosecurityservices@gmail.com">uwezosecurityservices@gmail.com</a>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="container"
-            style="padding-top: 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 0.875rem; flex-wrap: wrap-reverse; gap: 1.5rem; justify-content: center; text-align: center;">
-            <p>&copy; 2026 Uwezo Security Services Limited.</p>
-            <div style="display: flex; gap: 2rem;">
-                <a href="#">Security Audit</a>
-                <a href="#">Privacy Policy</a>
-            </div>
+        <div class="container">
+            <span>&copy; 2026 Uwezo Security Services Limited</span>
+            <span>PSO / UPF licensed &middot; Kampala, Uganda</span>
         </div>
     </footer>
 
     <script src="theme.js"></script>
-    <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/256774361171" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
         <span>Chat on WhatsApp</span>

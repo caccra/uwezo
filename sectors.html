@@ -17,161 +17,143 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://www.uwezosecurity.com/logo_new.png">
 
-    <link rel="stylesheet" href="index.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
-    <header class="glass">
+    <div class="reg-bar">
+        <div class="container">
+            <span><b>PSO LICENCE</b> &nbsp;UPF/PSO REGISTERED &nbsp;&middot;&nbsp; UWEZO SECURITY SERVICES LTD</span>
+            <span>CONTROL ROOM 24/7 &nbsp;&middot;&nbsp; <a href="tel:+256200902428">+256&nbsp;200&nbsp;902&nbsp;428</a></span>
+        </div>
+    </div>
+
+    <header>
         <div class="container nav-content">
-            <a href="/" class="logo-wrap">
-                <img src="logo_new.png" alt="Uwezo Security Official Logo">
-                
+            <a href="/" class="logo-wrap" aria-label="Uwezo Security home">
+                <img src="logo_new.png" alt="Uwezo Security">
+                <span class="logo-text">Uwezo Security</span>
             </a>
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">☰</button>
-            <nav>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">&#9776;</button>
+            <nav id="nav">
                 <ul class="nav-links" id="navLinks">
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/services">Services</a></li>
                     <li><a href="/sectors" class="active">Sectors</a></li>
                     <li><a href="/contact">Contact</a></li>
-                    <li><a href="/contact" class="btn-primary">Secure Now</a></li>
+                    <li class="nav-actions">
+                        <a href="/verify-receipt">Verify a record</a>
+                        <a href="/login">Client portal</a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="sub-header" style="background-image: url('images/istockphoto-1567440154-612x612.jpg'); background-size: cover; background-position: center top;">
-            <div class="container reveal">
-                <div class="feature-badge">Vertical Expertise</div>
-                <h1 class="sub-title">Industry <span class="text-gradient">Sectors</span></h1>
-                <p
-                    style="font-size: clamp(1.1rem, 3vw, 1.25rem); color: var(--muted); line-height: 1.8; max-width: 700px; margin-top: 1.5rem;">
-                    Every industry faces unique security challenges. We deliver specialized protocols designed for the
-                    specific risk profiles of your sector.
-                </p>
+        <section class="sub-header">
+            <div class="container">
+                <p class="eyebrow">Vertical expertise</p>
+                <h1 class="sub-title">Sectors served</h1>
+                <p style="max-width:58ch;">Every industry carries a different risk profile. Here's how the same
+                    disciplined operation adapts to eight of them.</p>
             </div>
         </section>
 
-        <!-- Sectors Bento Grid -->
         <section class="section-standard">
             <div class="container">
-                <div class="bento-grid">
-                    <!-- Banking: Large -->
-                    <div class="bento-item large reveal" style="padding: 0; overflow: hidden; position: relative;">
-                        <img src="images/anne-nygard-jORjvhaUX40-unsplash.jpg" alt="Banking & Finance Security"
-                            style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; min-height: 340px; filter: brightness(0.4);">
-                        <div style="position: absolute; inset: 0; padding: 2.5rem; display: flex; flex-direction: column; justify-content: flex-end; background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.3) 55%, transparent 100%);">
-                            <div class="feature-badge" style="margin-bottom: 1rem; align-self: flex-start;">High Security</div>
-                            <h3 style="font-size: 2.5rem; margin-bottom: 0.75rem;">Banking & Finance</h3>
-                            <p style="color: var(--muted); margin-bottom: 1.5rem; max-width: 560px;">Fortified protection for financial institutions, vault guarding, and secure cash logistics.</p>
-                            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                                <span class="feature-badge" style="margin-bottom: 0; padding: 0.25rem 0.75rem; font-size: 0.75rem;">✓ Armed CIT Escorts</span>
-                                <span class="feature-badge" style="margin-bottom: 0; padding: 0.25rem 0.75rem; font-size: 0.75rem;">✓ Biometric Vault Access</span>
-                                <span class="feature-badge" style="margin-bottom: 0; padding: 0.25rem 0.75rem; font-size: 0.75rem;">✓ ATM Response Units</span>
-                                <span class="feature-badge" style="margin-bottom: 0; padding: 0.25rem 0.75rem; font-size: 0.75rem;">✓ 24/7 Branch Guarding</span>
-                            </div>
+                <div class="tile-grid reveal">
+                    <a class="tile" href="/contact">
+                        <div class="tile-img"><img src="images/anne-nygard-jORjvhaUX40-unsplash.jpg" alt="Banking and finance security"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Armed CIT escorts &middot; biometric vault access &middot; ATM response</p>
+                            <h3>Banking &amp; finance</h3>
+                            <p>Fortified protection for financial institutions — branch guarding, vault cover and secure cash logistics.</p>
+                            <span class="tile-go">Enquire &rarr;</span>
                         </div>
-                    </div>
-
-                    <!-- Manufacturing: Medium -->
-                    <div class="bento-item medium reveal delay-1" style="padding: 0; overflow: hidden; position: relative;">
-                        <img src="images/jonny-caspari-1je5j4aN2RI-unsplash.jpg" alt="Industrial Security"
-                            style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; min-height: 260px; filter: brightness(0.45);">
-                        <div style="position: absolute; inset: 0; padding: 2rem; display: flex; flex-direction: column; justify-content: flex-end; background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);">
-                            <h3 style="font-size: 1.75rem; margin-bottom: 0.75rem;">Industrial & Logistics</h3>
-                            <p style="color: var(--muted); font-size: 0.9375rem; margin-bottom: 1.25rem;">Protecting supply chains, warehouses, and factories from theft and sabotage.</p>
-                            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                                <span class="feature-badge" style="margin-bottom: 0; padding: 0.25rem 0.75rem; font-size: 0.75rem;">Gate Management</span>
-                                <span class="feature-badge" style="margin-bottom: 0; padding: 0.25rem 0.75rem; font-size: 0.75rem;">Loss Prevention</span>
-                                <span class="feature-badge" style="margin-bottom: 0; padding: 0.25rem 0.75rem; font-size: 0.75rem;">GPS Patrols</span>
-                            </div>
+                    </a>
+                    <a class="tile" href="/contact">
+                        <div class="tile-img"><img src="images/uwezo security safekeeping services.jpg" alt="Mining and minerals custody"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Site security &middot; allocated bullion custody</p>
+                            <h3>Mining &amp; minerals</h3>
+                            <p>Security and custody for gold, gemstones and bullion, tracked from pit to buyer under one chain of custody.</p>
+                            <span class="tile-go">Enquire &rarr;</span>
                         </div>
-                    </div>
-
-                    <!-- Residential: Small -->
-                    <div class="bento-item reveal delay-2" style="padding: 0; overflow: hidden; position: relative;">
-                        <img src="images/gerson-repreza-CepDpEiALqM-unsplash.jpg" alt="Residential Security"
-                            style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; min-height: 260px; filter: brightness(0.5);">
-                        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);">
-                            <h3 style="margin-bottom: 0.4rem;">Residential</h3>
-                            <p style="color: var(--muted); font-size: 0.875rem;">Elite protection for gated communities and private estates across Kampala.</p>
+                    </a>
+                    <a class="tile" href="/contact">
+                        <div class="tile-img"><img src="images/jonny-caspari-1je5j4aN2RI-unsplash.jpg" alt="Industrial and logistics site security"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Gate management &middot; loss prevention &middot; GPS patrols</p>
+                            <h3>Industrial &amp; logistics</h3>
+                            <p>Protecting supply chains, warehouses and factories from theft and sabotage.</p>
+                            <span class="tile-go">Enquire &rarr;</span>
                         </div>
-                    </div>
-
-                    <!-- Diplomatic: Small -->
-                    <div class="bento-item reveal delay-3" style="padding: 0; overflow: hidden; position: relative;">
-                        <img src="images/design-hills-hfI0pr6g4yw-unsplash.jpg" alt="Diplomatic Security"
-                            style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; min-height: 260px; filter: brightness(0.5);">
-                        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);">
-                            <h3 style="margin-bottom: 0.4rem;">Diplomatic</h3>
-                            <p style="color: var(--muted); font-size: 0.875rem;">Discreet and high-level security for embassies and international NGOs.</p>
+                    </a>
+                    <a class="tile" href="/contact">
+                        <div class="tile-img"><img src="images/kevin-matos-Nl_FMFpXo2g-unsplash.jpg" alt="Commercial real estate security"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Access control &middot; visitor management &middot; CCTV</p>
+                            <h3>Commercial real estate</h3>
+                            <p>Concierge-level security for office buildings and shopping malls.</p>
+                            <span class="tile-go">Enquire &rarr;</span>
                         </div>
-                    </div>
-
-                    <!-- Commercial: Medium -->
-                    <div class="bento-item medium reveal delay-1" style="padding: 0; overflow: hidden; position: relative;">
-                        <img src="images/kevin-matos-Nl_FMFpXo2g-unsplash.jpg" alt="Commercial Real Estate Security"
-                            style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; min-height: 260px; filter: brightness(0.45);">
-                        <div style="position: absolute; inset: 0; padding: 2rem; display: flex; flex-direction: column; justify-content: flex-end; background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);">
-                            <h3 style="font-size: 1.75rem; margin-bottom: 0.75rem;">Commercial Real Estate</h3>
-                            <p style="color: var(--muted); font-size: 0.9375rem; margin-bottom: 1.25rem;">Concierge-level security for office buildings and shopping malls.</p>
-                            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                                <span class="feature-badge" style="margin-bottom: 0; padding: 0.25rem 0.75rem; font-size: 0.75rem;">Access Control</span>
-                                <span class="feature-badge" style="margin-bottom: 0; padding: 0.25rem 0.75rem; font-size: 0.75rem;">Visitor Management</span>
-                                <span class="feature-badge" style="margin-bottom: 0; padding: 0.25rem 0.75rem; font-size: 0.75rem;">CCTV Monitoring</span>
-                            </div>
+                    </a>
+                    <a class="tile" href="/contact">
+                        <div class="tile-img"><img src="images/design-hills-hfI0pr6g4yw-unsplash.jpg" alt="Diplomatic mission security"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Protocol&#8209;aware &middot; discreet</p>
+                            <h3>Diplomatic missions</h3>
+                            <p>High-level, discreet security and access management for embassies and international NGOs.</p>
+                            <span class="tile-go">Enquire &rarr;</span>
                         </div>
-                    </div>
-
-                    <!-- Construction: Small -->
-                    <div class="bento-item reveal delay-2" style="padding: 0; overflow: hidden; position: relative;">
-                        <img src="images/glenov-brankovic-6CT4cYdSNaI-unsplash.jpg" alt="Construction Security"
-                            style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; min-height: 260px; filter: brightness(0.5);">
-                        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);">
-                            <h3 style="margin-bottom: 0.4rem;">Construction</h3>
-                            <p style="color: var(--muted); font-size: 0.875rem;">Safeguarding equipment and high-value materials on-site.</p>
+                    </a>
+                    <a class="tile" href="/contact">
+                        <div class="tile-img"><img src="images/gerson-repreza-CepDpEiALqM-unsplash.jpg" alt="Residential estate security"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Static guards &middot; mobile patrols</p>
+                            <h3>Residential estates</h3>
+                            <p>Round-the-clock protection for gated communities and private estates across Kampala.</p>
+                            <span class="tile-go">Enquire &rarr;</span>
                         </div>
-                    </div>
-
-                    <!-- Education: Small -->
-                    <div class="bento-item reveal delay-3" style="padding: 0; overflow: hidden; position: relative;">
-                        <img src="images/zachary-keimig-s8ZTEbJNN7E-unsplash.jpg" alt="Educational Security"
-                            style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; min-height: 260px; filter: brightness(0.5);">
-                        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);">
-                            <h3 style="margin-bottom: 0.4rem;">Educational</h3>
-                            <p style="color: var(--muted); font-size: 0.875rem;">Safe campuses for schools and universities through diligent guarding.</p>
+                    </a>
+                    <a class="tile" href="/contact">
+                        <div class="tile-img"><img src="images/glenov-brankovic-6CT4cYdSNaI-unsplash.jpg" alt="Construction site security"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Site cover &middot; equipment protection</p>
+                            <h3>Construction</h3>
+                            <p>Safeguarding equipment and high-value materials on active building sites.</p>
+                            <span class="tile-go">Enquire &rarr;</span>
                         </div>
-                    </div>
+                    </a>
+                    <a class="tile" href="/contact">
+                        <div class="tile-img"><img src="images/zachary-keimig-s8ZTEbJNN7E-unsplash.jpg" alt="Education campus security"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Campus guarding</p>
+                            <h3>Education</h3>
+                            <p>Safe campuses for schools and universities through diligent, visible guarding.</p>
+                            <span class="tile-go">Enquire &rarr;</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Dynamic CTA -->
-        <section class="section-standard">
-            <div class="container reveal">
-                <div class="glass"
-                    style="padding: clamp(2rem, 8vw, 5rem) clamp(1.25rem, 5vw, 3rem); border-radius: var(--radius-lg); text-align: center; background: linear-gradient(135deg, rgba(0, 91, 150, 0.12) 0%, rgba(1,31,75,0.5) 100%);">
-                    <h2
-                        style="font-size: clamp(2.25rem, 5vw, 3rem); margin-bottom: 1.5rem; font-family: var(--font-heading);">
-                        Bespoke <span class="text-gradient">Sector Solutions</span></h2>
-                    <p
-                        style="color: var(--muted); font-size: clamp(1rem, 3vw, 1.25rem); margin-bottom: 3rem; max-width: 650px; margin-left: auto; margin-right: auto;">
-                        If your industry isn't listed, our tactical team can design a custom security protocol from the
-                        ground up for your specific operational needs.
-                    </p>
-                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                        <a href="/contact" class="btn-primary btn-large">Schedule a Consultation</a>
-                        <a href="/services" class="btn-outline btn-large">View All Services</a>
-                    </div>
+        <section class="section-standard vault">
+            <div class="container reveal" style="text-align:center;">
+                <p class="eyebrow" style="color:var(--vault-ink-60);">Not listed?</p>
+                <h2 style="max-width:22ch;margin-inline:auto;">We'll build a protocol for your specific operation.</h2>
+                <p class="lead" style="max-width:52ch;margin:1.2rem auto 2.2rem;color:var(--vault-ink-60);">
+                    If your industry isn't on the register, our team designs a custom security plan from the risk up.
+                </p>
+                <div style="display:flex;gap:0.9rem;justify-content:center;flex-wrap:wrap;">
+                    <a href="/contact" class="btn-primary btn-large">Schedule a consultation</a>
+                    <a href="/services" class="btn-outline btn-large">View all services</a>
                 </div>
             </div>
         </section>
@@ -180,27 +162,22 @@
     <footer>
         <div class="container footer-grid">
             <div class="footer-col">
-                <div class="logo-wrap" style="margin-bottom: 2rem;">
-                    <img src="logo_new.png" alt="Uwezo Logo" style="height: 48px;">
-                    
+                <div class="logo-wrap" style="margin-bottom:1.6rem;">
+                    <img src="logo_new.png" alt="Uwezo Security">
                 </div>
-                <p style="color: var(--muted); line-height: 1.8; margin-bottom: 2.5rem; max-width: 350px;">
-                    Protecting Ugandan homes and businesses with care, professionalism, and integrity since 2011.
+                <p style="max-width:34ch;font-size:0.9rem;">
+                    Protecting Ugandan homes and businesses with care, professionalism and integrity since 2011.
                 </p>
-                <div
-                    style="padding: 1.5rem; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); border: 1px solid var(--border); display: inline-block; width: 100%; max-width: 300px;">
-                    <p
-                        style="font-size: 0.75rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; font-weight: 700;">
-                        24/7 Emergency Lines</p>
-                    <p style="font-size: 1.25rem; font-weight: 800; color: white; margin-bottom: 0.25rem;">+256 200 902
-                        428</p>
-                    <p style="font-size: 1.25rem; font-weight: 800; color: white;">+256 774 361 171</p>
+                <div class="footer-emergency">
+                    <p class="fe-label">24/7 Emergency Lines</p>
+                    <p class="fe-num"><a href="tel:+256200902428">+256 200 902 428</a></p>
+                    <p class="fe-num"><a href="tel:+256774361171">+256 774 361 171</a></p>
                 </div>
             </div>
             <div class="footer-col">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="/service-guards">Armed & Unarmed Guards</a></li>
+                    <li><a href="/service-guards">Armed &amp; Unarmed Guards</a></li>
                     <li><a href="/service-corporate">Corporate Security</a></li>
                     <li><a href="/service-residential">Residential Protection</a></li>
                     <li><a href="/service-event">Event Management</a></li>
@@ -213,35 +190,40 @@
                 </ul>
             </div>
             <div class="footer-col">
+                <h4>Records</h4>
+                <ul>
+                    <li><a href="/verify-receipt">Verify a record</a></li>
+                    <li><a href="/track">Track a consignment</a></li>
+                    <li><a href="/login">Client portal</a></li>
+                    <li><a href="/signup">Open an account</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
                 <h4>Contact</h4>
                 <ul>
-                    <li style="margin-bottom: 1rem;">
-                        <p style="color: var(--muted); font-size: 0.875rem;">Head Office</p>
-                        <p style="color: var(--text-gray); font-size: 0.9375rem;">Plot 6, Ssemawata Road, Ntinda<br>Kampala, Uganda
-                        </p>
+                    <li style="margin-bottom:1rem;">
+                        <span class="fc-label">Head Office</span>
+                        Plot 6, Ssemawata Road, Ntinda<br>Kampala, Uganda
+                    </li>
+                    <li style="margin-bottom:1rem;">
+                        <span class="fc-label">General Enquiries</span>
+                        <a href="mailto:enquiries@uwezosecurity.com">enquiries@uwezosecurity.com</a>
                     </li>
                     <li>
-                        <p style="color: var(--muted); font-size: 0.875rem;">General Enquiries</p>
-                        <p><a href="mailto:enquiries@uwezosecurity.com" style="color: var(--primary);">enquiries@uwezosecurity.com</a></p>
-                        <p style="color: var(--muted); font-size: 0.875rem; margin-top: 0.75rem;">Administration</p>
-                        <p><a href="mailto:admin@uwezosecurity.com" style="color: var(--primary);">admin@uwezosecurity.com</a></p>
-                        <p><a href="mailto:uwezosecurityservices@gmail.com" style="color: var(--primary);">uwezosecurityservices@gmail.com</a></p>
+                        <span class="fc-label">Administration</span>
+                        <a href="mailto:admin@uwezosecurity.com">admin@uwezosecurity.com</a><br>
+                        <a href="mailto:uwezosecurityservices@gmail.com">uwezosecurityservices@gmail.com</a>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="container"
-            style="padding-top: 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 0.875rem; flex-wrap: wrap-reverse; gap: 1.5rem; justify-content: center; text-align: center;">
-            <p>&copy; 2026 Uwezo Security Services Limited.</p>
-            <div style="display: flex; gap: 2rem;">
-                <a href="#">Security Audit</a>
-                <a href="#">Privacy Policy</a>
-            </div>
+        <div class="container">
+            <span>&copy; 2026 Uwezo Security Services Limited</span>
+            <span>PSO / UPF licensed &middot; Kampala, Uganda</span>
         </div>
     </footer>
 
     <script src="theme.js"></script>
-    <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/256774361171" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
         <span>Chat on WhatsApp</span>

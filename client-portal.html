@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Portal | Uwezo Security Uganda</title>
+
+    <meta name="description" content="Sign in to the Uwezo Security client portal to view your holdings, download statements and safekeeping receipts, and request releases or transfers.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://www.uwezosecurity.com/client-portal">
+    <meta property="og:title" content="Client Portal | Uwezo Security">
+    <meta property="og:description" content="Secure access for Uwezo Security account holders — holdings, statements, safekeeping receipts and release requests.">
+    <meta property="og:url" content="https://www.uwezosecurity.com/client-portal">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.uwezosecurity.com/logo_new.png">
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-content">
+            <a href="/" class="logo-wrap">
+                <img src="logo_new.png" alt="Uwezo Security Official Logo">
+            </a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">☰</button>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/sectors">Sectors</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li class="nav-actions">
+                        <button type="button" class="icon-btn" id="themeToggle" aria-label="Toggle light or dark theme">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+                        </button>
+                        <a href="/verify-receipt" class="btn-ghost">Verify a Receipt</a>
+                        <a href="/client-portal" class="btn-primary">Client Portal</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="sub-header">
+            <div class="container reveal">
+                <div class="feature-badge">Secure Access</div>
+                <h1 class="sub-title">Client <span class="text-gradient">Portal</span></h1>
+                <p
+                    style="font-size: clamp(1.1rem, 3vw, 1.25rem); color: var(--muted); line-height: 1.8; max-width: 800px; margin: 1.5rem auto 0;">
+                    A private dashboard for Uwezo account holders — your holdings, statements, safekeeping receipts and
+                    release requests in one place.
+                </p>
+            </div>
+        </section>
+
+        <!-- Login + info -->
+        <section class="section-standard">
+            <div class="container">
+                <div class="grid-split" style="align-items: start;">
+                    <!-- Login card -->
+                    <div class="reveal">
+                        <form id="portalForm" class="glass"
+                            style="padding: clamp(1.5rem, 5vw, 3rem); border-radius: var(--radius-lg);">
+                            <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem; font-family: var(--font-heading);">Sign
+                                in</h2>
+                            <p style="color: var(--muted); font-size: 0.9375rem; margin-bottom: 2rem;">Use the Account ID
+                                and password issued during onboarding.</p>
+
+                            <div style="margin-bottom: 1.75rem;">
+                                <label
+                                    style="display: block; margin-bottom: 0.6rem; font-weight: 600; font-size: 0.875rem; color: var(--muted);">Account
+                                    ID</label>
+                                <input type="text" name="account" required class="form-input" placeholder="UWZ-000000"
+                                    autocomplete="username" style="margin-bottom: 0;">
+                            </div>
+
+                            <div style="margin-bottom: 2rem;">
+                                <label
+                                    style="display: block; margin-bottom: 0.6rem; font-weight: 600; font-size: 0.875rem; color: var(--muted);">Password</label>
+                                <input type="password" name="password" required class="form-input"
+                                    placeholder="••••••••" autocomplete="current-password" style="margin-bottom: 0;">
+                            </div>
+
+                            <div id="portalNotice"
+                                style="display:none; background: rgba(252,163,17,0.1); border: 1px solid rgba(252,163,17,0.4); border-radius: var(--radius-sm); padding: 1.25rem; margin-bottom: 1.5rem; color: var(--primary); font-weight: 600; line-height: 1.7;">
+                                The live portal is enabled per account by our custody desk. If your web access isn't
+                                active yet, email
+                                <a href="mailto:custody@uwezosecurity.com" style="color: var(--primary);">custody@uwezosecurity.com</a>
+                                or call +256 200 902 428 and we'll switch it on.
+                            </div>
+
+                            <button type="submit" id="portalBtn" class="btn-primary"
+                                style="width: 100%; padding: 1.25rem; font-size: 1.125rem;">Sign In</button>
+
+                            <div style="text-align: center; margin-top: 1.5rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                                <a href="mailto:custody@uwezosecurity.com?subject=Portal%20password%20reset"
+                                    style="color: var(--primary); font-weight: 600; font-size: 0.9375rem;">Forgot password?</a>
+                                <a href="/contact"
+                                    style="color: var(--primary); font-weight: 600; font-size: 0.9375rem;">Request portal access</a>
+                            </div>
+                        </form>
+
+                        <p style="color: var(--muted); font-size: 0.8125rem; margin-top: 1.5rem; line-height: 1.7;">
+                            🔒 Uwezo will never ask for your password by phone, email or WhatsApp. Always check the
+                            address bar reads <strong>uwezosecurity.com</strong> before signing in.
+                        </p>
+                    </div>
+
+                    <!-- What's inside -->
+                    <div class="reveal delay-1">
+                        <h2 style="font-size: clamp(1.75rem, 4vw, 2rem); margin-bottom: 1.5rem; font-family: var(--font-heading);">
+                            Inside the <span class="text-blue">portal</span></h2>
+                        <div class="grid-3" style="grid-template-columns: 1fr; gap: 1rem;">
+                            <div class="service-card">
+                                <h3 style="font-size: 1.125rem;">Your holdings</h3>
+                                <p style="margin-top: 0.5rem; color: var(--text-gray);">A live inventory of every asset
+                                    under custody, with declared values and storage location.</p>
+                            </div>
+                            <div class="service-card">
+                                <h3 style="font-size: 1.125rem;">Statements &amp; receipts</h3>
+                                <p style="margin-top: 0.5rem; color: var(--text-gray);">Download safekeeping receipts
+                                    (SKRs), monthly statements and audit certificates as PDFs.</p>
+                            </div>
+                            <div class="service-card">
+                                <h3 style="font-size: 1.125rem;">Releases &amp; transfers</h3>
+                                <p style="margin-top: 0.5rem; color: var(--text-gray);">Raise a release or transfer
+                                    instruction and track it through approval and collection.</p>
+                            </div>
+                            <div class="service-card">
+                                <h3 style="font-size: 1.125rem;">Full audit trail</h3>
+                                <p style="margin-top: 0.5rem; color: var(--text-gray);">Every deposit, inspection and
+                                    movement is time-stamped and visible to authorised users.</p>
+                            </div>
+                            <div class="service-card">
+                                <h3 style="font-size: 1.125rem;">Message the custody desk</h3>
+                                <p style="margin-top: 0.5rem; color: var(--text-gray);">Secure messaging with the team
+                                    that handles your account, 24/7.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section style="background: var(--card); padding: 80px 0; text-align: center;">
+            <div class="container">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; font-family: var(--font-heading);">Don't have an
+                    account yet?</h2>
+                <p style="color: var(--text-gray); font-size: 1.25rem; margin-bottom: 2.5rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    Open a safekeeping account and we'll set up your portal access as part of onboarding.</p>
+                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="/contact" class="btn-primary btn-large">Open an Account</a>
+                    <a href="/verify-receipt" class="btn-outline btn-large">Verify a Receipt</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="logo-wrap" style="margin-bottom: 2rem;">
+                    <img src="logo_new.png" alt="Uwezo Logo" style="height: 48px;">
+                </div>
+                <p style="color: var(--muted); line-height: 1.8; margin-bottom: 2.5rem; max-width: 350px;">
+                    Protecting Ugandan homes and businesses with care, professionalism, and integrity since 2011.
+                </p>
+                <div
+                    style="padding: 1.5rem; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); border: 1px solid var(--border); display: inline-block; width: 100%; max-width: 300px;">
+                    <p
+                        style="font-size: 0.75rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; font-weight: 700;">
+                        24/7 Emergency Lines</p>
+                    <p style="font-size: 1.25rem; font-weight: 800; color: white; margin-bottom: 0.25rem;">+256 200 902
+                        428</p>
+                    <p style="font-size: 1.25rem; font-weight: 800; color: white;">+256 774 361 171</p>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/service-guards">Armed &amp; Unarmed Guards</a></li>
+                    <li><a href="/service-corporate">Corporate Security</a></li>
+                    <li><a href="/service-residential">Residential Protection</a></li>
+                    <li><a href="/service-event">Event Management</a></li>
+                    <li><a href="/service-vip">VIP Protection</a></li>
+                    <li><a href="/service-cctv">CCTV Surveillance</a></li>
+                    <li><a href="/service-cit">Cash-in-Transit</a></li>
+                    <li><a href="/service-safekeeping">Safekeeping Deposit</a></li>
+                    <li><a href="/service-temporary">Temporary Security</a></li>
+                    <li><a href="/service-patrol">Patrol Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get Started</h4>
+                <ul>
+                    <li><a href="/contact">Request a Consultation</a></li>
+                    <li><a href="/contact">Open an Account</a></li>
+                    <li><a href="/verify-receipt">Verify a Safekeeping Receipt</a></li>
+                    <li><a href="/track">Track a Consignment</a></li>
+                    <li><a href="/client-portal">Client Portal</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li style="margin-bottom: 1rem;">
+                        <p style="color: var(--muted); font-size: 0.875rem;">Head Office</p>
+                        <p style="color: var(--text-gray); font-size: 0.9375rem;">Plot 6, Ssemawata Road, Ntinda<br>Kampala, Uganda
+                        </p>
+                    </li>
+                    <li>
+                        <p style="color: var(--muted); font-size: 0.875rem;">General Enquiries</p>
+                        <p><a href="mailto:enquiries@uwezosecurity.com" style="color: var(--primary);">enquiries@uwezosecurity.com</a></p>
+                        <p style="color: var(--muted); font-size: 0.875rem; margin-top: 0.75rem;">Administration</p>
+                        <p><a href="mailto:admin@uwezosecurity.com" style="color: var(--primary);">admin@uwezosecurity.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container"
+            style="padding-top: 3rem; border-top: 1px solid var(--border); display: flex; justify-content: center; align-items: center; color: var(--muted); font-size: 0.875rem; flex-wrap: wrap-reverse; gap: 1.5rem; text-align: center;">
+            <p>&copy; 2026 Uwezo Security Services Limited.</p>
+            <div style="display: flex; gap: 2rem;">
+                <a href="#">Security Audit</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="theme.js"></script>
+    <script>
+        document.getElementById('portalForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.getElementById('portalNotice').style.display = 'block';
+        });
+    </script>
+    <a href="https://wa.me/256774361171" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <span>Chat on WhatsApp</span>
+    </a>
+</body>
+
+</html>

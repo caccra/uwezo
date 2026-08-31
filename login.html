@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Sign In | Uwezo Security</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/app.css">
+</head>
+
+<body>
+    <div class="auth-wrap">
+        <form class="auth-card" id="loginForm" novalidate>
+            <a class="brand" href="/" style="text-decoration:none">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path>
+                </svg>
+                Uwezo <span>Security</span>
+            </a>
+            <h1>Sign in</h1>
+            <p class="sub">Access your safe box, documents and requests.</p>
+
+            <div class="msg info hidden" id="statusMsg"></div>
+            <div class="msg err hidden" id="err"></div>
+
+            <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+                <label for="password">Password</label>
+                <input id="password" type="password" autocomplete="current-password" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="btn">Sign in</button>
+
+            <p class="auth-alt">
+                <a href="#" id="forgot">Forgot password?</a> &nbsp;·&nbsp;
+                New client? <a href="/signup">Create an account</a>
+            </p>
+        </form>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+    <script src="assets/supabase-client.js"></script>
+    <script src="assets/auth.js"></script>
+    <script>
+        (function () {
+            var form = document.getElementById("loginForm");
+            var err = document.getElementById("err");
+            var btn = document.getElementById("btn");
+            var statusMsg = document.getElementById("statusMsg");
+
+            var params = new URLSearchParams(location.search);
+            var next = params.get("next");
+            var st = params.get("status");
+            if (st === "pending") show("Your account is awaiting administrator approval. You'll be able to sign in once it's activated.");
+            else if (st === "rejected") show("This account's application was not approved. Contact custody@uwezosecurity.com.");
+            else if (st === "suspended") show("This account is suspended. Contact custody@uwezosecurity.com.");
+            function show(m) { statusMsg.textContent = m; statusMsg.classList.remove("hidden"); }
+
+            if (!window.SB_READY) {
+                err.textContent = "Backend not configured — see supabase/README.md.";
+                err.classList.remove("hidden");
+                btn.disabled = true;
+            }
+
+            // already signed in? route by role.
+            (async function () {
+                if (!window.SB_READY) return;
+                var p = await UwezoAuth.getProfile();
+                if (!p) return;
+                if (p.role === "admin") location.replace("/admin");
+                else if (p.status === "active") location.replace(next || "/dashboard");
+            })();
+
+            form.addEventListener("submit", async function (e) {
+                e.preventDefault();
+                err.classList.add("hidden");
+                btn.disabled = true; btn.textContent = "Signing in…";
+                var email = document.getElementById("email").value.trim();
+                var password = document.getElementById("password").value;
+                var { error } = await sb.auth.signInWithPassword({ email: email, password: password });
+                if (error) {
+                    var m = error.message || "Sign in failed.";
+                    if (/not confirmed|confirm/i.test(m)) {
+                        m = "Confirm your email address first — check your inbox for the link.";
+                    } else if (/invalid login/i.test(m)) {
+                        m = "Email or password is incorrect.";
+                    }
+                    err.textContent = m;
+                    err.classList.remove("hidden");
+                    btn.disabled = false; btn.textContent = "Sign in";
+                    return;
+                }
+                var p = await UwezoAuth.getProfile();
+                if (!p) { err.textContent = "Profile not found."; err.classList.remove("hidden"); btn.disabled = false; btn.textContent = "Sign in"; return; }
+                if (p.role === "admin") { location.replace("/admin"); return; }
+                if (p.status !== "active") {
+                    await sb.auth.signOut();
+                    location.replace("/login?status=" + p.status);
+                    return;
+                }
+                location.replace(next || "/dashboard");
+            });
+
+            document.getElementById("forgot").addEventListener("click", async function (e) {
+                e.preventDefault();
+                var email = document.getElementById("email").value.trim();
+                if (!email) { err.textContent = "Enter your email above first."; err.classList.remove("hidden"); return; }
+                var { error } = await sb.auth.resetPasswordForEmail(email, { redirectTo: location.origin + "/login" });
+                err.classList.remove("hidden");
+                err.className = "msg " + (error ? "err" : "ok");
+                err.textContent = error ? error.message : "Password reset link sent to " + email + ".";
+            });
+        })();
+    </script>
+</body>
+
+</html>
