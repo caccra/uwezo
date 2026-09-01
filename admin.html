@@ -54,8 +54,9 @@
         </nav>
 
         <main class="content">
+            <h1 class="sr-only">Admin Dashboard</h1>
             <section data-panel="overview">
-                <h1 class="page">Overview</h1>
+                <h2 class="page">Overview</h2>
                 <p class="page-sub">At-a-glance status of the custody operation.</p>
                 <div class="cards" id="statCards"></div>
                 <div class="panel">
@@ -68,7 +69,7 @@
             </section>
 
             <section data-panel="clients" class="hidden">
-                <h1 class="page">Clients</h1>
+                <h2 class="page">Clients</h2>
                 <p class="page-sub">Approve sign-ups and manage accounts.</p>
                 <div style="margin-bottom:1rem"><input id="clientSearch" type="search" placeholder="Search name / email / company…" style="max-width:320px"></div>
                 <div class="table-wrap">
@@ -80,7 +81,7 @@
 
             <section data-panel="deployments" class="hidden">
                 <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap">
-                    <div><h1 class="page">Guard Deployment</h1><p class="page-sub">Duty rosters, shift management and site assignments.</p></div>
+                    <div><h2 class="page">Guard Deployment</h2><p class="page-sub">Duty rosters, shift management and site assignments.</p></div>
                     <button class="btn btn-primary" id="newDeployment">+ New deployment</button>
                 </div>
                 <div class="table-wrap">
@@ -92,7 +93,7 @@
 
             <section data-panel="incidents" class="hidden">
                 <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap">
-                    <div><h1 class="page">Incident Management</h1><p class="page-sub">Occurrence book — every incident logged, by severity and status.</p></div>
+                    <div><h2 class="page">Incident Management</h2><p class="page-sub">Occurrence book — every incident logged, by severity and status.</p></div>
                     <button class="btn btn-primary" id="newIncident">+ Log incident</button>
                 </div>
                 <div class="table-wrap">
@@ -104,7 +105,7 @@
 
             <section data-panel="personnel" class="hidden">
                 <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap">
-                    <div><h1 class="page">Personnel</h1><p class="page-sub">Guards, supervisors and managers.</p></div>
+                    <div><h2 class="page">Personnel</h2><p class="page-sub">Guards, supervisors and managers.</p></div>
                     <button class="btn btn-primary" id="newPersonnel">+ New personnel</button>
                 </div>
                 <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1rem">
@@ -120,7 +121,7 @@
 
             <section data-panel="sites" class="hidden">
                 <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap">
-                    <div><h1 class="page">Sites</h1><p class="page-sub">Client premises — risk level, instructions and equipment.</p></div>
+                    <div><h2 class="page">Sites</h2><p class="page-sub">Client premises — risk level, instructions and equipment.</p></div>
                     <button class="btn btn-primary" id="newSite">+ New site</button>
                 </div>
                 <div class="table-wrap">
@@ -132,7 +133,7 @@
 
             <section data-panel="invoices" class="hidden">
                 <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap">
-                    <div><h1 class="page">Invoices</h1><p class="page-sub" id="invoiceCount">Billing and outstanding balances.</p></div>
+                    <div><h2 class="page">Invoices</h2><p class="page-sub" id="invoiceCount">Billing and outstanding balances.</p></div>
                     <button class="btn btn-primary" id="newInvoice">+ New invoice</button>
                 </div>
                 <div class="table-wrap">
@@ -144,7 +145,7 @@
 
             <section data-panel="boxes" class="hidden">
                 <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap">
-                    <div><h1 class="page">Safe Boxes</h1><p class="page-sub">Create boxes, assign clients, record holdings.</p></div>
+                    <div><h2 class="page">Safe Boxes</h2><p class="page-sub">Create boxes, assign clients, record holdings.</p></div>
                     <button class="btn btn-primary" id="newBox">+ New box</button>
                 </div>
                 <div class="table-wrap">
@@ -156,7 +157,7 @@
 
             <section data-panel="docs" class="hidden">
                 <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap">
-                    <div><h1 class="page">Documents</h1><p class="page-sub" id="docCount">…</p></div>
+                    <div><h2 class="page">Documents</h2><p class="page-sub" id="docCount">…</p></div>
                     <button class="btn btn-primary" id="newDoc">+ Upload document</button>
                 </div>
                 <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1rem">
@@ -173,7 +174,7 @@
             </section>
 
             <section data-panel="requests" class="hidden">
-                <h1 class="page">Requests</h1>
+                <h2 class="page">Requests</h2>
                 <p class="page-sub">Client deposit / withdrawal / release / access requests.</p>
                 <div class="table-wrap">
                     <table><thead><tr><th>Raised</th><th>Client</th><th>Type</th><th>Details</th><th>Preferred</th><th>Status</th><th></th></tr></thead>
@@ -183,7 +184,7 @@
             </section>
 
             <section data-panel="audit" class="hidden">
-                <h1 class="page">Audit Log</h1>
+                <h2 class="page">Audit Log</h2>
                 <p class="page-sub">Every change to clients, boxes, documents, requests and KYC.</p>
                 <div class="table-wrap">
                     <table><thead><tr><th>When</th><th>Actor</th><th>Action</th><th>Entity</th><th>ID</th></tr></thead>
