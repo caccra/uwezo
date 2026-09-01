@@ -40,26 +40,39 @@
       ]
     }
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
+        <div class="reg-bar">
+        <div class="container">
+            <span><b>PSO LICENCE</b> &nbsp;UPF/PSO REGISTERED &nbsp;&middot;&nbsp; UWEZO SECURITY SERVICES LTD</span>
+            <span>CONTROL ROOM 24/7 &nbsp;&middot;&nbsp; <a href="tel:+256200902428">+256&nbsp;200&nbsp;902&nbsp;428</a></span>
+        </div>
+    </div>
+
     <header>
         <div class="container nav-content">
-            <a href="/" class="logo-wrap">
-                <img src="logo_new.png" alt="Uwezo Security Official Logo">
-                
+            <a href="/" class="logo-wrap" aria-label="Uwezo Security home">
+                <img src="logo_new.png" alt="Uwezo Security" width="700" height="669">
+                <span class="logo-text">Uwezo Security</span>
             </a>
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">☰</button>
-            <nav>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">&#9776;</button>
+            <nav id="nav">
                 <ul class="nav-links" id="navLinks">
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/services" class="active">Services</a></li>
                     <li><a href="/sectors">Sectors</a></li>
                     <li><a href="/contact">Contact</a></li>
-                    <li><a href="/contact" class="btn-primary">Get Started</a></li>
+                    <li class="nav-actions">
+                        <a href="/verify-receipt">Verify a record</a>
+                        <a href="/login">Client portal</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -101,9 +114,9 @@
                         </p>
                     </div>
                     <div class="grid-split-visual reveal delay-1"
-                        style="border-radius: var(--radius); overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+                        style="border-radius: var(--radius); overflow: hidden;">
                         <img src="tech.png" alt="Corporate Security Setup"
-                            style="width: 100%; height: clamp(300px, 40vh, 500px); object-fit: cover;">
+                            style="width: 100%; height: clamp(300px, 40vh, 500px); object-fit: cover;" width="1024" height="1024" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -144,7 +157,7 @@
 
         <!-- CTA Section -->
         <section class="section-standard"
-            style="text-align: center; background: linear-gradient(rgba(3,2,19,0.85), rgba(3,2,19,0.85)), url('hero.png'); background-size: cover; background-position: center;">
+            style="text-align: center; background: linear-gradient(rgba(20,33,61,0.86), rgba(20,33,61,0.86)), url('hero.png'); background-size: cover; background-position: center;">
             <div class="container reveal">
                 <div class="glass" style="padding: clamp(2rem, 8vw, 5rem); border-radius: var(--radius-lg);">
                     <h2
@@ -162,30 +175,25 @@
         </section>
     </main>
 
-    <footer>
+        <footer>
         <div class="container footer-grid">
             <div class="footer-col">
-                <div class="logo-wrap" style="margin-bottom: 2rem;">
-                    <img src="logo_new.png" alt="Uwezo Logo" style="height: 48px;">
-                    
+                <div class="logo-wrap" style="margin-bottom:1.6rem;">
+                    <img src="logo_new.png" alt="Uwezo Security" width="700" height="669">
                 </div>
-                <p style="color: var(--muted); line-height: 1.8; margin-bottom: 2.5rem; max-width: 350px;">
-                    Protecting Ugandan homes and businesses with care, professionalism, and integrity since 2011.
+                <p style="max-width:34ch;font-size:0.9rem;">
+                    Protecting Ugandan homes and businesses with care, professionalism and integrity since 2011.
                 </p>
-                <div
-                    style="padding: 1.5rem; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); border: 1px solid var(--border); display: inline-block; width: 100%; max-width: 300px;">
-                    <p
-                        style="font-size: 0.75rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; font-weight: 700;">
-                        24/7 Emergency Lines</p>
-                    <p style="font-size: 1.25rem; font-weight: 800; color: white; margin-bottom: 0.25rem;">+256 200 902
-                        428</p>
-                    <p style="font-size: 1.25rem; font-weight: 800; color: white;">+256 774 361 171</p>
+                <div class="footer-emergency">
+                    <p class="fe-label">24/7 Emergency Lines</p>
+                    <p class="fe-num"><a href="tel:+256200902428">+256 200 902 428</a></p>
+                    <p class="fe-num"><a href="tel:+256774361171">+256 774 361 171</a></p>
                 </div>
             </div>
             <div class="footer-col">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="/service-guards">Armed & Unarmed Guards</a></li>
+                    <li><a href="/service-guards">Armed &amp; Unarmed Guards</a></li>
                     <li><a href="/service-corporate">Corporate Security</a></li>
                     <li><a href="/service-residential">Residential Protection</a></li>
                     <li><a href="/service-event">Event Management</a></li>
@@ -198,30 +206,36 @@
                 </ul>
             </div>
             <div class="footer-col">
+                <h4>Records</h4>
+                <ul>
+                    <li><a href="/verify-receipt">Verify a record</a></li>
+                    <li><a href="/track">Track a consignment</a></li>
+                    <li><a href="/login">Client portal</a></li>
+                    <li><a href="/signup">Open an account</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
                 <h4>Contact</h4>
                 <ul>
-                    <li style="margin-bottom: 1rem;">
-                        <p style="color: var(--muted); font-size: 0.875rem;">Head Office</p>
-                        <p style="color: var(--text-gray); font-size: 0.9375rem;">Plot 6, Ssemawata Road, Ntinda<br>Kampala, Uganda
-                        </p>
+                    <li style="margin-bottom:1rem;">
+                        <span class="fc-label">Head Office</span>
+                        Plot 6, Ssemawata Road, Ntinda<br>Kampala, Uganda
+                    </li>
+                    <li style="margin-bottom:1rem;">
+                        <span class="fc-label">General Enquiries</span>
+                        <a href="mailto:enquiries@uwezosecurity.com">enquiries@uwezosecurity.com</a>
                     </li>
                     <li>
-                        <p style="color: var(--muted); font-size: 0.875rem;">General Enquiries</p>
-                        <p><a href="mailto:enquiries@uwezosecurity.com" style="color: var(--primary);">enquiries@uwezosecurity.com</a></p>
-                        <p style="color: var(--muted); font-size: 0.875rem; margin-top: 0.75rem;">Administration</p>
-                        <p><a href="mailto:admin@uwezosecurity.com" style="color: var(--primary);">admin@uwezosecurity.com</a></p>
-                        <p><a href="mailto:uwezosecurityservices@gmail.com" style="color: var(--primary);">uwezosecurityservices@gmail.com</a></p>
+                        <span class="fc-label">Administration</span>
+                        <a href="mailto:admin@uwezosecurity.com">admin@uwezosecurity.com</a><br>
+                        <a href="mailto:uwezosecurityservices@gmail.com">uwezosecurityservices@gmail.com</a>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="container"
-            style="padding-top: 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 0.875rem; flex-wrap: wrap-reverse; gap: 1.5rem; justify-content: center; text-align: center;">
-            <p>&copy; 2026 Uwezo Security Services Limited.</p>
-            <div style="display: flex; gap: 2rem;">
-                <a href="#">Security Audit</a>
-                <a href="#">Privacy Policy</a>
-            </div>
+        <div class="container">
+            <span>&copy; 2026 Uwezo Security Services Limited</span>
+            <span>PSO / UPF licensed &middot; Kampala, Uganda</span>
         </div>
     </footer>
 

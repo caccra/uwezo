@@ -66,3 +66,53 @@
   from = "/service-training"
   to = "/service-training.html"
   status = 200
+
+[[redirects]]
+  from = "/service-patrol"
+  to = "/service-patrol.html"
+  status = 200
+
+[[redirects]]
+  from = "/service-safekeeping"
+  to = "/service-safekeeping.html"
+  status = 200
+
+[[redirects]]
+  from = "/service-temporary"
+  to = "/service-temporary.html"
+  status = 200
+
+[[redirects]]
+  from = "/verify-receipt"
+  to = "/verify-receipt.html"
+  status = 200
+
+[[redirects]]
+  from = "/track"
+  to = "/track.html"
+  status = 200
+
+[[redirects]]
+  from = "/client-portal"
+  to = "/client-portal.html"
+  status = 200
+
+[[redirects]]
+  from = "/login"
+  to = "/login.html"
+  status = 200
+
+[[redirects]]
+  from = "/signup"
+  to = "/signup.html"
+  status = 200
+
+[[redirects]]
+  from = "/dashboard"
+  to = "/dashboard.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin"
+  to = "/admin.html"
+  status = 200

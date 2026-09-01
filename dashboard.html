@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Client Dashboard | Uwezo Security</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/app.css">
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="brand" style="margin:0;font-size:1rem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path>
+            </svg>
+            Uwezo <span>Security</span>
+        </div>
+        <div class="who">
+            <span id="whoName">…</span>
+            <button class="btn btn-ghost btn-sm" id="signOut">Sign out</button>
+        </div>
+    </div>
+
+    <div class="layout">
+        <nav class="sidenav" id="nav">
+            <button data-tab="box" class="active">Safe Box</button>
+            <button data-tab="docs">Documents</button>
+            <button data-tab="team">My Security Team</button>
+            <button data-tab="requests">Requests</button>
+            <button data-tab="invoices">Invoices &amp; Payments</button>
+            <button data-tab="alerts">Alerts &amp; Notifications<span class="nav-badge hidden" id="alertBadge"></span></button>
+            <button data-tab="profile">Account</button>
+        </nav>
+
+        <main class="content">
+            <h1 class="sr-only">Client Dashboard</h1>
+            <!-- SAFE BOX -->
+            <section data-panel="box">
+                <h2 class="page">Safe Box</h2>
+                <p class="page-sub">Boxes assigned to your account and their recorded holdings.</p>
+                <div id="boxOut"><div class="empty">Loading…</div></div>
+            </section>
+
+            <!-- DOCUMENTS -->
+            <section data-panel="docs" class="hidden">
+                <h2 class="page">Documents</h2>
+                <p class="page-sub">Safekeeping receipts, statements and other documents on your account.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Reference</th><th>Title</th><th>Type</th><th>Date</th><th>File</th></tr></thead>
+                        <tbody id="docRows"></tbody>
+                    </table>
+                    <div class="empty hidden" id="docEmpty">No documents yet.</div>
+                </div>
+            </section>
+
+            <!-- MY SECURITY TEAM -->
+            <section data-panel="team" class="hidden">
+                <h2 class="page">My Security Team</h2>
+                <p class="page-sub">Guards and supervisors currently deployed to your site(s).</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Name</th><th>Role</th><th>Site</th><th>Status</th></tr></thead>
+                        <tbody id="teamRows"></tbody>
+                    </table>
+                    <div class="empty hidden" id="teamEmpty">No personnel currently assigned.</div>
+                </div>
+            </section>
+
+            <!-- REQUESTS -->
+            <section data-panel="requests" class="hidden">
+                <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap">
+                    <div>
+                        <h2 class="page">Requests</h2>
+                        <p class="page-sub">Deposit, withdrawal, release and access appointments.</p>
+                    </div>
+                    <button class="btn btn-primary" id="newReq">+ New request</button>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Raised</th><th>Type</th><th>Box</th><th>Details</th><th>Preferred</th><th>Status</th></tr></thead>
+                        <tbody id="reqRows"></tbody>
+                    </table>
+                    <div class="empty hidden" id="reqEmpty">No requests yet.</div>
+                </div>
+            </section>
+
+            <!-- INVOICES & PAYMENTS -->
+            <section data-panel="invoices" class="hidden">
+                <h2 class="page">Invoices &amp; Payments</h2>
+                <p class="page-sub">Billing history and outstanding balances on your account.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Invoice #</th><th>Description</th><th>Amount</th><th>Issued</th><th>Due</th><th>Status</th></tr></thead>
+                        <tbody id="invoiceRows"></tbody>
+                    </table>
+                    <div class="empty hidden" id="invoiceEmpty">No invoices yet.</div>
+                </div>
+                <p class="muted" style="margin-top:1rem;font-size:.85rem">To arrange payment or query a balance, contact <a href="mailto:admin@uwezosecurity.com">admin@uwezosecurity.com</a>.</p>
+            </section>
+
+            <!-- ALERTS & NOTIFICATIONS -->
+            <section data-panel="alerts" class="hidden">
+                <h2 class="page">Alerts &amp; Notifications</h2>
+                <p class="page-sub">Updates from Uwezo Security about your account.</p>
+                <div id="alertsOut"><div class="empty">Loading…</div></div>
+            </section>
+
+            <!-- ACCOUNT -->
+            <section data-panel="profile" class="hidden">
+                <h2 class="page">Account</h2>
+                <p class="page-sub">Keep your details current, manage sign-in, and upload identification for verification.</p>
+
+                <div class="panel">
+                    <h3>Your details</h3>
+                    <div class="msg ok hidden" id="pOk">Saved.</div>
+                    <div class="msg err hidden" id="pErr"></div>
+                    <form id="profileForm">
+                        <div class="grid-2">
+                            <div class="field"><label>Full name</label><input id="pf_name" type="text"></div>
+                            <div class="field"><label>Phone</label><input id="pf_phone" type="tel"></div>
+                        </div>
+                        <div class="field"><label>Company</label><input id="pf_company" type="text"></div>
+                        <button class="btn btn-primary" type="submit">Save details</button>
+                    </form>
+                </div>
+
+                <div class="panel">
+                    <h3>Email address</h3>
+                    <p class="muted" style="font-size:.85rem;margin-bottom:1rem">Changing your email sends a confirmation link to the new address — sign-in keeps using your current email until you confirm.</p>
+                    <div class="msg ok hidden" id="emOk"></div>
+                    <div class="msg err hidden" id="emErr"></div>
+                    <form id="emailForm" style="display:flex;gap:.7rem;flex-wrap:wrap;align-items:end">
+                        <div class="field" style="margin:0;flex:1 1 220px"><label>Current email</label>
+                            <input id="pf_email" type="email" disabled></div>
+                        <div class="field" style="margin:0;flex:1 1 220px"><label>New email address</label>
+                            <input id="pf_newemail" type="email" placeholder="you@example.com"></div>
+                        <button class="btn btn-ghost" type="submit">Update email</button>
+                    </form>
+                </div>
+
+                <div class="panel">
+                    <h3>Change password</h3>
+                    <div class="msg ok hidden" id="pwOk">Password updated.</div>
+                    <div class="msg err hidden" id="pwErr"></div>
+                    <form id="pwForm">
+                        <div class="field" style="max-width:320px"><label>New password</label>
+                            <input id="pw_new" type="password" minlength="8" autocomplete="new-password"></div>
+                        <button class="btn btn-ghost" type="submit">Update password</button>
+                    </form>
+                </div>
+
+                <div class="panel">
+                    <h3>Identification (KYC)</h3>
+                    <div class="msg err hidden" id="kycErr"></div>
+                    <form id="kycForm" style="display:flex;gap:0.7rem;flex-wrap:wrap;align-items:end">
+                        <div class="field" style="margin:0;min-width:180px">
+                            <label>Document type</label>
+                            <select id="kyc_type">
+                                <option>National ID</option><option>Passport</option>
+                                <option>Driving permit</option><option>Proof of address</option><option>Other</option>
+                            </select>
+                        </div>
+                        <div class="field" style="margin:0;min-width:200px">
+                            <label>File (PDF/JPG/PNG, max 10 MB)</label>
+                            <input id="kyc_file" type="file" accept=".pdf,.jpg,.jpeg,.png,.webp">
+                        </div>
+                        <button class="btn btn-primary" type="submit">Upload</button>
+                    </form>
+                    <div class="table-wrap" style="margin-top:1rem">
+                        <table>
+                            <thead><tr><th>Type</th><th>Uploaded</th><th>Status</th><th>Note</th></tr></thead>
+                            <tbody id="kycRows"></tbody>
+                        </table>
+                        <div class="empty hidden" id="kycEmpty">Nothing uploaded yet.</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- new request modal -->
+    <div class="backdrop hidden" id="reqModal">
+        <form class="modal" id="reqForm">
+            <h2>New request</h2>
+            <div class="msg err hidden" id="reqErr"></div>
+            <div class="field"><label>Type</label>
+                <select id="rq_type">
+                    <option value="deposit">Deposit</option>
+                    <option value="withdrawal">Withdrawal</option>
+                    <option value="release">Release</option>
+                    <option value="access">Access appointment</option>
+                </select>
+            </div>
+            <div class="field"><label>Safe box <span class="muted">(optional)</span></label>
+                <select id="rq_box"><option value="">—</option></select>
+            </div>
+            <div class="field"><label>Details</label><textarea id="rq_details" required></textarea></div>
+            <div class="field" style="max-width:220px"><label>Preferred date <span class="muted">(optional)</span></label>
+                <input id="rq_date" type="date"></div>
+            <div class="modal-actions">
+                <button type="button" class="btn btn-ghost" data-close-modal>Cancel</button>
+                <button type="submit" class="btn btn-primary" id="rqSubmit">Submit request</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="toast"></div>
+
+    <script src="config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+    <script src="assets/supabase-client.js"></script>
+    <script src="assets/auth.js"></script>
+    <script src="assets/ui.js"></script>
+    <script>
+        (function () {
+            var U = window.UI, me = null, myBoxes = [];
+
+            document.getElementById("nav").addEventListener("click", function (e) {
+                var b = e.target.closest("button[data-tab]");
+                if (!b) return;
+                U.$all("#nav button").forEach(function (x) { x.classList.toggle("active", x === b); });
+                U.$all("[data-panel]").forEach(function (p) { p.classList.toggle("hidden", p.dataset.panel !== b.dataset.tab); });
+                if (b.dataset.tab === "docs") loadDocs();
+                if (b.dataset.tab === "team") loadTeam();
+                if (b.dataset.tab === "requests") loadRequests();
+                if (b.dataset.tab === "invoices") loadInvoices();
+                if (b.dataset.tab === "alerts") loadAlerts();
+                if (b.dataset.tab === "profile") loadKyc();
+            });
+            document.getElementById("signOut").addEventListener("click", UwezoAuth.signOut);
+
+            async function boot() {
+                me = await UwezoAuth.requireRole("client");
+                document.getElementById("whoName").textContent = me.full_name || me.email;
+                fillProfileForm();
+                await loadSafeBox();
+                wireForms();
+                checkAlerts();
+            }
+
+            /* ---------- Safe box ---------- */
+            async function loadSafeBox() {
+                var out = document.getElementById("boxOut");
+                var { data: boxes, error } = await sb.from("safe_boxes").select("*").order("box_number");
+                if (error) { out.innerHTML = '<div class="msg err">' + U.esc(error.message) + "</div>"; return; }
+                myBoxes = boxes || [];
+                if (!myBoxes.length) { out.innerHTML = '<div class="empty">No safe box is assigned to your account yet.</div>'; return; }
+                var ids = myBoxes.map(function (b) { return b.id; });
+                var { data: holds } = await sb.from("holdings").select("*").in("box_id", ids).order("added_at");
+                out.innerHTML = myBoxes.map(function (b) {
+                    var rows = (holds || []).filter(function (h) { return h.box_id === b.id; });
+                    return '<div class="panel">' +
+                        '<div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem">' +
+                        "<h3 style='margin:0'>Box " + U.esc(b.box_number) + "</h3>" + U.pill(b.status) + "</div>" +
+                        '<div class="cards" style="margin:1rem 0">' +
+                        stat(b.size || "—", "Size") + stat(b.location || "—", "Location") +
+                        stat(U.fmtMoney(b.monthly_fee, b.currency), "Monthly fee") +
+                        stat(U.fmtDate(b.assigned_at), "Assigned") + "</div>" +
+                        (b.notes ? '<p class="muted" style="margin:.2rem 0 1rem">' + U.esc(b.notes) + "</p>" : "") +
+                        '<div class="table-wrap"><table><thead><tr><th>Holding</th><th>Category</th><th>Declared value</th><th>Added</th></tr></thead><tbody>' +
+                        (rows.length ? rows.map(function (h) {
+                            return "<tr><td>" + U.esc(h.description) + "</td><td>" + U.esc(h.category || "—") +
+                                "</td><td>" + U.fmtMoney(h.declared_value, h.currency) + "</td><td>" + U.fmtDate(h.added_at) + "</td></tr>";
+                        }).join("") : '<tr><td colspan="4" class="muted">No holdings recorded.</td></tr>') +
+                        "</tbody></table></div></div>";
+                }).join("");
+            }
+            function stat(n, k) { return '<div class="stat"><div class="n" style="font-size:1.05rem">' + U.esc(n) + '</div><div class="k">' + k + "</div></div>"; }
+
+            /* ---------- Documents ---------- */
+            async function loadDocs() {
+                var tb = document.getElementById("docRows");
+                var { data, error } = await sb.from("documents")
+                    .select("*").order("issue_date", { ascending: false, nullsFirst: false });
+                if (error) { U.toast(error.message, true); return; }
+                var mine = (data || []).filter(function (d) { return d.visibility === "client" || d.owner_id === me.id; });
+                document.getElementById("docEmpty").classList.toggle("hidden", mine.length > 0);
+                tb.innerHTML = mine.map(function (d) {
+                    return "<tr><td><code>" + U.esc(d.reference) + "</code></td><td>" + U.esc(d.title) +
+                        "</td><td>" + U.esc(d.category || "—") + "</td><td>" + U.fmtDate(d.issue_date) + "</td><td>" +
+                        (d.file_path ? '<button class="btn btn-ghost btn-sm" data-dl="' + U.esc(d.file_path) + '">Download</button>'
+                            : '<span class="muted">—</span>') + "</td></tr>";
+                }).join("");
+                U.$all("[data-dl]", tb).forEach(function (b) {
+                    b.addEventListener("click", function () { U.downloadDoc("documents", b.dataset.dl); });
+                });
+            }
+
+            /* ---------- Requests ---------- */
+            async function loadRequests() {
+                var tb = document.getElementById("reqRows");
+                var { data, error } = await sb.from("requests").select("*").order("created_at", { ascending: false });
+                if (error) { U.toast(error.message, true); return; }
+                document.getElementById("reqEmpty").classList.toggle("hidden", (data || []).length > 0);
+                var boxName = {};
+                myBoxes.forEach(function (b) { boxName[b.id] = b.box_number; });
+                tb.innerHTML = (data || []).map(function (r) {
+                    return "<tr><td>" + U.fmtDate(r.created_at) + "</td><td>" + U.esc(r.type) + "</td><td>" +
+                        U.esc(boxName[r.box_id] || "—") + "</td><td>" + U.esc(r.details || "") +
+                        (r.admin_note ? '<div class="muted" style="margin-top:.3rem">Note: ' + U.esc(r.admin_note) + "</div>" : "") +
+                        "</td><td>" + U.fmtDate(r.preferred_date) + "</td><td>" + U.pill(r.status) + "</td></tr>";
+                }).join("");
+            }
+
+            /* ---------- My security team ---------- */
+            async function loadTeam() {
+                var tb = document.getElementById("teamRows");
+                var { data: sites, error: se } = await sb.from("sites").select("id,name").eq("client_id", me.id);
+                if (se) { U.toast(se.message, true); return; }
+                var mySites = sites || [];
+                if (!mySites.length) {
+                    document.getElementById("teamEmpty").textContent = "No site is linked to your account yet — contact your account manager.";
+                    document.getElementById("teamEmpty").classList.remove("hidden");
+                    tb.innerHTML = "";
+                    return;
+                }
+                var siteName = {};
+                mySites.forEach(function (s) { siteName[s.id] = s.name; });
+                var ids = mySites.map(function (s) { return s.id; });
+                var { data, error } = await sb.from("personnel").select("*").in("site_id", ids).order("full_name");
+                if (error) { U.toast(error.message, true); return; }
+                document.getElementById("teamEmpty").textContent = "No personnel currently assigned.";
+                document.getElementById("teamEmpty").classList.toggle("hidden", (data || []).length > 0);
+                tb.innerHTML = (data || []).map(function (p) {
+                    return "<tr><td>" + U.esc(p.full_name) + "</td><td>" + U.esc(p.role || "—") + "</td><td>" +
+                        U.esc(siteName[p.site_id] || "—") + "</td><td>" + U.pill(p.status) + "</td></tr>";
+                }).join("");
+            }
+
+            /* ---------- Invoices & payments ---------- */
+            async function loadInvoices() {
+                var tb = document.getElementById("invoiceRows");
+                var { data, error } = await sb.from("invoices").select("*").order("issue_date", { ascending: false });
+                if (error) { U.toast(error.message, true); return; }
+                document.getElementById("invoiceEmpty").classList.toggle("hidden", (data || []).length > 0);
+                tb.innerHTML = (data || []).map(function (v) {
+                    return "<tr><td><code>" + U.esc(v.invoice_no) + "</code></td><td>" + U.esc(v.description || "—") +
+                        "</td><td>" + U.fmtMoney(v.amount, v.currency) + "</td><td>" + U.fmtDate(v.issue_date) +
+                        "</td><td>" + U.fmtDate(v.due_date) + "</td><td>" + U.pill(v.status) + "</td></tr>";
+                }).join("");
+            }
+
+            /* ---------- Alerts & notifications ---------- */
+            async function checkAlerts() {
+                var { data, error } = await sb.from("notifications").select("id,read");
+                if (error) return;
+                updateAlertBadge(data || []);
+            }
+            function updateAlertBadge(list) {
+                var n = (list || []).filter(function (x) { return !x.read; }).length;
+                var badge = document.getElementById("alertBadge");
+                if (n > 0) { badge.textContent = n; badge.classList.remove("hidden"); }
+                else badge.classList.add("hidden");
+            }
+            async function loadAlerts() {
+                var out = document.getElementById("alertsOut");
+                var { data, error } = await sb.from("notifications").select("*").order("created_at", { ascending: false });
+                if (error) { out.innerHTML = '<div class="msg err">' + U.esc(error.message) + "</div>"; return; }
+                var list = data || [];
+                updateAlertBadge(list);
+                if (!list.length) { out.innerHTML = '<div class="empty">No notifications yet.</div>'; return; }
+                out.innerHTML = list.map(function (n) {
+                    return '<div class="panel" style="border-left:3px solid ' + (n.read ? "var(--line)" : "var(--primary)") + '">' +
+                        '<div style="display:flex;justify-content:space-between;gap:1rem;align-items:flex-start;flex-wrap:wrap">' +
+                        "<div><strong>" + U.esc(n.title) + "</strong> " + U.pill(n.type) + "</div>" +
+                        (n.read ? "" : '<button class="btn btn-ghost btn-sm" data-read="' + n.id + '">Mark read</button>') +
+                        "</div>" +
+                        (n.body ? '<p class="muted" style="margin-top:.5rem">' + U.esc(n.body) + "</p>" : "") +
+                        '<p class="muted" style="font-size:.78rem;margin-top:.5rem">' + U.fmtDateTime(n.created_at) + "</p>" +
+                        "</div>";
+                }).join("");
+                U.$all("[data-read]", out).forEach(function (btn) {
+                    btn.addEventListener("click", async function () {
+                        await sb.from("notifications").update({ read: true }).eq("id", btn.dataset.read);
+                        loadAlerts();
+                    });
+                });
+            }
+
+            /* ---------- KYC ---------- */
+            async function loadKyc() {
+                var tb = document.getElementById("kycRows");
+                var { data, error } = await sb.from("kyc_documents").select("*").order("uploaded_at", { ascending: false });
+                if (error) { U.toast(error.message, true); return; }
+                document.getElementById("kycEmpty").classList.toggle("hidden", (data || []).length > 0);
+                tb.innerHTML = (data || []).map(function (k) {
+                    return "<tr><td>" + U.esc(k.doc_type) + "</td><td>" + U.fmtDate(k.uploaded_at) + "</td><td>" +
+                        U.pill(k.status) + "</td><td>" + U.esc(k.review_note || "—") + "</td></tr>";
+                }).join("");
+            }
+
+            /* ---------- forms ---------- */
+            function fillProfileForm() {
+                pf_name.value = me.full_name || ""; pf_phone.value = me.phone || "";
+                pf_company.value = me.company || ""; pf_email.value = me.email || "";
+            }
+            function wireForms() {
+                document.getElementById("profileForm").addEventListener("submit", async function (e) {
+                    e.preventDefault();
+                    pOk.classList.add("hidden"); pErr.classList.add("hidden");
+                    var { error } = await sb.from("profiles").update({
+                        full_name: pf_name.value.trim(), phone: pf_phone.value.trim(), company: pf_company.value.trim(),
+                    }).eq("id", me.id);
+                    if (error) { pErr.textContent = error.message; pErr.classList.remove("hidden"); return; }
+                    me.full_name = pf_name.value.trim();
+                    document.getElementById("whoName").textContent = me.full_name || me.email;
+                    pOk.classList.remove("hidden");
+                });
+
+                document.getElementById("emailForm").addEventListener("submit", async function (e) {
+                    e.preventDefault();
+                    emOk.classList.add("hidden"); emErr.classList.add("hidden");
+                    var val = pf_newemail.value.trim();
+                    if (!val) { emErr.textContent = "Enter a new email address."; emErr.classList.remove("hidden"); return; }
+                    var { error } = await sb.auth.updateUser({ email: val });
+                    if (error) { emErr.textContent = error.message; emErr.classList.remove("hidden"); return; }
+                    pf_newemail.value = "";
+                    emOk.textContent = "Confirmation link sent to " + val + " — check that inbox to complete the change.";
+                    emOk.classList.remove("hidden");
+                });
+
+                document.getElementById("pwForm").addEventListener("submit", async function (e) {
+                    e.preventDefault();
+                    pwOk.classList.add("hidden"); pwErr.classList.add("hidden");
+                    if (pw_new.value.length < 8) { pwErr.textContent = "Minimum 8 characters."; pwErr.classList.remove("hidden"); return; }
+                    var { error } = await sb.auth.updateUser({ password: pw_new.value });
+                    if (error) { pwErr.textContent = error.message; pwErr.classList.remove("hidden"); return; }
+                    pw_new.value = ""; pwOk.classList.remove("hidden");
+                });
+
+                document.getElementById("kycForm").addEventListener("submit", async function (e) {
+                    e.preventDefault();
+                    kycErr.classList.add("hidden");
+                    var f = document.getElementById("kyc_file").files[0];
+                    if (!f) { kycErr.textContent = "Choose a file."; kycErr.classList.remove("hidden"); return; }
+                    if (f.size > 10 * 1024 * 1024) { kycErr.textContent = "Max 10 MB."; kycErr.classList.remove("hidden"); return; }
+                    var path = me.id + "/" + Date.now() + "-" + f.name.replace(/[^\w.\-]+/g, "_");
+                    var up = await sb.storage.from("kyc").upload(path, f, { upsert: false });
+                    if (up.error) { kycErr.textContent = up.error.message; kycErr.classList.remove("hidden"); return; }
+                    var { error } = await sb.from("kyc_documents").insert({
+                        client_id: me.id, doc_type: document.getElementById("kyc_type").value,
+                        file_path: path, file_name: f.name, file_size: f.size,
+                    });
+                    if (error) { kycErr.textContent = error.message; kycErr.classList.remove("hidden"); return; }
+                    document.getElementById("kyc_file").value = "";
+                    U.toast("Uploaded — awaiting review");
+                    loadKyc();
+                });
+
+                // new request
+                document.getElementById("newReq").addEventListener("click", function () {
+                    reqErr.classList.add("hidden");
+                    var sel = document.getElementById("rq_box");
+                    sel.innerHTML = '<option value="">—</option>' + myBoxes.map(function (b) {
+                        return '<option value="' + b.id + '">Box ' + U.esc(b.box_number) + "</option>";
+                    }).join("");
+                    U.openModal(document.getElementById("reqModal"));
+                });
+                document.getElementById("reqForm").addEventListener("submit", async function (e) {
+                    e.preventDefault();
+                    reqErr.classList.add("hidden");
+                    var btn = document.getElementById("rqSubmit"); btn.disabled = true;
+                    var { error } = await sb.from("requests").insert({
+                        client_id: me.id,
+                        box_id: document.getElementById("rq_box").value || null,
+                        type: document.getElementById("rq_type").value,
+                        details: document.getElementById("rq_details").value.trim(),
+                        preferred_date: document.getElementById("rq_date").value || null,
+                    });
+                    btn.disabled = false;
+                    if (error) { reqErr.textContent = error.message; reqErr.classList.remove("hidden"); return; }
+                    U.closeModal(document.getElementById("reqModal"));
+                    document.getElementById("reqForm").reset();
+                    U.toast("Request submitted");
+                    loadRequests();
+                });
+            }
+
+            boot();
+        })();
+    </script>
+</body>
+
+</html>

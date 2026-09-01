@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Create an Account | Uwezo Security</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/app.css">
+</head>
+
+<body>
+    <div class="auth-wrap">
+        <form class="auth-card" id="signupForm" novalidate>
+            <a class="brand" href="/" style="text-decoration:none">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path>
+                </svg>
+                Uwezo <span>Security</span>
+            </a>
+            <h1>Create an account</h1>
+            <p class="sub">Set up access to your safe box, documents and requests.</p>
+
+            <div class="msg err hidden" id="err"></div>
+            <div class="msg ok hidden" id="done">
+                Account created. <a href="/login">Sign in</a> to continue.
+            </div>
+
+            <div id="fields">
+                <div class="field">
+                    <label for="full_name">Full name</label>
+                    <input id="full_name" type="text" autocomplete="name" required>
+                </div>
+                <div class="grid-2">
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" autocomplete="email" required>
+                    </div>
+                    <div class="field">
+                        <label for="phone">Phone</label>
+                        <input id="phone" type="tel" autocomplete="tel" placeholder="+256…">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="company">Company / organisation <span class="muted">(optional)</span></label>
+                    <input id="company" type="text" autocomplete="organization">
+                </div>
+                <div class="grid-2">
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <input id="password" type="password" autocomplete="new-password" minlength="8" required>
+                    </div>
+                    <div class="field">
+                        <label for="confirm">Confirm password</label>
+                        <input id="confirm" type="password" autocomplete="new-password" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" id="btn">Create account</button>
+            </div>
+
+            <p class="auth-alt">Already registered? <a href="/login">Sign in</a></p>
+        </form>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+    <script src="assets/supabase-client.js"></script>
+    <script>
+        (function () {
+            var form = document.getElementById("signupForm");
+            var err = document.getElementById("err");
+            var done = document.getElementById("done");
+            var fields = document.getElementById("fields");
+            var btn = document.getElementById("btn");
+
+            if (!window.SB_READY) {
+                err.textContent = "Backend not configured — see supabase/README.md.";
+                err.classList.remove("hidden");
+                btn.disabled = true;
+            }
+
+            function fail(m) { err.textContent = m; err.classList.remove("hidden"); btn.disabled = false; btn.textContent = "Create account"; }
+
+            form.addEventListener("submit", async function (e) {
+                e.preventDefault();
+                err.classList.add("hidden");
+                var pw = document.getElementById("password").value;
+                if (pw.length < 8) return fail("Password must be at least 8 characters.");
+                if (pw !== document.getElementById("confirm").value) return fail("Passwords do not match.");
+
+                btn.disabled = true; btn.textContent = "Creating…";
+                var { data, error } = await sb.auth.signUp({
+                    email: document.getElementById("email").value.trim(),
+                    password: pw,
+                    options: {
+                        data: {
+                            full_name: document.getElementById("full_name").value.trim(),
+                            phone: document.getElementById("phone").value.trim(),
+                            company: document.getElementById("company").value.trim(),
+                        },
+                    },
+                });
+                if (error) return fail(error.message || "Sign up failed.");
+
+                // No approval step — if we already have a session, go straight in.
+                if (data.session) { location.replace("/dashboard"); return; }
+                fields.classList.add("hidden");
+                done.classList.remove("hidden");
+            });
+        })();
+    </script>
+</body>
+
+</html>

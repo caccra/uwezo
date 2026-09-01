@@ -17,230 +17,280 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://www.uwezosecurity.com/logo_new.png">
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Security Services in Uganda",
+      "url": "https://www.uwezosecurity.com/services",
+      "description": "Guarding, VIP protection, cash-in-transit, CCTV, corporate, residential, event, safekeeping, temporary and patrol security services from Uwezo Security Services Limited.",
+      "isPartOf": {"@type": "WebSite", "name": "Uwezo Security Services", "url": "https://www.uwezosecurity.com"}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.uwezosecurity.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.uwezosecurity.com/services"}
+      ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
+    <div class="reg-bar">
+        <div class="container">
+            <span><b>PSO LICENCE</b> &nbsp;UPF/PSO REGISTERED &nbsp;&middot;&nbsp; UWEZO SECURITY SERVICES LTD</span>
+            <span>CONTROL ROOM 24/7 &nbsp;&middot;&nbsp; <a href="tel:+256200902428">+256&nbsp;200&nbsp;902&nbsp;428</a></span>
+        </div>
+    </div>
+
     <header>
         <div class="container nav-content">
-            <a href="/" class="logo-wrap">
-                <img src="logo_new.png" alt="Uwezo Security Official Logo">
-                
+            <a href="/" class="logo-wrap" aria-label="Uwezo Security home">
+                <img src="logo_new.png" alt="Uwezo Security" width="700" height="669">
+                <span class="logo-text">Uwezo Security</span>
             </a>
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">☰</button>
-            <nav>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">&#9776;</button>
+            <nav id="nav">
                 <ul class="nav-links" id="navLinks">
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/services" class="active">Services</a></li>
                     <li><a href="/sectors">Sectors</a></li>
                     <li><a href="/contact">Contact</a></li>
-                    <li><a href="/contact" class="btn-primary">Get Started</a></li>
+                    <li class="nav-actions">
+                        <a href="/verify-receipt">Verify a record</a>
+                        <a href="/login">Client portal</a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="sub-header" style="background-image: url('images/istockphoto-1316755912-612x612.jpg'); background-size: cover; background-position: center top;">
+        <section class="sub-header">
             <div class="container">
-                <div style="max-width: 900px; margin: 0 auto;">
-                    <h1 class="sub-title">Our <span class="text-gradient">Services</span></h1>
-                    <p style="font-size: clamp(1.1rem, 3vw, 1.25rem); color: var(--text-gray); line-height: 1.8;">
-                        Comprehensive security
-                        solutions tailored to protect what matters most to you across Uganda.</p>
+                <p class="eyebrow">Exhibit A</p>
+                <h1 class="sub-title">Schedule of services</h1>
+                <p style="max-width:58ch;">Everything Uwezo fields, in one register — from a single officer on a gate
+                    to allocated vault custody for gold and bullion. Every line links to how it runs.</p>
+            </div>
+        </section>
+
+        <section class="section-standard">
+            <div class="container">
+                <div class="entry-head reveal">
+                    <h2>Guarding, response &amp; logistics</h2>
+                </div>
+                <div class="tile-grid reveal">
+                    <a class="tile" href="/service-guards">
+                        <div class="tile-img"><img src="images/uwezo-security gaurd.jpg" alt="Manned guarding officer on post" width="768" height="1024" loading="lazy"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Armed &amp; unarmed &middot; sites, estates, malls</p>
+                            <h3>Manned guarding</h3>
+                            <p>Vetted, trained officers for factories, warehouses, estates and commercial premises across Uganda.</p>
+                            <span class="tile-go">Learn more &rarr;</span>
+                        </div>
+                    </a>
+                    <a class="tile" href="/service-corporate">
+                        <div class="tile-img"><img src="images/Corporate-Security.png" alt="Corporate security reception" width="848" height="450" loading="lazy"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Access control &middot; visitor management</p>
+                            <h3>Corporate security</h3>
+                            <p>Cover for banks, offices and business complexes, with reception-level access control.</p>
+                            <span class="tile-go">Learn more &rarr;</span>
+                        </div>
+                    </a>
+                    <a class="tile" href="/service-residential">
+                        <div class="tile-img"><img src="images/residential-security-2.jpg" alt="Residential estate security" width="350" height="300" loading="lazy"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">24/7 &middot; estates &amp; gated communities</p>
+                            <h3>Residential security</h3>
+                            <p>Static guards and mobile patrols for homes, apartments and private estates.</p>
+                            <span class="tile-go">Learn more &rarr;</span>
+                        </div>
+                    </a>
+                    <a class="tile" href="/service-patrol">
+                        <div class="tile-img"><img src="images/slider1.jpg" alt="Mobile patrol unit" width="1600" height="833" loading="lazy"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">GPS&#8209;tracked &middot; randomised routes</p>
+                            <h3>Patrol services</h3>
+                            <p>Mobile units on randomised schedules covering estates, industrial zones and commercial complexes.</p>
+                            <span class="tile-go">Learn more &rarr;</span>
+                        </div>
+                    </a>
+                    <a class="tile" href="/service-event">
+                        <div class="tile-img"><img src="images/people-taking-part-high-protocol-event.jpg" alt="Event security and crowd control" width="896" height="1344" loading="lazy"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Crowd control &middot; weddings, concerts, conferences</p>
+                            <h3>Event security</h3>
+                            <p>Crowd management and access screening for functions, sports events and corporate gatherings.</p>
+                            <span class="tile-go">Learn more &rarr;</span>
+                        </div>
+                    </a>
+                    <a class="tile" href="/service-vip">
+                        <div class="tile-img"><img src="vip_protection.png" alt="VIP close protection detail" width="1024" height="1024" loading="lazy"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Executive &middot; diplomatic &middot; discreet</p>
+                            <h3>VIP &amp; close protection</h3>
+                            <p>Close protection for executives, diplomats and high-net-worth individuals.</p>
+                            <span class="tile-go">Learn more &rarr;</span>
+                        </div>
+                    </a>
+                    <a class="tile" href="/service-cctv">
+                        <div class="tile-img"><img src="images/uwezo security cameras.jpg" alt="CCTV camera installation" width="1600" height="1068" loading="lazy"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Install &middot; monitor &middot; rapid response</p>
+                            <h3>CCTV &amp; surveillance</h3>
+                            <p>Installation, maintenance and 24/7 monitoring with rapid response across Kampala.</p>
+                            <span class="tile-go">Learn more &rarr;</span>
+                        </div>
+                    </a>
+                    <a class="tile" href="/service-cit">
+                        <div class="tile-img"><img src="images/uwezo security armored van.jpg" alt="Cash-in-transit armoured van" width="1344" height="768" loading="lazy"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Armoured fleet &middot; insured</p>
+                            <h3>Cash-in-transit</h3>
+                            <p>Secure transport of cash and valuables with armoured vehicles and armed escorts.</p>
+                            <span class="tile-go">Learn more &rarr;</span>
+                        </div>
+                    </a>
+                    <a class="tile" href="/service-temporary">
+                        <div class="tile-img"><img src="images/construction site security.jpg" alt="Temporary security at a construction site" width="612" height="408" loading="lazy"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Short notice &middot; flexible terms</p>
+                            <h3>Temporary security</h3>
+                            <p>Short-term guard deployment for construction sites, relocations and staff shortages.</p>
+                            <span class="tile-go">Learn more &rarr;</span>
+                        </div>
+                    </a>
+                    <a class="tile" href="/service-investigation">
+                        <div class="tile-img"><img src="images/uwezo security private investigator.jpg" alt="Private investigator at work" width="1600" height="1067" loading="lazy"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Background checks &middot; audits</p>
+                            <h3>Investigations</h3>
+                            <p>Private investigations, background checks and security audits for corporate and individual clients.</p>
+                            <span class="tile-go">Learn more &rarr;</span>
+                        </div>
+                    </a>
+                    <a class="tile" href="/service-training">
+                        <div class="tile-img"><img src="images/uwezo security female security guard.jpg" alt="Security training programme" width="360" height="240" loading="lazy"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Certified programmes</p>
+                            <h3>Security training</h3>
+                            <p>Training programmes and consultancy for organisations and individuals.</p>
+                            <span class="tile-go">Learn more &rarr;</span>
+                        </div>
+                    </a>
+                    <a class="tile" href="/service-safekeeping">
+                        <div class="tile-img"><img src="images/anne-nygard-jORjvhaUX40-unsplash.jpg" alt="Vault custody storage" width="1067" height="1600" loading="lazy"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Vault&#8209;grade &middot; 24/7 supervision</p>
+                            <h3>Safekeeping deposit</h3>
+                            <p>Custodial storage for cash, documents and valuables with full chain-of-custody documentation.</p>
+                            <span class="tile-go">Learn more &rarr;</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-standard" style="background: var(--paper-2);">
+            <div class="container">
+                <div class="entry-head reveal">
+                    <h2>Custody &amp; precious metals</h2>
+                    <span class="eyebrow" style="margin:0;">One chain-of-custody standard</span>
+                </div>
+                <div class="tile-grid reveal">
+                    <a class="tile" href="/contact">
+                        <div class="tile-img"><img src="images/uwezo security safekeeping services.jpg" alt="Precious metals vault custody" width="1600" height="900" loading="lazy"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Gold &middot; silver &middot; platinum &middot; gemstones</p>
+                            <h3>Precious metals custody</h3>
+                            <p>Institutional-grade vault storage, allocated or segregated, for dealers and investors.</p>
+                            <span class="tile-go">Enquire &rarr;</span>
+                        </div>
+                    </a>
+                    <a class="tile" href="/contact">
+                        <div class="tile-img"><img src="images/uwezo security safe deposit services.webp" alt="Bullion custody storage" width="1280" height="720" loading="lazy"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Mining companies &middot; dealers</p>
+                            <h3>Bullion custody</h3>
+                            <p>Allocated and segregated bullion custody from pit to buyer.</p>
+                            <span class="tile-go">Enquire &rarr;</span>
+                        </div>
+                    </a>
+                    <a class="tile" href="/track">
+                        <div class="tile-img"><img src="hero_cit_uganda.png" alt="Secure logistics consignment transport" width="1024" height="1024" loading="lazy"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Mine &rarr; refinery &rarr; vault &rarr; buyer</p>
+                            <h3>Secure logistics</h3>
+                            <p>Armed, tracked movement of high-value consignments between custody points.</p>
+                            <span class="tile-go">Track a consignment &rarr;</span>
+                        </div>
+                    </a>
+                    <a class="tile" href="/contact">
+                        <div class="tile-img"><img src="images/anne-nygard-jORjvhaUX40-unsplash.jpg" alt="Private safety deposit boxes" width="1067" height="1600" loading="lazy"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Private &middot; individually secured</p>
+                            <h3>Safety deposit boxes</h3>
+                            <p>Private boxes for valuables and confidential items.</p>
+                            <span class="tile-go">Enquire &rarr;</span>
+                        </div>
+                    </a>
+                    <a class="tile" href="/contact">
+                        <div class="tile-img"><img src="images/uwezo-security-building.jpg" alt="Secure document storage facility" width="1600" height="1067" loading="lazy"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Ownership &amp; export records</p>
+                            <h3>Secure document storage</h3>
+                            <p>Protection for ownership records, export documentation and confidential business records.</p>
+                            <span class="tile-go">Enquire &rarr;</span>
+                        </div>
+                    </a>
+                    <a class="tile" href="/verify-receipt">
+                        <div class="tile-img"><img src="tech.png" alt="Digital Safekeeping Receipt verification" width="1024" height="1024" loading="lazy"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Verifiable online &middot; by reference</p>
+                            <h3>Digital SKR platform</h3>
+                            <p>Safekeeping receipts anyone can verify against the register by reference number.</p>
+                            <span class="tile-go">Verify a record &rarr;</span>
+                        </div>
+                    </a>
+                    <a class="tile" href="/contact">
+                        <div class="tile-img"><img src="images/vertical-shot-young-black-businessman-wearing-suit-also-face-mask-standing-confidently.jpg" alt="Security consulting advisor" width="1067" height="1600" loading="lazy"></div>
+                        <div class="tile-body">
+                            <p class="tile-tag">Risk assessments &middot; facility audits</p>
+                            <h3>Security consulting</h3>
+                            <p>Risk assessments, facility audits and precious-metals logistics planning.</p>
+                            <span class="tile-go">Enquire &rarr;</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
 
         <section class="section-standard">
             <div class="container">
-                <div class="grid-3">
-                    <div class="service-card" style="padding: 0; overflow: hidden;">
-                        <div style="width: 100%; height: 220px; overflow: hidden; background: #0a1628;">
-                            <img src="images/uwezo-security gaurd.jpg" alt="Uwezo Security Guard"
-                                style="width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block;">
-                        </div>
-                        <div style="padding: 1.75rem 2rem 2rem;">
-                            <h3>Armed & Unarmed Guards</h3>
-                            <p style="margin-top: 0.75rem; color: var(--text-gray);">Professionally trained security guards for
-                                factories, warehouses, construction sites, residential estates, and commercial premises
-                                throughout Uganda.</p>
-                            <a href="/service-guards"
-                                style="display: inline-block; margin-top: 1.5rem; color: var(--primary); font-weight: 600; font-size: 0.9375rem;">Learn
-                                More →</a>
-                        </div>
+                <div class="grid-split reveal">
+                    <div class="grid-split-visual">
+                        <img src="surveillance_tech.png" alt="Uwezo control room technology"
+                            style="width:100%;aspect-ratio:4/3;object-fit:cover;filter:grayscale(0.25) contrast(1.03);" width="1024" height="1024" loading="lazy">
                     </div>
-                    <div class="service-card" style="padding: 0; overflow: hidden;">
-                        <div style="width: 100%; height: 220px; overflow: hidden; background: #0a1628;">
-                            <img src="images/Corporate-Security.png" alt="Corporate Security"
-                                style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
-                        </div>
-                        <div style="padding: 1.75rem 2rem 2rem;">
-                            <h3>Corporate Security</h3>
-                            <p style="margin-top: 0.75rem; color: var(--text-gray);">Comprehensive security for banks, offices,
-                                shopping malls, and business complexes with access control and visitor management.</p>
-                            <a href="/service-corporate"
-                                style="display: inline-block; margin-top: 1.5rem; color: var(--primary); font-weight: 600; font-size: 0.9375rem;">Learn
-                                More →</a>
-                        </div>
-                    </div>
-                    <div class="service-card" style="padding: 0; overflow: hidden;">
-                        <div style="width: 100%; height: 220px; overflow: hidden; background: #0a1628;">
-                            <img src="images/residential-security-2.jpg" alt="Residential Security"
-                                style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
-                        </div>
-                        <div style="padding: 1.75rem 2rem 2rem;">
-                            <h3>Residential Security</h3>
-                            <p style="margin-top: 0.75rem; color: var(--text-gray);">24/7 protection for homes, apartments, and
-                                gated communities with mobile patrols and static guard deployment.</p>
-                            <a href="/service-residential"
-                                style="display: inline-block; margin-top: 1.5rem; color: var(--primary); font-weight: 600; font-size: 0.9375rem;">Learn
-                                More →</a>
-                        </div>
-                    </div>
-                    <div class="service-card" style="padding: 0; overflow: hidden;">
-                        <div style="width: 100%; height: 220px; overflow: hidden; background: #0a1628;">
-                            <img src="images/people-taking-part-high-protocol-event.jpg" alt="Event Security"
-                                style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
-                        </div>
-                        <div style="padding: 1.75rem 2rem 2rem;">
-                            <h3>Event Security</h3>
-                            <p style="margin-top: 0.75rem; color: var(--text-gray);">Professional crowd control and security
-                                management for weddings, concerts, conferences, sports events, and corporate functions.</p>
-                            <a href="/service-event"
-                                style="display: inline-block; margin-top: 1.5rem; color: var(--primary); font-weight: 600; font-size: 0.9375rem;">Learn
-                                More →</a>
-                        </div>
-                    </div>
-                    <div class="service-card" style="padding: 0; overflow: hidden;">
-                        <div style="width: 100%; height: 220px; overflow: hidden; background: #0a1628;">
-                            <img src="images/amazingly-looking-african-american-man-wear-blue-blazer-with-brooch-black-turtleneck-glasses-posed-street-fashionable-black-guy.jpg"
-                                alt="VIP Executive Protection"
-                                style="width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block;">
-                        </div>
-                        <div style="padding: 1.75rem 2rem 2rem;">
-                            <h3>VIP & Executive Protection</h3>
-                            <p style="margin-top: 0.75rem; color: var(--text-gray);">Close protection services for executives,
-                                diplomats, celebrities, and high-net-worth individuals with trained bodyguards.</p>
-                            <a href="/service-vip"
-                                style="display: inline-block; margin-top: 1.5rem; color: var(--primary); font-weight: 600; font-size: 0.9375rem;">Learn
-                                More →</a>
-                        </div>
-                    </div>
-                    <div class="service-card" style="padding: 0; overflow: hidden;">
-                        <div style="width: 100%; height: 220px; overflow: hidden; background: #0a1628;">
-                            <img src="images/uwezo security cameras.jpg" alt="CCTV Surveillance"
-                                style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
-                        </div>
-                        <div style="padding: 1.75rem 2rem 2rem;">
-                            <h3>CCTV & Surveillance</h3>
-                            <p style="margin-top: 0.75rem; color: var(--text-gray);">Installation, maintenance, and 24/7
-                                monitoring of CCTV systems with rapid response capabilities across Kampala.</p>
-                            <a href="/service-cctv"
-                                style="display: inline-block; margin-top: 1.5rem; color: var(--primary); font-weight: 600; font-size: 0.9375rem;">Learn
-                                More →</a>
-                        </div>
-                    </div>
-                    <div class="service-card" style="padding: 0; overflow: hidden;">
-                        <div style="width: 100%; height: 220px; overflow: hidden; background: #0a1628;">
-                            <img src="images/uwezo security armored van.jpg" alt="Cash in Transit"
-                                style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
-                        </div>
-                        <div style="padding: 1.75rem 2rem 2rem;">
-                            <h3>Cash-in-Transit</h3>
-                            <p style="margin-top: 0.75rem; color: var(--text-gray);">Secure transportation of cash and
-                                valuables with armored vehicles and trained armed escorts for banks and businesses.</p>
-                            <a href="/service-cit"
-                                style="display: inline-block; margin-top: 1.5rem; color: var(--primary); font-weight: 600; font-size: 0.9375rem;">Learn
-                                More →</a>
-                        </div>
-                    </div>
-                    <div class="service-card" style="padding: 0; overflow: hidden;">
-                        <div style="width: 100%; height: 220px; overflow: hidden; background: #0a1628;">
-                            <img src="images/uwezo security private investigator.jpg" alt="Investigation Services"
-                                style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block;">
-                        </div>
-                        <div style="padding: 1.75rem 2rem 2rem;">
-                            <h3>Investigation Services</h3>
-                            <p style="margin-top: 0.75rem; color: var(--text-gray);">Private investigations, background checks,
-                                and security audits for corporate and individual clients.</p>
-                            <a href="/service-investigation"
-                                style="display: inline-block; margin-top: 1.5rem; color: var(--primary); font-weight: 600; font-size: 0.9375rem;">Learn
-                                More →</a>
-                        </div>
-                    </div>
-                    <div class="service-card" style="padding: 0; overflow: hidden;">
-                        <div style="width: 100%; height: 220px; overflow: hidden; background: #0a1628;">
-                            <img src="images/uwezo security female security guard.jpg" alt="Security Training"
-                                style="width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block;">
-                        </div>
-                        <div style="padding: 1.75rem 2rem 2rem;">
-                            <h3>Security Training</h3>
-                            <p style="margin-top: 0.75rem; color: var(--text-gray);">Professional security training programs
-                                and consultancy services for organizations and individuals.</p>
-                            <a href="/service-training"
-                                style="display: inline-block; margin-top: 1.5rem; color: var(--primary); font-weight: 600; font-size: 0.9375rem;">Learn
-                                More →</a>
-                        </div>
-                    </div>
-                    <div class="service-card" style="padding: 0; overflow: hidden;">
-                        <div style="width: 100%; height: 220px; overflow: hidden; background: #0a1628;">
-                            <img src="images/anne-nygard-jORjvhaUX40-unsplash.jpg" alt="Safekeeping Deposit Secure Vault Storage Uganda"
-                                style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
-                        </div>
-                        <div style="padding: 1.75rem 2rem 2rem;">
-                            <h3>Safekeeping Deposit</h3>
-                            <p style="margin-top: 0.75rem; color: var(--text-gray);">Vault-grade custodial storage for cash, documents, jewelry, and high-value assets with 24/7 armed supervision and full chain-of-custody documentation.</p>
-                            <a href="/service-safekeeping"
-                                style="display: inline-block; margin-top: 1.5rem; color: var(--primary); font-weight: 600; font-size: 0.9375rem;">Learn
-                                More →</a>
-                        </div>
-                    </div>
-                    <div class="service-card" style="padding: 0; overflow: hidden;">
-                        <div style="width: 100%; height: 220px; overflow: hidden; background: #0a1628;">
-                            <img src="images/uwezo-security gaurd.jpg" alt="Temporary Security Services Uganda"
-                                style="width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block;">
-                        </div>
-                        <div style="padding: 1.75rem 2rem 2rem;">
-                            <h3>Temporary Security Services</h3>
-                            <p style="margin-top: 0.75rem; color: var(--text-gray);">Flexible short-term guard deployment at short notice — for construction sites, business relocations, staff shortages, and any situation requiring immediate security cover.</p>
-                            <a href="/service-temporary"
-                                style="display: inline-block; margin-top: 1.5rem; color: var(--primary); font-weight: 600; font-size: 0.9375rem;">Learn
-                                More →</a>
-                        </div>
-                    </div>
-                    <div class="service-card" style="padding: 0; overflow: hidden;">
-                        <div style="width: 100%; height: 220px; overflow: hidden; background: #0a1628;">
-                            <img src="images/slider1.jpg" alt="Patrol Security Services Uganda"
-                                style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
-                        </div>
-                        <div style="padding: 1.75rem 2rem 2rem;">
-                            <h3>Patrol Services</h3>
-                            <p style="margin-top: 0.75rem; color: var(--text-gray);">GPS-tracked mobile patrol units on randomized schedules — covering estates, industrial zones, and commercial complexes with visible deterrence and rapid incident response.</p>
-                            <a href="/service-patrol"
-                                style="display: inline-block; margin-top: 1.5rem; color: var(--primary); font-weight: 600; font-size: 0.9375rem;">Learn
-                                More →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    style="margin-top: 6rem; background: rgba(255,255,255,0.02); padding: clamp(1.5rem, 5vw, 4rem); border-radius: var(--radius); border: 1px solid var(--border);">
-                    <div class="grid-split">
-                        <div class="grid-split-visual">
-                            <img src="surveillance_tech.png" alt="Tech Setup"
-                                style="width: 100%; height: clamp(200px, 30vh, 300px); object-fit: cover; border-radius: var(--radius);">
-                        </div>
-                        <div class="grid-split-content">
-                            <h2 style="font-size: clamp(1.75rem, 4vw, 2.25rem); margin-bottom: 24px;">The Technical
-                                Edge.</h2>
-                            <p style="color: var(--text-gray); font-size: 1.125rem;">We integrate GPS patrol
-                                synchronization and biometric access controls to ensure 100% mission success for every
-                                contract.</p>
-                        </div>
+                    <div class="grid-split-content">
+                        <p class="eyebrow">The technical edge</p>
+                        <h2 style="margin-bottom:1.2rem;">GPS, biometrics and a written record for every contract.</h2>
+                        <p style="color:var(--ink-70);margin-bottom:1.8rem;">We integrate GPS patrol synchronisation
+                            and biometric access control across our deployments — so every shift, movement and
+                            custody has a timestamp behind it.</p>
+                        <a href="/contact" class="btn-primary btn-large">Request a proposal</a>
                     </div>
                 </div>
             </div>
@@ -250,27 +300,22 @@
     <footer>
         <div class="container footer-grid">
             <div class="footer-col">
-                <div class="logo-wrap" style="margin-bottom: 2rem;">
-                    <img src="logo_new.png" alt="Uwezo Logo" style="height: 48px;">
-                    
+                <div class="logo-wrap" style="margin-bottom:1.6rem;">
+                    <img src="logo_new.png" alt="Uwezo Security" width="700" height="669">
                 </div>
-                <p style="color: var(--muted); line-height: 1.8; margin-bottom: 2.5rem; max-width: 350px;">
-                    Protecting Ugandan homes and businesses with care, professionalism, and integrity since 2011.
+                <p style="max-width:34ch;font-size:0.9rem;">
+                    Protecting Ugandan homes and businesses with care, professionalism and integrity since 2011.
                 </p>
-                <div
-                    style="padding: 1.5rem; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); border: 1px solid var(--border); display: inline-block; width: 100%; max-width: 300px;">
-                    <p
-                        style="font-size: 0.75rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; font-weight: 700;">
-                        24/7 Emergency Lines</p>
-                    <p style="font-size: 1.25rem; font-weight: 800; color: white; margin-bottom: 0.25rem;">+256 200 902
-                        428</p>
-                    <p style="font-size: 1.25rem; font-weight: 800; color: white;">+256 774 361 171</p>
+                <div class="footer-emergency">
+                    <p class="fe-label">24/7 Emergency Lines</p>
+                    <p class="fe-num"><a href="tel:+256200902428">+256 200 902 428</a></p>
+                    <p class="fe-num"><a href="tel:+256774361171">+256 774 361 171</a></p>
                 </div>
             </div>
             <div class="footer-col">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="/service-guards">Armed & Unarmed Guards</a></li>
+                    <li><a href="/service-guards">Armed &amp; Unarmed Guards</a></li>
                     <li><a href="/service-corporate">Corporate Security</a></li>
                     <li><a href="/service-residential">Residential Protection</a></li>
                     <li><a href="/service-event">Event Management</a></li>
@@ -283,35 +328,40 @@
                 </ul>
             </div>
             <div class="footer-col">
+                <h4>Records</h4>
+                <ul>
+                    <li><a href="/verify-receipt">Verify a record</a></li>
+                    <li><a href="/track">Track a consignment</a></li>
+                    <li><a href="/login">Client portal</a></li>
+                    <li><a href="/signup">Open an account</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
                 <h4>Contact</h4>
                 <ul>
-                    <li style="margin-bottom: 1rem;">
-                        <p style="color: var(--muted); font-size: 0.875rem;">Head Office</p>
-                        <p style="color: var(--text-gray); font-size: 0.9375rem;">Plot 6, Ssemawata Road, Ntinda<br>Kampala, Uganda
-                        </p>
+                    <li style="margin-bottom:1rem;">
+                        <span class="fc-label">Head Office</span>
+                        Plot 6, Ssemawata Road, Ntinda<br>Kampala, Uganda
+                    </li>
+                    <li style="margin-bottom:1rem;">
+                        <span class="fc-label">General Enquiries</span>
+                        <a href="mailto:enquiries@uwezosecurity.com">enquiries@uwezosecurity.com</a>
                     </li>
                     <li>
-                        <p style="color: var(--muted); font-size: 0.875rem;">General Enquiries</p>
-                        <p><a href="mailto:enquiries@uwezosecurity.com" style="color: var(--primary);">enquiries@uwezosecurity.com</a></p>
-                        <p style="color: var(--muted); font-size: 0.875rem; margin-top: 0.75rem;">Administration</p>
-                        <p><a href="mailto:admin@uwezosecurity.com" style="color: var(--primary);">admin@uwezosecurity.com</a></p>
-                        <p><a href="mailto:uwezosecurityservices@gmail.com" style="color: var(--primary);">uwezosecurityservices@gmail.com</a></p>
+                        <span class="fc-label">Administration</span>
+                        <a href="mailto:admin@uwezosecurity.com">admin@uwezosecurity.com</a><br>
+                        <a href="mailto:uwezosecurityservices@gmail.com">uwezosecurityservices@gmail.com</a>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="container"
-            style="padding-top: 3rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 0.875rem; flex-wrap: wrap-reverse; gap: 1.5rem; justify-content: center; text-align: center;">
-            <p>&copy; 2026 Uwezo Security Services Limited.</p>
-            <div style="display: flex; gap: 2rem;">
-                <a href="#">Security Audit</a>
-                <a href="#">Privacy Policy</a>
-            </div>
+        <div class="container">
+            <span>&copy; 2026 Uwezo Security Services Limited</span>
+            <span>PSO / UPF licensed &middot; Kampala, Uganda</span>
         </div>
     </footer>
 
     <script src="theme.js"></script>
-    <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/256774361171" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
         <span>Chat on WhatsApp</span>

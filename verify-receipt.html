@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify a Document | Uwezo Security Uganda</title>
+
+    <meta name="description" content="Confirm that a Uwezo Security document or Safekeeping Receipt is genuine. Enter its reference number to check it against the official Uwezo register.">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <link rel="canonical" href="https://www.uwezosecurity.com/verify-receipt">
+    <meta property="og:title" content="Verify a Document | Uwezo Security">
+    <meta property="og:description" content="Check a Uwezo Security document or receipt against the official register by reference number.">
+    <meta property="og:url" content="https://www.uwezosecurity.com/verify-receipt">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.uwezosecurity.com/logo_new.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Verify a Record",
+      "url": "https://www.uwezosecurity.com/verify-receipt",
+      "description": "Verify the authenticity of a safekeeping receipt or document issued by Uwezo Security Services by its reference number.",
+      "isPartOf": {"@type": "WebSite", "name": "Uwezo Security Services", "url": "https://www.uwezosecurity.com"}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.uwezosecurity.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Verify a Record", "item": "https://www.uwezosecurity.com/verify-receipt"}
+      ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+
+    <style>
+        /* ---- verify-a-document card: uses the site's own tokens (index.css) ---- */
+        .verify-wrap { max-width: 640px; margin-inline: auto; }
+
+        .card { background: var(--paper); border: 1px solid var(--hair); padding: clamp(1.5rem, 4vw, 2.5rem); }
+
+        .card-icon {
+            width: 52px; height: 52px;
+            background: var(--paper-2);
+            border: 1px solid var(--hair);
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        .card-icon svg { width: 24px; height: 24px; color: var(--seal); }
+
+        .row { display: flex; gap: 0.75rem; }
+        .row .ref-field { flex: 1 1 60%; }
+        .row .type-field { flex: 1 1 40%; }
+        .field { margin-bottom: 1.25rem; }
+        .field label {
+            display: block; margin-bottom: 0.6rem;
+            font-family: var(--mono); font-size: 0.72rem; font-weight: 500;
+            letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-45);
+        }
+
+        /* results */
+        .results { margin-top: 1.75rem; display: grid; gap: 0.85rem; }
+
+        .verified-banner {
+            display: flex; align-items: center; gap: 0.6rem;
+            color: #2f7a4a; font-weight: 700; font-size: 0.92rem;
+            background: rgba(47, 122, 74, 0.08); border: 1px solid rgba(47, 122, 74, 0.3);
+            padding: 0.85rem 1rem;
+        }
+
+        /* detail record card */
+        .record { border: 1px solid var(--hair); padding: clamp(1.1rem, 3vw, 1.6rem); background: var(--paper-2); }
+        .record-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 1.1rem; }
+        .back-link {
+            background: none; border: none; color: var(--ink-70);
+            font: inherit; font-weight: 700; font-size: 0.88rem; cursor: pointer;
+            padding: 0.3rem 0; display: inline-flex; align-items: center; gap: 0.4rem;
+        }
+        .back-link:hover { color: var(--ink); }
+
+        .invoice-btn {
+            display: flex; align-items: center; gap: 0.6rem;
+            border: 1px solid var(--ink); padding: 0.6rem 0.9rem;
+            text-decoration: none; color: var(--ink); flex-shrink: 0; background: var(--paper);
+        }
+        .invoice-btn:hover { background: var(--ink); color: var(--paper); }
+        .invoice-btn .pdf {
+            width: 26px; height: 26px; background: #b3382c; color: #fff;
+            font-size: 0.6rem; font-weight: 800; display: flex; align-items: center; justify-content: center;
+            letter-spacing: 0.02em; flex-shrink: 0;
+        }
+        .invoice-btn b { display: block; font-size: 0.84rem; }
+        .invoice-btn span { display: block; font-size: 0.72rem; color: var(--ink-45); }
+        .invoice-btn:hover span { color: inherit; }
+
+        .record-title { display: flex; align-items: center; gap: 0.55rem; font-size: clamp(1.05rem, 3vw, 1.3rem); font-weight: 800; }
+        .record-title svg { width: 20px; height: 20px; color: var(--ink-45); flex-shrink: 0; }
+        .record-sub {
+            font-family: var(--mono); color: var(--ink-45); font-size: 0.76rem; font-weight: 500;
+            letter-spacing: 0.08em; text-transform: uppercase; margin: 0.4rem 0 0 1.7rem;
+        }
+
+        .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--hair); border: 1px solid var(--hair); margin-top: 1.4rem; }
+        @media (max-width: 560px) {
+            .tiles { grid-template-columns: 1fr; }
+            .record-top { flex-direction: column-reverse; align-items: stretch; }
+            .invoice-btn { justify-content: center; }
+        }
+        .tile { background: var(--paper); padding: 0.95rem 1rem; }
+        .tile .k { font-family: var(--mono); color: var(--ink-45); font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.4rem; }
+        .tile .v { font-size: 0.98rem; font-weight: 700; }
+        .tile .v.status { color: var(--seal); }
+
+        .record-field { margin-top: 1.1rem; padding-top: 1.1rem; border-top: 1px solid var(--hair); }
+        .record-field .rk { font-family: var(--mono); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-45); margin-bottom: 0.35rem; }
+        .record-field .rv { font-size: 0.94rem; line-height: 1.6; color: var(--ink-70); }
+
+        .other-matches { margin-top: 1rem; }
+        .other-matches .k { font-family: var(--mono); color: var(--ink-45); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.5rem; }
+        .pick {
+            display: block; width: 100%; text-align: left;
+            background: var(--paper); border: 1px solid var(--hair); padding: 0.7rem 0.9rem;
+            color: var(--ink); font: inherit; cursor: pointer; margin-bottom: 0.4rem;
+        }
+        .pick:hover { border-color: var(--seal); }
+        .pick .pr { font-family: var(--mono); color: var(--seal); font-size: 0.76rem; font-weight: 700; }
+        .pick .pt { font-size: 0.85rem; color: var(--ink-45); }
+
+        .src-note { text-align: center; color: var(--ink-45); font-size: 0.72rem; }
+
+        .diag { margin-top: 0.9rem; border: 1px solid var(--hair); background: var(--paper-2); padding: 1rem 1.1rem; font-size: 0.8rem; color: var(--ink-70); }
+        .diag-title { font-weight: 700; color: var(--ink); font-size: 0.9rem; margin-bottom: 0.6rem; }
+        .diag code { font-family: var(--mono); color: var(--seal); word-break: break-all; }
+        .diag-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1px; background: var(--hair); border: 1px solid var(--hair); margin-top: 0.8rem; }
+        .diag-card { background: var(--paper); }
+        .diag-card .di-img { aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center; background: var(--paper-2); color: var(--ink-45); }
+        .diag-card .di-img svg { width: 24px; height: 24px; }
+        .diag-card .di-body { padding: 0.65rem 0.75rem; }
+        .diag-card .di-ref { font-family: var(--mono); color: var(--seal); font-size: 0.7rem; font-weight: 700; }
+        .diag-card .di-title { font-size: 0.84rem; font-weight: 700; color: var(--ink); margin: 0.25rem 0; line-height: 1.3; }
+        .diag-card .di-meta { font-family: var(--mono); font-size: 0.64rem; color: var(--ink-45); text-transform: uppercase; letter-spacing: 0.04em; }
+        .diag-card .di-meta.pub { color: #2f7a4a; }
+
+        .noresult {
+            border: 1px solid rgba(179, 56, 44, 0.3); background: rgba(179, 56, 44, 0.06); color: #b3382c;
+            padding: 1rem 1.1rem; font-size: 0.9rem; line-height: 1.6; font-weight: 600;
+        }
+        .noresult a { color: inherit; }
+
+        .help { margin-top: 1.5rem; font-size: 0.86rem; color: var(--ink-45); text-align: center; }
+        .help a { color: var(--ink-70); }
+
+        .hidden { display: none; }
+    </style>
+    <script src="config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+    <script src="assets/supabase-client.js"></script>
+</head>
+
+<body>
+
+    <div class="reg-bar">
+        <div class="container">
+            <span><b>PSO LICENCE</b> &nbsp;UPF/PSO REGISTERED &nbsp;&middot;&nbsp; UWEZO SECURITY SERVICES LTD</span>
+            <span>CONTROL ROOM 24/7 &nbsp;&middot;&nbsp; <a href="tel:+256200902428">+256&nbsp;200&nbsp;902&nbsp;428</a></span>
+        </div>
+    </div>
+
+    <header>
+        <div class="container nav-content">
+            <a href="/" class="logo-wrap" aria-label="Uwezo Security home">
+                <img src="logo_new.png" alt="Uwezo Security" width="700" height="669">
+                <span class="logo-text">Uwezo Security</span>
+            </a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">&#9776;</button>
+            <nav id="nav">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/sectors">Sectors</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li class="nav-actions">
+                        <a href="/verify-receipt" class="active">Verify a record</a>
+                        <a href="/login">Client portal</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="sub-header">
+            <div class="container">
+                <p class="eyebrow">Digital SKR platform</p>
+                <h1 class="sub-title">Verify a Document</h1>
+                <p style="max-width:58ch;">Enter the reference number printed on your Safekeeping Receipt or document
+                    to check it against the official Uwezo register.</p>
+            </div>
+        </section>
+
+        <section class="section-standard">
+            <div class="container">
+                <div class="verify-wrap">
+                    <div class="card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <path d="m9 12 2 2 4-4"></path>
+                            </svg>
+                        </div>
+
+                        <form id="verifyForm" novalidate>
+                            <div class="field row">
+                                <div class="ref-field">
+                                    <label for="ref">Reference number</label>
+                                    <input id="ref" type="text" class="form-input" autocomplete="off" autocapitalize="characters"
+                                        spellcheck="false" placeholder="USSK-2026-024" style="margin-bottom:0;">
+                                </div>
+                                <div class="type-field">
+                                    <label for="type">Type</label>
+                                    <select id="type" class="form-input" style="margin-bottom:0;">
+                                        <option value="">Any</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-primary btn-large" style="width:100%;justify-content:center;">Verify</button>
+                        </form>
+
+                        <div class="results hidden" id="results"></div>
+
+                        <p class="help">Have a receipt we can't confirm here? Email
+                            <a href="mailto:custody@uwezosecurity.com">custody@uwezosecurity.com</a> or call
+                            +256&nbsp;200&nbsp;902&nbsp;428.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="logo-wrap" style="margin-bottom:1.6rem;">
+                    <img src="logo_new.png" alt="Uwezo Security" width="700" height="669">
+                </div>
+                <p style="max-width:34ch;font-size:0.9rem;">
+                    Protecting Ugandan homes and businesses with care, professionalism and integrity since 2011.
+                </p>
+                <div class="footer-emergency">
+                    <p class="fe-label">24/7 Emergency Lines</p>
+                    <p class="fe-num"><a href="tel:+256200902428">+256 200 902 428</a></p>
+                    <p class="fe-num"><a href="tel:+256774361171">+256 774 361 171</a></p>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/service-guards">Armed &amp; Unarmed Guards</a></li>
+                    <li><a href="/service-corporate">Corporate Security</a></li>
+                    <li><a href="/service-residential">Residential Protection</a></li>
+                    <li><a href="/service-event">Event Management</a></li>
+                    <li><a href="/service-vip">VIP Protection</a></li>
+                    <li><a href="/service-cctv">CCTV Surveillance</a></li>
+                    <li><a href="/service-cit">Cash-in-Transit</a></li>
+                    <li><a href="/service-safekeeping">Safekeeping Deposit</a></li>
+                    <li><a href="/service-temporary">Temporary Security</a></li>
+                    <li><a href="/service-patrol">Patrol Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Records</h4>
+                <ul>
+                    <li><a href="/verify-receipt">Verify a record</a></li>
+                    <li><a href="/track">Track a consignment</a></li>
+                    <li><a href="/login">Client portal</a></li>
+                    <li><a href="/signup">Open an account</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li style="margin-bottom:1rem;">
+                        <span class="fc-label">Head Office</span>
+                        Plot 6, Ssemawata Road, Ntinda<br>Kampala, Uganda
+                    </li>
+                    <li style="margin-bottom:1rem;">
+                        <span class="fc-label">General Enquiries</span>
+                        <a href="mailto:enquiries@uwezosecurity.com">enquiries@uwezosecurity.com</a>
+                    </li>
+                    <li>
+                        <span class="fc-label">Administration</span>
+                        <a href="mailto:admin@uwezosecurity.com">admin@uwezosecurity.com</a><br>
+                        <a href="mailto:uwezosecurityservices@gmail.com">uwezosecurityservices@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <span>&copy; 2026 Uwezo Security Services Limited</span>
+            <span>PSO / UPF licensed &middot; Kampala, Uganda</span>
+        </div>
+    </footer>
+
+    <script src="theme.js"></script>
+    <a href="https://wa.me/256774361171" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <span>Chat on WhatsApp</span>
+    </a>
+
+    <script>
+        (function () {
+            var API_BASE = '/api';
+            var STORE_KEY = 'uwezo-documents';   // written by /admin in demo mode
+            var CATEGORIES = ['Policy', 'Certificate', 'Compliance', 'Statement',
+                'Safekeeping Receipt', 'Report', 'Contract', 'Other'];
+
+            var form = document.getElementById('verifyForm');
+            var refIn = document.getElementById('ref');
+            var typeIn = document.getElementById('type');
+            var out = document.getElementById('results');
+
+            CATEGORIES.forEach(function (c) { typeIn.add(new Option(c, c)); });
+
+            function esc(s) {
+                return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+                    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+                });
+            }
+            function fmtDate(iso) {
+                var d = new Date(iso);
+                return isNaN(d) ? '' : d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+            }
+            function fmtSize(b) {
+                if (!b && b !== 0) return '';
+                if (b < 1024) return b + ' B';
+                if (b < 1048576) return (b / 1024).toFixed(0) + ' KB';
+                return (b / 1048576).toFixed(1) + ' MB';
+            }
+            function isPublic(d) { return d && String(d.visibility).toLowerCase() === 'public'; }
+
+            // map a Supabase 'documents' row to the shape this page renders
+            function mapDbDoc(d) {
+                return {
+                    reference: d.reference, title: d.title, category: d.category, visibility: 'public',
+                    customer: d.customer, commodity: d.commodity, issueDate: d.issue_date, status: d.status,
+                    purpose: d.purpose, description: d.description, fileName: d.file_name, fileSize: d.file_size,
+                    file_path: d.file_path, fileUrl: '', updatedAt: d.updated_at
+                };
+            }
+
+            function demoDocs() {
+                var now = Date.now(), day = 86400000;
+                return [
+                    { reference: 'USSK-2026-024', title: 'Safekeeping Receipt', category: 'Safekeeping Receipt', visibility: 'Public', customer: 'COMICO Cooperative Miniere du Congo', commodity: 'Gold nuggets', issueDate: '2026-08-28', status: 'Received at Origin', purpose: 'Allocated custody pending export clearance', description: 'Chain of custody opened at the origin vault.', fileName: 'skr-ussk-2026-024.pdf', fileSize: 240000, fileUrl: '', updatedAt: new Date(now - 3 * day).toISOString() },
+                    { reference: 'CERT-PSO-2026', title: 'PSO Operating Licence 2026', category: 'Certificate', visibility: 'Public', description: 'Licence issued by the Uganda Police Force.', fileName: 'pso-licence-2026.pdf', fileSize: 842000, fileUrl: '', updatedAt: new Date(now - 40 * day).toISOString() },
+                    { reference: 'RPT-CUST-2026Q2', title: 'Q2 2026 Custody Audit Report', category: 'Report', visibility: 'Public', description: 'Independent audit of vault holdings and controls.', fileName: 'custody-audit-q2-2026.pdf', fileSize: 1290000, fileUrl: '', updatedAt: new Date(now - 7 * day).toISOString() }
+                ];
+            }
+
+            function readStore() {
+                try {
+                    var raw = localStorage.getItem(STORE_KEY);
+                    var arr = raw ? JSON.parse(raw) : null;
+                    return Array.isArray(arr) ? arr : null;
+                } catch (e) { return null; }
+            }
+
+            async function getDocs() {
+                // 1. live database (Supabase) — public documents only
+                if (window.sb) {
+                    try {
+                        var res = await window.sb.from('documents').select('*').eq('visibility', 'public');
+                        if (!res.error && res.data) {
+                            return { all: res.data.map(mapDbDoc), source: 'database' };
+                        }
+                    } catch (e) { /* fall through */ }
+                }
+                // 2. local demo store written by an offline /admin
+                var stored = readStore();
+                if (stored && stored.length) return { all: stored, source: 'store' };
+                // 3. built-in sample
+                return { all: demoDocs(), source: 'demo' };
+            }
+
+            async function ensureFileUrl(d) {
+                if (d.fileUrl || !d.file_path || !window.sb) return;
+                try {
+                    var r = await window.sb.storage.from('documents').createSignedUrl(d.file_path, 300);
+                    if (r.data) d.fileUrl = r.data.signedUrl;
+                } catch (e) { /* leave without a link */ }
+            }
+
+            function norm(s) { return String(s == null ? '' : s).toLowerCase().replace(/[^a-z0-9]/g, ''); }
+            function fmtDay(iso) {
+                if (!iso) return '';
+                var d = new Date(iso);
+                return isNaN(d) ? '' : d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: '2-digit' });
+            }
+
+            function search(docs, q, type) {
+                var nq = norm(q);
+                var lq = q.trim().toLowerCase();
+                return docs.filter(function (d) {
+                    if (type && norm(d.category) !== norm(type)) return false;
+                    if (!nq) return !!type;
+                    return norm(d.reference).indexOf(nq) !== -1 ||
+                        norm(d.fileName).indexOf(nq) !== -1 ||
+                        norm(d.title).indexOf(nq) !== -1 ||
+                        String(d.title || '').toLowerCase().indexOf(lq) !== -1 ||
+                        String(d.customer || '').toLowerCase().indexOf(lq) !== -1 ||
+                        String(d.fileName || '').toLowerCase().indexOf(lq) !== -1;
+                });
+            }
+
+            var DOC_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">' +
+                '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>';
+
+            function diagBlock(data, publicDocs) {
+                var cards = (data.all || []).map(function (d) {
+                    var isPub = String(d.visibility || '').toLowerCase() === 'public';
+                    return '<div class="diag-card">' +
+                        '<div class="di-img">' + DOC_ICON + '</div>' +
+                        '<div class="di-body">' +
+                        '<div class="di-ref">' + esc(d.reference || '(no ref)') + '</div>' +
+                        '<div class="di-title">' + esc(d.title || 'Document') + '</div>' +
+                        '<div class="di-meta' + (isPub ? ' pub' : '') + '">' + esc(d.category || '—') + ' &middot; ' + esc(d.visibility || '—') + '</div>' +
+                        '</div></div>';
+                }).join('');
+                return '<div class="diag">' +
+                    '<p class="diag-title">Why isn’t my document here?</p>' +
+                    '<p>This page: <code>' + esc(location.origin) + location.pathname + '</code><br>' +
+                    'Source: <strong>' + esc(data.source) + '</strong> &nbsp;·&nbsp; ' +
+                    (data.all ? data.all.length : 0) + ' record(s), ' + publicDocs.length + ' public.</p>' +
+                    '<p>The admin panel must be open on the <strong>same address</strong> shown above, and the document ' +
+                    'must be <strong>Public</strong>. Records currently visible to this page:</p>' +
+                    (cards ? '<div class="diag-grid">' + cards + '</div>' : '<p class="src-note">(register is empty on this page)</p>') +
+                    '</div>';
+            }
+
+            var BOX = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"></path><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>';
+
+            function detailCard(d, others, exact) {
+                var hasFile = d.fileUrl && d.fileUrl !== '#';
+                var invoice = hasFile
+                    ? '<a class="invoice-btn" href="' + esc(d.fileUrl) + '" target="_blank" rel="noopener" download>' +
+                    '<span class="pdf">PDF</span><span><b>Download document</b><span>' + esc(d.fileName || 'file') + '</span></span></a>'
+                    : '';
+
+                var tiles =
+                    '<div class="tile"><div class="k">Client name</div><div class="v">' + esc(d.customer || '—') + '</div></div>' +
+                    '<div class="tile"><div class="k">Date</div><div class="v">' + esc(fmtDay(d.issueDate) || fmtDay(d.updatedAt) || '—') + '</div></div>' +
+                    '<div class="tile"><div class="k">Status</div><div class="v status">' + esc(d.status || 'On record') + '</div></div>';
+
+                var reason = d.purpose
+                    ? '<div class="record-field"><div class="rk">Reason for deposit</div><div class="rv">' + esc(d.purpose) + '</div></div>'
+                    : '';
+
+                var pick = '';
+                if (others && others.length) {
+                    pick = '<div class="other-matches"><div class="k">' + others.length + ' other match' + (others.length > 1 ? 'es' : '') + '</div>' +
+                        others.map(function (o) {
+                            return '<button type="button" class="pick" data-ref="' + esc(o.reference) + '">' +
+                                '<span class="pr">' + esc(o.reference) + '</span> <span class="pt">' + esc(o.title || '') + '</span></button>';
+                        }).join('') + '</div>';
+                }
+
+                return (exact ? '<div class="verified-banner">' +
+                    '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"></path><circle cx="12" cy="12" r="9"></circle></svg>' +
+                    'On the register — this reference is genuine.</div>' : '') +
+                    '<div class="record">' +
+                    '<div class="record-top">' +
+                    '<button type="button" class="back-link" id="backBtn">&larr; Back</button>' +
+                    invoice +
+                    '</div>' +
+                    '<div class="record-title">' + BOX + esc(d.title || 'Document') + '</div>' +
+                    '<div class="record-sub">' + esc(d.commodity || d.category || '') + ' &nbsp;·&nbsp; ' + esc(d.reference || '') + '</div>' +
+                    '<div class="tiles">' + tiles + '</div>' +
+                    reason +
+                    (d.description ? '<div class="record-field"><div class="rk">Notes</div><div class="rv">' + esc(d.description) + '</div></div>' : '') +
+                    (hasFile ? '' : '<div class="record-field"><div class="rv" style="color:var(--ink-45)">No downloadable file is attached to this record. Contact the custody desk for a certified copy.</div></div>') +
+                    pick +
+                    '</div>';
+            }
+
+            var current = [];   // last match set
+
+            async function showDetail(ref) {
+                var idx = current.findIndex(function (d) { return d.reference === ref; });
+                if (idx < 0) idx = 0;
+                var d = current[idx];
+                await ensureFileUrl(d);
+                var others = current.filter(function (_, i) { return i !== idx; });
+                var exact = norm(refIn.value) && norm(d.reference) === norm(refIn.value);
+                out.innerHTML = detailCard(d, others, exact);
+                var back = document.getElementById('backBtn');
+                if (back) back.addEventListener('click', function () {
+                    out.classList.add('hidden'); out.innerHTML = ''; refIn.focus();
+                });
+                out.querySelectorAll('.pick').forEach(function (b) {
+                    b.addEventListener('click', function () { showDetail(b.getAttribute('data-ref')); });
+                });
+            }
+
+            async function run() {
+                var q = refIn.value.trim();
+                var type = typeIn.value;
+                if (!q && !type) { out.classList.add('hidden'); out.innerHTML = ''; return; }
+
+                out.classList.remove('hidden');
+                out.innerHTML = '<div class="src-note">Checking the register…</div>';
+
+                var data = await getDocs();
+                var publicDocs = data.all.filter(isPublic);
+                var matches = search(publicDocs, q, type);
+
+                if (!matches.length) {
+                    var hidden = q && data.all.find(function (d) { return norm(d.reference) === norm(q); });
+                    if (hidden) {
+                        out.innerHTML = '<div class="noresult">' +
+                            '<strong>' + esc(hidden.reference) + '</strong> is on record but not marked for public viewing. ' +
+                            'Contact the custody desk to confirm its status — ' +
+                            '<a href="mailto:custody@uwezosecurity.com">custody@uwezosecurity.com</a>.</div>';
+                        return;
+                    }
+                    var extra = data.all.length === 0 ? ' The public register has no entries yet.'
+                        : (publicDocs.length === 0 ? ' ' + data.all.length + ' document(s) are on file but none are marked Public.' : '');
+                    out.innerHTML = '<div class="noresult">No document matching “' + esc(q || type) + '” is on the Uwezo register.' + extra +
+                        ' If you were given a receipt, do not act on it until our custody desk confirms it — email ' +
+                        '<a href="mailto:custody@uwezosecurity.com">custody@uwezosecurity.com</a>.</div>' +
+                        diagBlock(data, publicDocs);
+                    return;
+                }
+
+                // best match first: exact reference, else first
+                matches.sort(function (a, b) {
+                    return (norm(b.reference) === norm(q)) - (norm(a.reference) === norm(q));
+                });
+                current = matches;
+                showDetail(matches[0].reference);
+            }
+
+            form.addEventListener('submit', function (e) { e.preventDefault(); refIn.value = refIn.value.trim().toUpperCase(); run(); });
+            var t;
+            refIn.addEventListener('input', function () { clearTimeout(t); t = setTimeout(run, 220); });
+            typeIn.addEventListener('change', run);
+        })();
+    </script>
+</body>
+
+</html>

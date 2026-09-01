@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /signup
+Disallow: /client-portal
 
 Sitemap: https://www.uwezosecurity.com/sitemap.xml

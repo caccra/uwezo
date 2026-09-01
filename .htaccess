@@ -9,9 +9,9 @@ DirectoryIndex index.html
     # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
     # RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
 
-    # Force HTTPS (optional — remove if not needed)
-    # RewriteCond %{HTTPS} off
-    # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+    # Force HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
     # Serve .html files without the extension
     # e.g. /about -> /about.html

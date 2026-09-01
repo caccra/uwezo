@@ -24,16 +24,40 @@ async function build() {
     if (fs.existsSync(DIST)) fs.rmSync(DIST, { recursive: true });
     fs.mkdirSync(DIST);
 
-    // Copy static assets (images, logo, fonts, etc.)
-    const staticDirs = ['images'];
+    // Copy static assets (images, logo, fonts, the app JS/CSS bundle, etc.)
+    const staticDirs = ['images', 'assets'];
     for (const dir of staticDirs) {
         const src = path.join(SRC, dir);
         if (fs.existsSync(src)) copyDir(src, path.join(DIST, dir));
     }
-    const staticFiles = ['logo_new.png', 'netlify.toml'];
+    const staticFiles = [
+        'netlify.toml',
+        'favicon.jpg',
+        'logo_new.png',
+        'guarding_official.jpg',
+        'hero.png',
+        'hero_cit_uganda.png',
+        'hero_surveillance_tech.png',
+        'hero_tactical_kampala.png',
+        'surveillance_tech.png',
+        'tech.png',
+        'vip_protection.png',
+    ];
     for (const f of staticFiles) {
         const src = path.join(SRC, f);
         if (fs.existsSync(src)) fs.copyFileSync(src, path.join(DIST, f));
+    }
+
+    // config.js holds the live Supabase URL/anon key the portal needs at runtime.
+    // It's gitignored (never committed), so copy it from the local checkout if
+    // it's there — but don't let the build silently produce a portal that can't
+    // reach Supabase without saying so.
+    const configSrc = path.join(SRC, 'config.js');
+    if (fs.existsSync(configSrc)) {
+        fs.copyFileSync(configSrc, path.join(DIST, 'config.js'));
+        console.log('✓ config.js copied');
+    } else {
+        console.warn('⚠ config.js not found — dashboard/admin/login/signup will not be able to reach Supabase in this build. Copy config.example.js to config.js and fill in your project URL/anon key first.');
     }
 
     // Minify CSS

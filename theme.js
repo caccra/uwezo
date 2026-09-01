@@ -21,27 +21,17 @@ if (mobileToggle && navLinks) {
     });
 }
 
-// Hero Slider Logic
+// Hero Slider Logic (background photos only — hero text is static)
 const slides = document.querySelectorAll('.hero-slide');
-const slideTexts = document.querySelectorAll('.hero-slide-text');
 let currentSlide = 0;
 
 function nextSlide() {
-    // Remove active from current
     slides[currentSlide].classList.remove('active');
-    slideTexts[currentSlide].classList.remove('active');
-    slideTexts[currentSlide].style.display = 'none';
-
-    // Move to next
     currentSlide = (currentSlide + 1) % slides.length;
-
-    // Add active to next
     slides[currentSlide].classList.add('active');
-    slideTexts[currentSlide].classList.add('active');
-    slideTexts[currentSlide].style.display = 'block';
 }
 
-if (slides.length > 0) {
+if (slides.length > 1) {
     setInterval(nextSlide, 6000); // Switch every 6 seconds
 }
 
@@ -55,3 +45,16 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// Theme toggle (visual only — dark is the only styled theme for now)
+const themeToggle = document.getElementById('themeToggle');
+if (themeToggle) {
+    if (localStorage.getItem('uwezo-theme') === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+    }
+    themeToggle.addEventListener('click', () => {
+        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+        document.documentElement.setAttribute('data-theme', isLight ? 'dark' : 'light');
+        localStorage.setItem('uwezo-theme', isLight ? 'dark' : 'light');
+    });
+}
